@@ -129,6 +129,13 @@ const articles = [
       'Why scans come out sideways, what the /Rotate flag changes, and how to fix only the wrong pages.',
     tag: 'Documents',
   },
+  {
+    to: '/guides/reorder-pdf-pages-without-upload',
+    title: 'Reorder PDF pages, locally',
+    description:
+      'Why a written order beats dragging thumbnails, and what survives a rebuilt document.',
+    tag: 'Documents',
+  },
 ]
 
 export function Guides() {

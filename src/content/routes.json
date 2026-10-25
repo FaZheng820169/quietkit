@@ -194,6 +194,11 @@
     "description": "Why scans come out sideways, what the /Rotate flag actually changes, which angle to pick, and how to fix all pages or just the wrong ones locally.",
     "priority": "0.8"
   },
+  "/guides/reorder-pdf-pages-without-upload": {
+    "title": "Reorder PDF pages without uploading the file",
+    "description": "Why page order goes wrong, why a written order beats dragging thumbnails, what survives a rebuild, and how to rearrange a PDF locally.",
+    "priority": "0.8"
+  },
   "/pricing": {
     "title": "Pricing — free tools, one planned pro tier",
     "description": "QuietKit tools are free with no limits and no account. A one-time pro tier for saved presets and batch folders across many tools is in development.",

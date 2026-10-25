@@ -136,6 +136,9 @@ export function Footer() {
               <li>
                 <Link to="/guides/rotate-pdf-without-upload">Rotate a PDF</Link>
               </li>
+              <li>
+                <Link to="/guides/reorder-pdf-pages-without-upload">Reorder PDF pages</Link>
+              </li>
             </ul>
           </div>
 

@@ -343,6 +343,11 @@ export function Home() {
                 title: 'Fix sideways scans',
                 body: 'What the /Rotate flag actually changes, which angle to pick, and how to fix only the wrong pages.',
               },
+              {
+                to: '/guides/reorder-pdf-pages-without-upload',
+                title: 'Reorder pages by typing',
+                body: 'Why a written order beats dragging thumbnails, and what survives a rebuilt document.',
+              },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">
                 <h3 style={{ fontSize: 19 }}>{article.title}</h3>

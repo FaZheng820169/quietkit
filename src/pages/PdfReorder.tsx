@@ -265,6 +265,11 @@ export function PdfReorder() {
                   <CheckIcon size={15} /> Build a PDF from photos
                 </Link>
               </li>
+              <li>
+                <Link to="/guides/reorder-pdf-pages-without-upload" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Guide: why typing beats dragging
+                </Link>
+              </li>
             </ul>
           </div>
         </aside>
