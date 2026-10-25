@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Twenty-one tools, no filler</span>
+              <span className="eyebrow">Twenty-two tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -119,6 +119,13 @@ export function Home() {
               title="Convert images"
               description="Turn an iPhone HEIC into JPEG, PNG into JPEG, or a whole folder into WebP — in a single pass, without uploading."
               meta="HEIC · JPG · PNG · WebP"
+            />
+            <ToolCard
+              to="/tools/avif-converter"
+              icon={<ImageIcon size={22} />}
+              title="Convert AVIF"
+              description="AVIF to JPG, PNG or WebP that any software can open — or JPG and PNG back to AVIF, in batches."
+              meta="AVIF · JPG · PNG"
             />
             <ToolCard
               to="/tools/image-resizer"
@@ -278,6 +285,11 @@ export function Home() {
                 to: '/guides/heic-to-jpg',
                 title: 'Convert HEIC to JPG',
                 body: 'Why iPhones save HEIC, where it breaks, and how to convert it without uploading photos.',
+              },
+              {
+                to: '/guides/avif-to-jpg',
+                title: 'Convert AVIF to JPG',
+                body: 'The format browsers read and nothing else does — which target to pick, and how to convert locally.',
               },
               {
                 to: '/guides/remove-location-from-photo',

@@ -1,6 +1,6 @@
 import { toDecodableImage } from './heic'
 
-export type CompressFormat = 'original' | 'image/jpeg' | 'image/webp' | 'image/png'
+export type CompressFormat = 'original' | 'image/jpeg' | 'image/webp' | 'image/png' | 'image/avif'
 
 export type CompressOptions = {
   maxDimension: number | null
@@ -53,7 +53,9 @@ export async function compressImage(file: File, options: CompressOptions): Promi
   if (!ctx) throw new Error('Canvas is not available in this browser.')
 
   ctx.imageSmoothingQuality = 'high'
-  if (type !== 'image/png') {
+  // JPEG and WebP get a white base because the encoder or the target workflow
+  // assumes no alpha; PNG and AVIF keep the transparent pixels they carry.
+  if (type === 'image/jpeg' || type === 'image/webp') {
     ctx.fillStyle = '#ffffff'
     ctx.fillRect(0, 0, width, height)
   }
@@ -109,6 +111,7 @@ export async function compressImage(file: File, options: CompressOptions): Promi
 export function outputExtension(type: string): string {
   if (type === 'image/png') return 'png'
   if (type === 'image/webp') return 'webp'
+  if (type === 'image/avif') return 'avif'
   return 'jpg'
 }
 

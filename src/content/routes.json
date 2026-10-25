@@ -6,7 +6,7 @@
   },
   "/tools": {
     "title": "All tools — private browser-local file utilities",
-    "description": "The full QuietKit toolbox: compress, convert or resize images, remove EXIF and GPS metadata, inspect and strip the metadata inside a PDF, resize PDF pages to A4 or Letter, split a PDF into separate files, turn PDF pages into JPG images, build a PDF from photos, merge PDFs, add page numbers, extract text, then delete, reorder or rotate pages. Every tool runs locally in your browser.",
+    "description": "The full QuietKit toolbox: compress, convert or resize images, convert AVIF to JPG or back, remove EXIF and GPS metadata, inspect and strip the metadata inside a PDF, resize PDF pages to A4 or Letter, split a PDF into separate files, turn PDF pages into JPG images, build a PDF from photos, merge PDFs, add page numbers, extract text, then delete, reorder or rotate pages. Every tool runs locally in your browser.",
     "priority": "0.8"
   },
   "/tools/image-compressor": {
@@ -17,6 +17,11 @@
   "/tools/image-converter": {
     "title": "Convert HEIC to JPG, PNG to JPG, JPG to WebP",
     "description": "Convert iPhone HEIC photos and JPEG, PNG or WebP images in batches inside your browser. Transparent areas become white in JPEG, and nothing is uploaded.",
+    "priority": "0.9"
+  },
+  "/tools/avif-converter": {
+    "title": "AVIF to JPG converter — no upload, works both ways",
+    "description": "Convert AVIF images to JPG, PNG or WebP that any software can open — or re-encode JPG and PNG as space-saving AVIF. Batch conversion entirely in your browser, nothing uploaded.",
     "priority": "0.9"
   },
   "/tools/image-resizer": {
@@ -192,6 +197,11 @@
   "/guides/heic-to-jpg": {
     "title": "How to convert HEIC to JPG (without uploading photos)",
     "description": "Why iPhones save photos as HEIC, how to convert them to JPEG on Windows, Mac, iPhone and Android, and how to do it in the browser without uploading anything.",
+    "priority": "0.8"
+  },
+  "/guides/avif-to-jpg": {
+    "title": "How to convert AVIF to JPG (without uploading the file)",
+    "description": "What the AVIF format is, whether to convert it to JPG, PNG or WebP, which browsers can also write AVIF — and how to do the whole conversion locally.",
     "priority": "0.8"
   },
   "/guides/resize-image-without-upload": {

@@ -109,6 +109,13 @@ const articles = [
     tag: 'Formats',
   },
   {
+    to: '/guides/avif-to-jpg',
+    title: 'Convert AVIF to JPG',
+    description:
+      'The format browsers read and nothing else does — JPG versus PNG versus WebP, and how to convert locally.',
+    tag: 'Formats',
+  },
+  {
     to: '/guides/resize-image-without-upload',
     title: 'Resize to exact pixels, locally',
     description:

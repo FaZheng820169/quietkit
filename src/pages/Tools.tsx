@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Twenty-one tools. Zero uploads.</h1>
+          <h1>Twenty-two tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -34,6 +34,13 @@ export function Tools() {
               title="Convert images"
               description="Turn PNG into JPEG, screenshots into WebP, or a folder of mixed files into one format."
               meta="Images"
+            />
+            <ToolCard
+              to="/tools/avif-converter"
+              icon={<ImageIcon size={22} />}
+              title="Convert AVIF"
+              description="AVIF to JPG, PNG or WebP that anything can open — or JPG and PNG back to space-saving AVIF, in batches."
+              meta="Images · AVIF"
             />
             <ToolCard
               to="/tools/image-resizer"
@@ -175,8 +182,9 @@ export function Tools() {
             <div className="split" style={{ gap: 24 }}>
               <p className="small muted">
                 Shipped from the bench: a batch workflow that runs several tools over one folder
-                in a single pass, an OCR reader that turns pictures of words into plain text, and
-                a form filler that types into a PDF's fields and flattens the answers.
+                in a single pass, an OCR reader that turns pictures of words into plain text,
+                a form filler that types into a PDF's fields and flattens the answers, and an
+                AVIF converter that works in both directions.
                 Comparison, watermarking, compression, PDF to JPG rendering,
                 splitting, page-size rebuilding, metadata inspection, page numbering, folder-wide
                 resizing and metadata cleaning, text extraction, page reorder, rotation, JPG to

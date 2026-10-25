@@ -4,6 +4,7 @@ import { Home } from './pages/Home'
 import { Tools } from './pages/Tools'
 import { ImageCompressor } from './pages/ImageCompressor'
 import { ImageConverter } from './pages/ImageConverter'
+import { AvifConverter } from './pages/AvifConverter'
 import { ImageResizer } from './pages/ImageResizer'
 import { MetadataCleaner } from './pages/MetadataCleaner'
 import { PdfMerge } from './pages/PdfMerge'
@@ -43,6 +44,7 @@ import { ConvertPngToJpg } from './pages/guides/ConvertPngToJpg'
 import { WhatIsWebp } from './pages/guides/WhatIsWebp'
 import { SocialMediaImageSizes } from './pages/guides/SocialMediaImageSizes'
 import { HeicToJpg } from './pages/guides/HeicToJpg'
+import { AvifToJpgGuide } from './pages/guides/AvifToJpgGuide'
 import { ResizeImageGuide } from './pages/guides/ResizeImageGuide'
 import { RemovePdfPagesGuide } from './pages/guides/RemovePdfPagesGuide'
 import { RotatePdfGuide } from './pages/guides/RotatePdfGuide'
@@ -65,6 +67,7 @@ export default function App() {
           <Route path="/tools" element={<Tools />} />
           <Route path="/tools/image-compressor" element={<ImageCompressor />} />
           <Route path="/tools/image-converter" element={<ImageConverter />} />
+          <Route path="/tools/avif-converter" element={<AvifConverter />} />
           <Route path="/tools/image-resizer" element={<ImageResizer />} />
           <Route path="/tools/metadata-cleaner" element={<MetadataCleaner />} />
           <Route path="/tools/pdf-merge" element={<PdfMerge />} />
@@ -100,6 +103,7 @@ export default function App() {
           <Route path="/guides/what-is-webp" element={<WhatIsWebp />} />
           <Route path="/guides/social-media-image-sizes" element={<SocialMediaImageSizes />} />
           <Route path="/guides/heic-to-jpg" element={<HeicToJpg />} />
+          <Route path="/guides/avif-to-jpg" element={<AvifToJpgGuide />} />
           <Route path="/guides/resize-image-without-upload" element={<ResizeImageGuide />} />
           <Route path="/guides/remove-pdf-pages-without-upload" element={<RemovePdfPagesGuide />} />
           <Route path="/guides/rotate-pdf-without-upload" element={<RotatePdfGuide />} />

@@ -29,6 +29,9 @@ export function Footer() {
                 <Link to="/tools/image-converter">Convert images</Link>
               </li>
               <li>
+                <Link to="/tools/avif-converter">Convert AVIF</Link>
+              </li>
+              <li>
                 <Link to="/tools/image-resizer">Resize images</Link>
               </li>
               <li>
@@ -135,6 +138,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/heic-to-jpg">HEIC to JPG</Link>
+              </li>
+              <li>
+                <Link to="/guides/avif-to-jpg">AVIF to JPG</Link>
               </li>
               <li>
                 <Link to="/guides/resize-image-without-upload">Resize to exact pixels</Link>
