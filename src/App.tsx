@@ -37,6 +37,7 @@ import { TextDiff } from './pages/TextDiff'
 import { Base64 } from './pages/Base64'
 import { UrlEncoder } from './pages/UrlEncoder'
 import { WordCounter } from './pages/WordCounter'
+import { CaseConverter } from './pages/CaseConverter'
 import { Pricing } from './pages/Pricing'
 import { Privacy } from './pages/Privacy'
 import { About } from './pages/About'
@@ -83,6 +84,7 @@ import { TextDiffGuide } from './pages/guides/TextDiffGuide'
 import { Base64Guide } from './pages/guides/Base64Guide'
 import { UrlEncoderGuide } from './pages/guides/UrlEncoderGuide'
 import { WordCounterGuide } from './pages/guides/WordCounterGuide'
+import { CaseConverterGuide } from './pages/guides/CaseConverterGuide'
 
 export default function App() {
   return (
@@ -126,6 +128,7 @@ export default function App() {
           <Route path="/tools/base64" element={<Base64 />} />
           <Route path="/tools/url-encoder" element={<UrlEncoder />} />
           <Route path="/tools/word-counter" element={<WordCounter />} />
+          <Route path="/tools/case-converter" element={<CaseConverter />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/remove-location-from-photo" element={<RemoveLocationPhoto />} />
           <Route path="/guides/compress-image-to-100kb" element={<CompressTo100kb />} />
@@ -168,6 +171,7 @@ export default function App() {
           <Route path="/guides/base64-without-upload" element={<Base64Guide />} />
           <Route path="/guides/url-encoding-without-upload" element={<UrlEncoderGuide />} />
           <Route path="/guides/word-count-without-upload" element={<WordCounterGuide />} />
+          <Route path="/guides/case-conversion-without-upload" element={<CaseConverterGuide />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />

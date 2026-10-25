@@ -290,6 +290,13 @@ const articles = [
       'What a word really is to a computer — CJK text, emoji and contractions — how reading time is estimated, and why an unpublished draft should never go through an online counter.',
     tag: 'Writing',
   },
+  {
+    to: '/guides/case-conversion-without-upload',
+    title: 'Convert text case without pasting it into a server',
+    description:
+      'What separates camelCase from PascalCase, how title case decides which words stay small, why acronyms break naive converters — and how to do every conversion locally.',
+    tag: 'Writing',
+  },
 ]
 
 export function Guides() {

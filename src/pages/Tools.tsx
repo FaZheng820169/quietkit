@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Thirty-five tools. Zero uploads.</h1>
+          <h1>Thirty-six tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -265,6 +265,13 @@ export function Tools() {
               title="Word counter"
               description="Count words, characters, sentences and paragraphs — with reading and speaking time, keyword density, and correct CJK counts."
               meta="Writing · Count / analyse"
+            />
+            <ToolCard
+              to="/tools/case-converter"
+              icon={<FileIcon size={22} />}
+              title="Case converter"
+              description="UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case and CONSTANT_CASE — all nine at once."
+              meta="Writing · Transform"
             />
           </div>
 

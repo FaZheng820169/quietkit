@@ -127,6 +127,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/word-counter">Word counter</Link>
               </li>
+              <li>
+                <Link to="/tools/case-converter">Case converter</Link>
+              </li>
             </ul>
           </div>
 
@@ -255,6 +258,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/word-count-without-upload">Word counting without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/case-conversion-without-upload">Case conversion without a server</Link>
               </li>
             </ul>
           </div>

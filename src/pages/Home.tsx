@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Thirty-five tools, no filler</span>
+              <span className="eyebrow">Thirty-six tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -351,6 +351,13 @@ export function Home() {
               description="Count words, characters, sentences and paragraphs — with reading and speaking time, keyword density, and correct CJK counts."
               meta="Writing · Count / analyse"
             />
+            <ToolCard
+              to="/tools/case-converter"
+              icon={<FileIcon size={22} />}
+              title="Case converter"
+              description="All nine case styles at once — UPPER, lower, Title, Sentence, camel, Pascal, snake, kebab, CONSTANT — with acronyms handled."
+              meta="Writing · Transform"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -576,6 +583,11 @@ export function Home() {
                 to: '/guides/word-count-without-upload',
                 title: 'Word counting without a server',
                 body: 'What a word really is to a computer, how reading time is estimated, and why an unpublished draft should never go through an online counter.',
+              },
+              {
+                to: '/guides/case-conversion-without-upload',
+                title: 'Case conversion without a server',
+                body: 'Why acronyms break naive converters, which words Title Case keeps small, and why re-lettering text is a local job.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">
