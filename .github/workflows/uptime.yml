@@ -18,7 +18,7 @@ jobs:
           set -e
           BASE="https://fazheng820169.github.io/quietkit"
           for path in "/" "/tools" "/tools/image-compressor" "/tools/metadata-cleaner" "/tools/pdf-merge"; do
-            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 "$BASE$path")
+            code=$(curl -sL -o /dev/null -w "%{http_code}" --max-time 20 "$BASE$path")
             echo "$path -> $code"
             if [ "$code" != "200" ]; then
               echo "::error::$path returned $code"
