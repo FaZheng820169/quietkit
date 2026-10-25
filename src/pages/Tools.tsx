@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Thirteen tools. Zero uploads.</h1>
+          <h1>Fourteen tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -106,6 +106,13 @@ export function Tools() {
               meta="Documents · Print"
             />
             <ToolCard
+              to="/tools/pdf-split"
+              icon={<FileIcon size={22} />}
+              title="Split a PDF"
+              description="Cut one document into a file per page, fixed-size chunks, or your own ranges — then download the parts as a ZIP."
+              meta="Documents"
+            />
+            <ToolCard
               to="/tools/jpg-to-pdf"
               icon={<ImageIcon size={22} />}
               title="JPG to PDF"
@@ -118,10 +125,10 @@ export function Tools() {
             <span className="panel-title">On the workbench</span>
             <div className="split" style={{ gap: 24 }}>
               <p className="small muted">
-                Next up: a splitter that cuts one PDF into the pages or ranges you need, each as its
-                own file. Page-size rebuilding, metadata inspection, page numbering, folder-wide
-                resizing and metadata cleaning, text extraction, page reorder, rotation, JPG to PDF
-                and HEIC decoding all ship — each runs entirely in the tab.
+                Next up: a comparison view for PDFs — put two versions side by side and see what
+                changed. Splitting, page-size rebuilding, metadata inspection, page numbering,
+                folder-wide resizing and metadata cleaning, text extraction, page reorder, rotation,
+                JPG to PDF and HEIC decoding all ship — each runs entirely in the tab.
               </p>
               <p className="small muted">
                 Want a specific tool? The fastest way to get it built is to ask for it — every

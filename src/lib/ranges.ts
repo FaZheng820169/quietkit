@@ -1,13 +1,13 @@
 const TOKEN = /^(\d+)?\s*(?:-\s*(\d+)?)?$/
 
-type Segment = { start: number; end: number }
+export type PageSegment = { start: number; end: number }
 
 /** Expands "1-3, 7, 10-" into 1-based segments; `10-` means "to the last page". */
-function segments(input: string, pageCount: number): Segment[] {
+export function parsePageSegments(input: string, pageCount: number): PageSegment[] {
   const trimmed = input.trim()
   if (!trimmed) throw new Error('Enter at least one page or range.')
 
-  const parsed: Segment[] = []
+  const parsed: PageSegment[] = []
   for (const raw of trimmed.split(',')) {
     const token = raw.trim()
     if (!token) continue
@@ -36,7 +36,7 @@ function segments(input: string, pageCount: number): Segment[] {
  */
 export function parsePageRanges(input: string, pageCount: number): number[] {
   const indices = new Set<number>()
-  for (const { start, end } of segments(input, pageCount)) {
+  for (const { start, end } of parsePageSegments(input, pageCount)) {
     for (let page = start; page <= end; page += 1) indices.add(page - 1)
   }
   return [...indices].sort((a, b) => a - b)
@@ -50,7 +50,7 @@ export function parsePageOrder(input: string, pageCount: number): number[] {
   const order: number[] = []
   const seen = new Set<number>()
 
-  for (const { start, end } of segments(input, pageCount)) {
+  for (const { start, end } of parsePageSegments(input, pageCount)) {
     for (let page = start; page <= end; page += 1) {
       if (seen.has(page - 1)) throw new Error(`Page ${page} appears twice in the order.`)
       seen.add(page - 1)

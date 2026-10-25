@@ -1,5 +1,5 @@
 ﻿import { PDFDocument, StandardFonts, degrees, rgb } from 'pdf-lib'
-import { parsePageRanges, parsePageOrder } from './ranges'
+import { parsePageRanges, parsePageOrder, type PageSegment } from './ranges'
 import {
   PAGE_NUMBER_EDGE,
   paperName,
@@ -51,6 +51,62 @@ export async function mergePdfs(files: File[]): Promise<{ blob: Blob; pages: num
   const bytes = await out.save()
   const buffer = new Uint8Array(bytes)
   return { blob: new Blob([buffer], { type: 'application/pdf' }), pages }
+}
+
+export type SplitPart = {
+  blob: Blob
+  start: number
+  end: number
+}
+
+export type SplitResult = {
+  parts: SplitPart[]
+  pages: number
+}
+
+/**
+ * Cuts one PDF into one file per segment, in the order the segments were
+ * given. Every page is copied, never rasterised, so text and links survive.
+ */
+export async function splitPdf(
+  file: File,
+  segments: PageSegment[],
+  onProgress?: (done: number, total: number) => void,
+): Promise<SplitResult> {
+  const bytes = await file.arrayBuffer()
+  const src = await PDFDocument.load(bytes, { ignoreEncryption: true, updateMetadata: false })
+  if (src.isEncrypted) throw new EncryptedPdfError(file.name)
+
+  const total = src.getPageCount()
+  const parts: SplitPart[] = []
+
+  for (const segment of segments) {
+    if (segment.start < 1 || segment.end > total || segment.start > segment.end) {
+      throw new Error(`This PDF has ${total} page${total === 1 ? '' : 's'}.`)
+    }
+
+    const indices: number[] = []
+    for (let page = segment.start; page <= segment.end; page += 1) indices.push(page - 1)
+
+    const out = await PDFDocument.create()
+    const copied = await out.copyPages(src, indices)
+    copied.forEach((page) => out.addPage(page))
+
+    out.setTitle(`Pages ${segment.start}-${segment.end} made with QuietKit`)
+    out.setProducer('QuietKit')
+    out.setCreator('QuietKit')
+    out.setCreationDate(new Date())
+
+    const saved = await out.save()
+    parts.push({
+      blob: new Blob([new Uint8Array(saved)], { type: 'application/pdf' }),
+      start: segment.start,
+      end: segment.end,
+    })
+    onProgress?.(parts.length, segments.length)
+  }
+
+  return { parts, pages: total }
 }
 
 /**

@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Thirteen tools, no filler</span>
+              <span className="eyebrow">Fourteen tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -196,6 +196,13 @@ export function Home() {
               title="Resize PDF pages"
               description="Make every page one sheet — A4, Letter or A3 — fitted to show the whole page or filled to cover it."
               meta="Print · One sheet"
+            />
+            <ToolCard
+              to="/tools/pdf-split"
+              icon={<FileIcon size={22} />}
+              title="Split a PDF"
+              description="Cut one document into a file per page, equal chunks or your own ranges, and take the parts away as a ZIP."
+              meta="Any pages · ZIP"
             />
           </div>
 
