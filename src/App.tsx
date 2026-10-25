@@ -3,6 +3,7 @@ import { Layout } from './components/Layout'
 import { Home } from './pages/Home'
 import { Tools } from './pages/Tools'
 import { ImageCompressor } from './pages/ImageCompressor'
+import { ImageConverter } from './pages/ImageConverter'
 import { MetadataCleaner } from './pages/MetadataCleaner'
 import { PdfMerge } from './pages/PdfMerge'
 import { Pricing } from './pages/Pricing'
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/tools" element={<Tools />} />
           <Route path="/tools/image-compressor" element={<ImageCompressor />} />
+          <Route path="/tools/image-converter" element={<ImageConverter />} />
           <Route path="/tools/metadata-cleaner" element={<MetadataCleaner />} />
           <Route path="/tools/pdf-merge" element={<PdfMerge />} />
           <Route path="/guides" element={<Guides />} />

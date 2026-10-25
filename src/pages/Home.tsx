@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Three tools, no filler</span>
+              <span className="eyebrow">Four tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -112,6 +112,13 @@ export function Home() {
               title="Compress images"
               description="Shrink JPEG, PNG and WebP photos by 60–90% with a live before/after preview and a size target."
               meta="JPEG · PNG · WebP"
+            />
+            <ToolCard
+              to="/tools/image-converter"
+              icon={<ImageIcon size={22} />}
+              title="Convert images"
+              description="Turn PNG into JPEG, screenshots into WebP, or a whole folder into one format — in a single pass."
+              meta="JPG · PNG · WebP"
             />
             <ToolCard
               to="/tools/metadata-cleaner"

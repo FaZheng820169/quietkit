@@ -26,7 +26,9 @@ const escapeHtml = (value) =>
 const basePrefix = normalizeBase === '/' ? '' : normalizeBase.replace(/\/$/, '')
 
 const urlFor = (path) =>
-  `${siteUrl}${basePrefix}${path ? `/${path.replace(/^\//, '')}` : ''}`
+  path
+    ? `${siteUrl}${basePrefix}/${path.replace(/^\//, '')}`
+    : `${siteUrl}${basePrefix}/`
 
 const shell = readFileSync(resolve(dist, 'index.html'), 'utf8')
 

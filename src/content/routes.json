@@ -6,12 +6,17 @@
   },
   "/tools": {
     "title": "All tools — private browser-local file utilities",
-    "description": "The full QuietKit toolbox: compress images, remove EXIF and GPS metadata, and merge PDFs. Every tool runs locally in your browser.",
+    "description": "The full QuietKit toolbox: compress or convert images, remove EXIF and GPS metadata, and merge PDFs. Every tool runs locally in your browser.",
     "priority": "0.8"
   },
   "/tools/image-compressor": {
     "title": "Compress images in your browser, no upload",
     "description": "Free image compressor for JPEG, PNG and WebP. Resize, set a quality level and download — all processed locally in your browser with no uploads.",
+    "priority": "0.9"
+  },
+  "/tools/image-converter": {
+    "title": "Convert PNG to JPG, JPG to WebP — no upload",
+    "description": "Convert images between JPEG, PNG and WebP in batches inside your browser. Transparent areas become white in JPEG, and nothing is uploaded.",
     "priority": "0.9"
   },
   "/tools/metadata-cleaner": {

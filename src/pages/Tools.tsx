@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Three tools. Zero uploads.</h1>
+          <h1>Four tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -26,6 +26,13 @@ export function Tools() {
               icon={<ImageIcon size={22} />}
               title="Compress images"
               description="Resize and re-encode JPEG, PNG and WebP files with a live size report and batch download."
+              meta="Images"
+            />
+            <ToolCard
+              to="/tools/image-converter"
+              icon={<ImageIcon size={22} />}
+              title="Convert images"
+              description="Turn PNG into JPEG, screenshots into WebP, or a folder of mixed files into one format."
               meta="Images"
             />
             <ToolCard
@@ -50,7 +57,7 @@ export function Tools() {
               <p className="small muted">
                 Next up: splitting and rotating PDF pages, HEIC to JPEG conversion, and batch
                 metadata cleaning for whole folders. These need more browser support than the
-                current three, so they take longer to do properly.
+                current four, so they take longer to do properly.
               </p>
               <p className="small muted">
                 Want a specific tool? The fastest way to get it built is to ask for it — every
