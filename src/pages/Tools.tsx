@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Ten tools. Zero uploads.</h1>
+          <h1>Eleven tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -85,6 +85,13 @@ export function Tools() {
               meta="Documents"
             />
             <ToolCard
+              to="/tools/pdf-page-numbers"
+              icon={<FileIcon size={22} />}
+              title="Add PDF page numbers"
+              description="Stamp numbers in the corner you choose, from a starting number you set, with a live preview of the first page."
+              meta="Documents"
+            />
+            <ToolCard
               to="/tools/jpg-to-pdf"
               icon={<ImageIcon size={22} />}
               title="JPG to PDF"
@@ -97,9 +104,10 @@ export function Tools() {
             <span className="panel-title">On the workbench</span>
             <div className="split" style={{ gap: 24 }}>
               <p className="small muted">
-                Next up: a page-number stamp you can add before printing, and a PDF metadata
-                viewer. Folder-wide resizing and metadata cleaning, text extraction, page reorder,
-                rotation, JPG to PDF and HEIC decoding all ship — each runs entirely in the tab.
+                Next up: a PDF metadata viewer that shows what a file says about itself before you
+                send it. Page numbering, folder-wide resizing and metadata cleaning, text
+                extraction, page reorder, rotation, JPG to PDF and HEIC decoding all ship — each
+                runs entirely in the tab.
               </p>
               <p className="small muted">
                 Want a specific tool? The fastest way to get it built is to ask for it — every

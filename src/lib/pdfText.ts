@@ -1,3 +1,5 @@
+import { getPdfjs } from './pdfjs'
+
 type RawItem = {
   str?: string
   transform?: number[]
@@ -57,10 +59,7 @@ function assemble(items: unknown[]): string {
  * main bundle stays small for visitors who never open this tool.
  */
 export async function openPdfText(file: File): Promise<PdfTextDoc> {
-  const pdfjs = await import('pdfjs-dist')
-  const worker = await import('pdfjs-dist/build/pdf.worker.min.mjs?url')
-
-  pdfjs.GlobalWorkerOptions.workerSrc = worker.default
+  const pdfjs = await getPdfjs()
 
   const bytes = new Uint8Array(await file.arrayBuffer())
   const task = pdfjs.getDocument({ data: bytes })

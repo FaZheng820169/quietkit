@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Ten tools, no filler</span>
+              <span className="eyebrow">Eleven tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -175,6 +175,13 @@ export function Home() {
               title="Extract PDF text"
               description="Copy the words out of a PDF page by page, or download the whole document as plain text."
               meta="Copy · .txt"
+            />
+            <ToolCard
+              to="/tools/pdf-page-numbers"
+              icon={<FileIcon size={22} />}
+              title="Add PDF page numbers"
+              description="Stamp a number in any corner, start at any number, and see the first page before you download."
+              meta="Preview · Any format"
             />
           </div>
 

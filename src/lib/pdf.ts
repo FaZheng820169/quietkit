@@ -1,5 +1,6 @@
-import { PDFDocument, degrees } from 'pdf-lib'
+﻿import { PDFDocument, StandardFonts, degrees, rgb } from 'pdf-lib'
 import { parsePageRanges, parsePageOrder } from './ranges'
+import { PAGE_NUMBER_EDGE, type PageNumberOptions, type PageNumberResult } from './pdfLayout'
 
 export type PdfPart = {
   file: File
@@ -32,6 +33,92 @@ export async function mergePdfs(files: File[]): Promise<{ blob: Blob; pages: num
   const bytes = await out.save()
   const buffer = new Uint8Array(bytes)
   return { blob: new Blob([buffer], { type: 'application/pdf' }), pages }
+}
+
+/**
+ * Draws page numbers on top of the existing page content. The text is placed
+ * in the viewer's orientation, so a page with /Rotate 90 gets an upright
+ * number in its bottom-right corner, not one lying on its side.
+ */
+export async function stampPageNumbers(
+  file: File,
+  options: PageNumberOptions,
+): Promise<PageNumberResult> {
+  const bytes = await file.arrayBuffer()
+  const doc = await PDFDocument.load(bytes, { ignoreEncryption: true })
+  const font = await doc.embedFont(StandardFonts.Helvetica)
+  const total = doc.getPageCount()
+  const size = options.fontSize
+
+  const vertical = options.position.startsWith('top') ? 'top' : 'bottom'
+  const horizontal = options.position.endsWith('left')
+    ? 'left'
+    : options.position.endsWith('right')
+      ? 'right'
+      : 'center'
+
+  let numbered = 0
+
+  for (let index = 0; index < total; index += 1) {
+    if (options.skipFirst && index === 0) continue
+    const page = doc.getPage(index)
+    const label =
+      options.format === 'plain'
+        ? `${options.start + index}`
+        : options.format === 'slash'
+          ? `${options.start + index} / ${options.start - 1 + total}`
+          : `Page ${options.start + index} of ${options.start - 1 + total}`
+
+    const box = page.getCropBox()
+    const rotation = ((page.getRotation().angle % 360) + 360) % 360
+    const sideways = rotation === 90 || rotation === 270
+    const visibleWidth = sideways ? box.height : box.width
+    const visibleHeight = sideways ? box.width : box.height
+
+    const textWidth = font.widthOfTextAtSize(label, size)
+    const x =
+      horizontal === 'left'
+        ? PAGE_NUMBER_EDGE
+        : horizontal === 'right'
+          ? visibleWidth - PAGE_NUMBER_EDGE - textWidth
+          : (visibleWidth - textWidth) / 2
+    const y = vertical === 'bottom' ? PAGE_NUMBER_EDGE : visibleHeight - PAGE_NUMBER_EDGE - size * 0.72
+
+    // Map the viewer-oriented position back into unrotated page space.
+    let drawX = x
+    let drawY = y
+    if (rotation === 90) {
+      drawX = box.width - y
+      drawY = x
+    } else if (rotation === 180) {
+      drawX = box.width - x
+      drawY = box.height - y
+    } else if (rotation === 270) {
+      drawX = y
+      drawY = box.height - x
+    }
+
+    page.drawText(label, {
+      x: box.x + drawX,
+      y: box.y + drawY,
+      size,
+      font,
+      color: rgb(0.13, 0.13, 0.13),
+      rotate: degrees(rotation),
+    })
+    numbered += 1
+  }
+
+  doc.setProducer('QuietKit')
+  doc.setCreator('QuietKit')
+  doc.setModificationDate(new Date())
+
+  const saved = await doc.save()
+  return {
+    blob: new Blob([new Uint8Array(saved)], { type: 'application/pdf' }),
+    pages: total,
+    numbered,
+  }
 }
 
 export type PageEditResult = {

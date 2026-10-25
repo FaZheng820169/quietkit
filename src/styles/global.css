@@ -966,6 +966,28 @@ select {
   border-bottom: 0;
 }
 
+.pdf-preview {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(20, 20, 15, 0.07);
+}
+
+.pdf-preview canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.stamp-preview-label {
+  user-select: none;
+}
+
 .text-preview {
   margin: 16px 0 0;
   padding: 16px 18px;

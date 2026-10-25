@@ -50,6 +50,9 @@ export function Footer() {
                 <Link to="/tools/pdf-text">Extract PDF text</Link>
               </li>
               <li>
+                <Link to="/tools/pdf-page-numbers">Add PDF page numbers</Link>
+              </li>
+              <li>
                 <Link to="/tools/jpg-to-pdf">JPG to PDF</Link>
               </li>
             </ul>

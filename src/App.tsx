@@ -12,6 +12,7 @@ import { PdfRotate } from './pages/PdfRotate'
 import { PdfReorder } from './pages/PdfReorder'
 import { JpgToPdf } from './pages/JpgToPdf'
 import { PdfText } from './pages/PdfText'
+import { PdfPageNumbers } from './pages/PdfPageNumbers'
 import { Pricing } from './pages/Pricing'
 import { Privacy } from './pages/Privacy'
 import { About } from './pages/About'
@@ -43,6 +44,7 @@ export default function App() {
           <Route path="/tools/pdf-reorder" element={<PdfReorder />} />
           <Route path="/tools/jpg-to-pdf" element={<JpgToPdf />} />
           <Route path="/tools/pdf-text" element={<PdfText />} />
+          <Route path="/tools/pdf-page-numbers" element={<PdfPageNumbers />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/remove-location-from-photo" element={<RemoveLocationPhoto />} />
           <Route path="/guides/compress-image-to-100kb" element={<CompressTo100kb />} />
