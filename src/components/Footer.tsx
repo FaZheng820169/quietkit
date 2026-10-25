@@ -92,6 +92,9 @@ export function Footer() {
                 <Link to="/guides/pdf-to-jpg-without-upload">PDF to JPG locally</Link>
               </li>
               <li>
+                <Link to="/guides/watermark-pdf-without-upload">Watermark a PDF</Link>
+              </li>
+              <li>
                 <Link to="/guides/exif-viewer">Read EXIF data</Link>
               </li>
               <li>

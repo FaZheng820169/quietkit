@@ -270,6 +270,11 @@ export function Home() {
                 body: 'What a page loses when it becomes pixels, the DPI that fits each job, and why margins turn black.',
               },
               {
+                to: '/guides/watermark-pdf-without-upload',
+                title: 'Watermark a PDF, properly',
+                body: 'Status, ownership and protection marks want different settings — and why a text layer beats flattening.',
+              },
+              {
                 to: '/guides/exif-viewer',
                 title: 'What an EXIF viewer shows',
                 body: 'The metadata families, the risky fields, and what f-stop, ISO and focal length mean.',

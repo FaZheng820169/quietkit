@@ -39,6 +39,13 @@ const articles = [
     tag: 'Documents',
   },
   {
+    to: '/guides/watermark-pdf-without-upload',
+    title: 'Watermark a PDF without uploading it',
+    description:
+      'The settings that fit a draft, a confidential report or an issued copy — and what a text layer does to the page.',
+    tag: 'Documents',
+  },
+  {
     to: '/guides/exif-viewer',
     title: 'What an EXIF viewer shows you',
     description:
