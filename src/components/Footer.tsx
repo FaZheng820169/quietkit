@@ -124,6 +124,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/url-encoder">URL encoder</Link>
               </li>
+              <li>
+                <Link to="/tools/word-counter">Word counter</Link>
+              </li>
             </ul>
           </div>
 
@@ -249,6 +252,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/url-encoding-without-upload">URL encoding without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/word-count-without-upload">Word counting without a server</Link>
               </li>
             </ul>
           </div>

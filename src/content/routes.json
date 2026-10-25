@@ -179,6 +179,11 @@
     "description": "Percent-encode a value for a URL or decode it back, with component and full-URL modes. Parse a query string into a decoded key-value table. Runs entirely in your browser — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/word-counter": {
+    "title": "Word counter — words, characters, sentences, reading time",
+    "description": "Count words, characters, sentences and paragraphs with live reading and speaking time estimates and keyword density. Counts CJK text and emoji correctly. Runs entirely in your browser — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -382,6 +387,11 @@
   "/guides/url-encoding-without-upload": {
     "title": "URL-encode and decode without pasting links into a server",
     "description": "encodeURIComponent vs encodeURI, why %zz breaks a decoder, what + really means in a query string — and how to encode tokens, redirect URLs and tracking links locally.",
+    "priority": "0.8"
+  },
+  "/guides/word-count-without-upload": {
+    "title": "Count words without pasting your draft into a server",
+    "description": "What a word really is to a computer — CJK text, emoji and contractions — how reading time is estimated, and why an unpublished draft should never go through an online counter.",
     "priority": "0.8"
   },
   "/pricing": {

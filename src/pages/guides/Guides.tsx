@@ -283,6 +283,13 @@ const articles = [
       'encodeURIComponent vs encodeURI, why %zz breaks a decoder, what + really means in a query string — and why tracking links should not go through an online decoder.',
     tag: 'Developer',
   },
+  {
+    to: '/guides/word-count-without-upload',
+    title: 'Count words without pasting your draft into a server',
+    description:
+      'What a word really is to a computer — CJK text, emoji and contractions — how reading time is estimated, and why an unpublished draft should never go through an online counter.',
+    tag: 'Writing',
+  },
 ]
 
 export function Guides() {
