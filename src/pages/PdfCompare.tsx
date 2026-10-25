@@ -462,6 +462,11 @@ export function PdfCompare() {
                 </Link>
               </li>
               <li>
+                <Link to="/guides/compare-pdf-without-upload" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> How to compare two PDFs, properly
+                </Link>
+              </li>
+              <li>
                 <Link to="/guides/merge-pdf-without-upload" className="row" style={{ gap: 8 }}>
                   <CheckIcon size={15} /> Why local beats upload
                 </Link>

@@ -304,6 +304,11 @@ export function Home() {
                 body: 'Receipts and signed forms photographed on a phone — page size, order and HEIC, handled locally.',
               },
               {
+                to: '/guides/compare-pdf-without-upload',
+                title: 'Compare two PDFs',
+                body: 'Side-by-side reading versus pixel comparison — and why contracts should stay on your device.',
+              },
+              {
                 to: '/guides/exif-viewer',
                 title: 'What an EXIF viewer shows',
                 body: 'The metadata families, the risky fields, and what f-stop, ISO and focal length mean.',

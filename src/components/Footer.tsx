@@ -110,6 +110,9 @@ export function Footer() {
                 <Link to="/guides/jpg-to-pdf-without-upload">Photos to PDF</Link>
               </li>
               <li>
+                <Link to="/guides/compare-pdf-without-upload">Compare two PDFs</Link>
+              </li>
+              <li>
                 <Link to="/guides/exif-viewer">Read EXIF data</Link>
               </li>
               <li>

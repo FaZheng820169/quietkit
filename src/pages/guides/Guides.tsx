@@ -67,6 +67,13 @@ const articles = [
     tag: 'Documents',
   },
   {
+    to: '/guides/compare-pdf-without-upload',
+    title: 'Compare two PDFs, locally',
+    description:
+      'What changed between two versions — side-by-side reading, pixel comparison and mismatched page counts.',
+    tag: 'Documents',
+  },
+  {
     to: '/guides/exif-viewer',
     title: 'What an EXIF viewer shows you',
     description:

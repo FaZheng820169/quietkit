@@ -124,6 +124,11 @@
     "description": "Receipts, ID scans and signed forms photographed on a phone — which page size to pick, how HEIC fits in, and how to assemble the PDF locally.",
     "priority": "0.8"
   },
+  "/guides/compare-pdf-without-upload": {
+    "title": "How to compare two PDFs without uploading either one",
+    "description": "What changed between version one and version two — side-by-side reading versus pixel comparison, different page counts, and why contracts should never leave your device to be compared.",
+    "priority": "0.8"
+  },
   "/guides": {
     "title": "Guides — files, metadata and privacy",
     "description": "Practical guides on photo metadata, image compression and local PDF handling. Short, specific, and linked to a tool that does the work.",
