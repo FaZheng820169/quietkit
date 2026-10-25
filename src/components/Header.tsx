@@ -3,9 +3,9 @@ import { LockIcon } from './Icons'
 
 const links = [
   { to: '/tools', label: 'Tools' },
+  { to: '/guides', label: 'Guides' },
   { to: '/pricing', label: 'Pricing' },
-  { to: '/privacy', label: 'Privacy' },
-  { to: '/about', label: 'About', hideOnMobile: true },
+  { to: '/privacy', label: 'Privacy', hideOnMobile: true },
 ]
 
 export function Header() {

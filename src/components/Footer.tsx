@@ -35,6 +35,24 @@ export function Footer() {
           </div>
 
           <div className="footer-col">
+            <h4>Guides</h4>
+            <ul>
+              <li>
+                <Link to="/guides/remove-location-from-photo">Remove photo location</Link>
+              </li>
+              <li>
+                <Link to="/guides/compress-image-to-100kb">Compress to 100 KB</Link>
+              </li>
+              <li>
+                <Link to="/guides/merge-pdf-without-upload">Merge PDFs locally</Link>
+              </li>
+              <li>
+                <Link to="/guides/exif-viewer">Read EXIF data</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
             <h4>Company</h4>
             <ul>
               <li>
@@ -46,15 +64,6 @@ export function Footer() {
               <li>
                 <Link to="/privacy">Privacy policy</Link>
               </li>
-            </ul>
-          </div>
-
-          <div className="footer-col">
-            <h4>Status</h4>
-            <ul>
-              <li>No servers to go down</li>
-              <li>No account required</li>
-              <li>Runs offline once loaded</li>
             </ul>
           </div>
         </div>

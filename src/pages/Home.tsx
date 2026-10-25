@@ -141,6 +141,50 @@ export function Home() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="container">
+          <div className="split" style={{ alignItems: 'end', marginBottom: 30 }}>
+            <div>
+              <span className="eyebrow">Guides</span>
+              <h2 style={{ fontSize: 32, marginTop: 14 }}>If you want to understand it first.</h2>
+            </div>
+            <Link className="btn" to="/guides">
+              All guides
+            </Link>
+          </div>
+          <div className="card-grid">
+            {[
+              {
+                to: '/guides/remove-location-from-photo',
+                title: 'Remove location data from a photo',
+                body: 'What GPS in a JPEG actually is, and the exact steps on iPhone, Android and Windows.',
+              },
+              {
+                to: '/guides/compress-image-to-100kb',
+                title: 'Compress an image to 100 KB',
+                body: 'Resize first, then lower quality, then change format — with real size numbers.',
+              },
+              {
+                to: '/guides/merge-pdf-without-upload',
+                title: 'Merge PDFs without uploading',
+                body: 'Why contracts and IDs should stay on your machine, and how to verify a tool is local.',
+              },
+              {
+                to: '/guides/exif-viewer',
+                title: 'What an EXIF viewer shows',
+                body: 'The metadata families, the risky fields, and what f-stop, ISO and focal length mean.',
+              },
+            ].map((article) => (
+              <Link key={article.to} to={article.to} className="tool-card">
+                <h3 style={{ fontSize: 19 }}>{article.title}</h3>
+                <p>{article.body}</p>
+                <span className="tool-card-foot">Read the guide</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section-tight" style={{ borderTop: '1px solid var(--line)', borderBottom: '1px solid var(--line)', background: 'var(--paper-2)' }}>
         <div className="container">
           <div className="split">
