@@ -36,6 +36,7 @@ function renderShell(path, meta) {
   const url = urlFor(path === '/' ? '' : path)
   const title = escapeHtml(meta.title)
   const description = escapeHtml(meta.description)
+  const image = `${siteUrl}${basePrefix}/og.png`
   const head = [
     `<title>${title}</title>`,
     `<meta name="description" content="${description}" />`,
@@ -45,7 +46,11 @@ function renderShell(path, meta) {
     `<meta property="og:title" content="${title}" />`,
     `<meta property="og:description" content="${description}" />`,
     `<meta property="og:url" content="${url}" />`,
-    `<meta name="twitter:card" content="summary" />`,
+    `<meta property="og:image" content="${image}" />`,
+    `<meta property="og:image:width" content="1200" />`,
+    `<meta property="og:image:height" content="630" />`,
+    `<meta name="twitter:card" content="summary_large_image" />`,
+    `<meta name="twitter:image" content="${image}" />`,
     `<meta name="twitter:title" content="${title}" />`,
     `<meta name="twitter:description" content="${description}" />`,
   ].join('\n    ')
