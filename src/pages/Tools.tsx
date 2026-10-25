@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Twelve tools. Zero uploads.</h1>
+          <h1>Thirteen tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -99,6 +99,13 @@ export function Tools() {
               meta="Documents"
             />
             <ToolCard
+              to="/tools/pdf-resize"
+              icon={<FileIcon size={22} />}
+              title="Resize PDF pages"
+              description="Put every page on one sheet — A4, Letter, Legal, A5 or A3 — fitted to show it all or filled to cover it."
+              meta="Documents · Print"
+            />
+            <ToolCard
               to="/tools/jpg-to-pdf"
               icon={<ImageIcon size={22} />}
               title="JPG to PDF"
@@ -111,11 +118,10 @@ export function Tools() {
             <span className="panel-title">On the workbench</span>
             <div className="split" style={{ gap: 24 }}>
               <p className="small muted">
-                Next up: a page-size fixer that rescales and crops a PDF to A4 or Letter, so a
-                print comes out at the size it was meant to be. PDF metadata inspection, page
-                numbering, folder-wide resizing and metadata cleaning, text extraction, page
-                reorder, rotation, JPG to PDF and HEIC decoding all ship — each runs entirely in
-                the tab.
+                Next up: a splitter that cuts one PDF into the pages or ranges you need, each as its
+                own file. Page-size rebuilding, metadata inspection, page numbering, folder-wide
+                resizing and metadata cleaning, text extraction, page reorder, rotation, JPG to PDF
+                and HEIC decoding all ship — each runs entirely in the tab.
               </p>
               <p className="small muted">
                 Want a specific tool? The fastest way to get it built is to ask for it — every

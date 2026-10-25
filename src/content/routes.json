@@ -6,7 +6,7 @@
   },
   "/tools": {
     "title": "All tools — private browser-local file utilities",
-    "description": "The full QuietKit toolbox: compress, convert or resize images, remove EXIF and GPS metadata, inspect and strip the metadata inside a PDF, build a PDF from photos, merge PDFs, add page numbers, extract text, then delete, reorder or rotate pages. Every tool runs locally in your browser.",
+    "description": "The full QuietKit toolbox: compress, convert or resize images, remove EXIF and GPS metadata, inspect and strip the metadata inside a PDF, resize PDF pages to A4 or Letter, build a PDF from photos, merge PDFs, add page numbers, extract text, then delete, reorder or rotate pages. Every tool runs locally in your browser.",
     "priority": "0.8"
   },
   "/tools/image-compressor": {
@@ -67,6 +67,11 @@
   "/tools/pdf-metadata": {
     "title": "See and remove the metadata inside a PDF",
     "description": "Read the author, producer, creation date and XMP packet a PDF carries, then download a copy with the property block emptied. Pages are untouched and nothing is uploaded.",
+    "priority": "0.9"
+  },
+  "/tools/pdf-resize": {
+    "title": "Resize PDF pages to A4 or Letter, no upload",
+    "description": "Put every page of a PDF on one sheet — A4, Letter, Legal, A5 or A3 — fitted to show it all or filled to cover the sheet. Rotation is normalised, text stays vector, nothing is uploaded.",
     "priority": "0.9"
   },
   "/guides": {

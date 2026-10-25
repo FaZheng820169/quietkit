@@ -53,6 +53,9 @@ export function Footer() {
                 <Link to="/tools/pdf-page-numbers">Add PDF page numbers</Link>
               </li>
               <li>
+                <Link to="/tools/pdf-resize">Resize PDF pages</Link>
+              </li>
+              <li>
                 <Link to="/tools/pdf-metadata">Inspect PDF metadata</Link>
               </li>
               <li>

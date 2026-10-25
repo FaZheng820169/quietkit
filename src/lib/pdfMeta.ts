@@ -9,6 +9,7 @@ import {
   PDFStream,
   PDFString,
 } from 'pdf-lib'
+import { paperName } from './pdfLayout'
 
 export type MetaRisk = 'identity' | 'software' | 'timeline' | 'content' | 'other'
 
@@ -56,17 +57,6 @@ const KNOWN: Record<string, { label: string; risk: MetaRisk }> = {
 }
 
 const ORDER = Object.keys(KNOWN)
-
-// Sizes in points, short side first, with a ±4 pt tolerance so the usual
-// rounding differences between producers still land on the right name.
-const PAPERS: [string, number, number][] = [
-  ['A3', 841.89, 1190.55],
-  ['A4', 595.28, 841.89],
-  ['A5', 419.53, 595.28],
-  ['Letter', 612, 792],
-  ['Legal', 612, 1008],
-  ['Tabloid', 792, 1224],
-]
 
 function infoDict(doc: PDFDocument): PDFDict | undefined {
   const ref = doc.context.trailerInfo.Info
@@ -136,15 +126,6 @@ function readFields(doc: PDFDocument): PdfMetaField[] {
     const sortedB = rankB === -1 ? ORDER.length : rankB
     return sortedA - sortedB || a.label.localeCompare(b.label)
   })
-}
-
-function paperName(width: number, height: number): string {
-  const short = Math.min(width, height)
-  const long = Math.max(width, height)
-  for (const [name, paperShort, paperLong] of PAPERS) {
-    if (Math.abs(short - paperShort) <= 4 && Math.abs(long - paperLong) <= 4) return name
-  }
-  return 'Custom'
 }
 
 function readPageSizes(doc: PDFDocument): PdfPageSize[] {

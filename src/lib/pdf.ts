@@ -1,6 +1,26 @@
 ﻿import { PDFDocument, StandardFonts, degrees, rgb } from 'pdf-lib'
 import { parsePageRanges, parsePageOrder } from './ranges'
-import { PAGE_NUMBER_EDGE, type PageNumberOptions, type PageNumberResult } from './pdfLayout'
+import {
+  PAGE_NUMBER_EDGE,
+  paperName,
+  targetSize,
+  type PageNumberOptions,
+  type PageNumberResult,
+  type PdfPageBox,
+  type ResizeOptions,
+  type ResizeResult,
+} from './pdfLayout'
+
+export class EncryptedPdfError extends Error {
+  constructor() {
+    super('This PDF is password-protected')
+    this.name = 'EncryptedPdfError'
+  }
+}
+
+function normalizeAngle(angle: number): number {
+  return ((angle % 360) + 360) % 360
+}
 
 export type PdfPart = {
   file: File
@@ -228,6 +248,124 @@ export async function reorderPdfPages(file: File, input: string): Promise<Reorde
     blob: new Blob([new Uint8Array(saved)], { type: 'application/pdf' }),
     pages: total,
     moved: order.filter((pageIndex, position) => pageIndex !== position).length,
+  }
+}
+
+/** Visible page boxes, with the viewer rotation already taken into account. */
+export async function readPdfPageBoxes(file: File): Promise<PdfPageBox[]> {
+  const bytes = await file.arrayBuffer()
+  const doc = await PDFDocument.load(bytes, { ignoreEncryption: true, updateMetadata: false })
+
+  return doc.getPages().map((page) => {
+    const box = page.getCropBox()
+    const rotation = normalizeAngle(page.getRotation().angle)
+    const sideways = rotation === 90 || rotation === 270
+    const width = Math.round((sideways ? box.height : box.width) * 10) / 10
+    const height = Math.round((sideways ? box.width : box.height) * 10) / 10
+    return {
+      paper: paperName(width, height),
+      width,
+      height,
+      rotation,
+      landscape: width > height,
+    }
+  })
+}
+
+const IDENTITY: [number, number, number, number, number, number] = [1, 0, 0, 1, 0, 0]
+
+/**
+ * Rebuilds every page on a fixed sheet. Each source page is embedded as a form
+ * XObject, with the crop box origin moved to (0, 0) and the viewer rotation
+ * baked into the form's matrix, so a page that was stored sideways comes out
+ * upright on a sheet with no /Rotate flag.
+ *
+ * The trade-off is stated on the page itself: the printed page is rebuilt, so
+ * links, form fields and comments are not carried over.
+ */
+export async function resizePdfPages(
+  file: File,
+  options: ResizeOptions,
+): Promise<ResizeResult> {
+  const bytes = await file.arrayBuffer()
+  const src = await PDFDocument.load(bytes, { ignoreEncryption: true, updateMetadata: false })
+  if (src.isEncrypted) throw new EncryptedPdfError()
+
+  const out = await PDFDocument.create()
+  let scaled = 0
+
+  for (const page of src.getPages()) {
+    const box = page.getCropBox()
+    if (box.width <= 0 || box.height <= 0) continue
+
+    const rotation = normalizeAngle(page.getRotation().angle)
+    const sideways = rotation === 90 || rotation === 270
+    const visibleWidth = sideways ? box.height : box.width
+    const visibleHeight = sideways ? box.width : box.height
+    const sheet = targetSize(options.paper, options.orientation, visibleWidth > visibleHeight)
+
+    const scale =
+      options.mode === 'fill'
+        ? Math.max(sheet.width / visibleWidth, sheet.height / visibleHeight)
+        : Math.min(sheet.width / visibleWidth, sheet.height / visibleHeight)
+
+    const target = out.addPage([sheet.width, sheet.height])
+    const offsetX = (sheet.width - visibleWidth * scale) / 2
+    const offsetY = (sheet.height - visibleHeight * scale) / 2
+
+    if (page.node.Contents() === undefined) {
+      // A blank page stays blank — the sheet is still created at the right size.
+      if (Math.abs(scale - 1) > 0.005) scaled += 1
+      continue
+    }
+
+    // Rotation of the content into the viewer's orientation:
+    //   90°: (u, v) = (y, w - x)   180°: (w - x, h - y)   270°: (h - y, x)
+    // expressed as the [a b c d e f] matrix in PDF's cm operator, with the
+    // crop box origin shifted to (0, 0) first.
+    const base: [number, number, number, number, number, number] =
+      rotation === 90
+        ? [0, -1, 1, 0, 0, box.width]
+        : rotation === 180
+          ? [-1, 0, 0, -1, box.width, box.height]
+          : rotation === 270
+            ? [0, 1, -1, 0, box.height, 0]
+            : IDENTITY
+    const [a, b, c, d, e, f] = base
+    const matrix: [number, number, number, number, number, number] = [
+      a,
+      b,
+      c,
+      d,
+      e - a * box.x - c * box.y,
+      f - b * box.x - d * box.y,
+    ]
+
+    const embedded = await out.embedPage(
+      page,
+      { left: box.x, bottom: box.y, right: box.x + box.width, top: box.y + box.height },
+      matrix,
+    )
+
+    target.drawPage(embedded, {
+      x: offsetX,
+      y: offsetY,
+      xScale: scale,
+      yScale: scale,
+    })
+    if (Math.abs(scale - 1) > 0.005) scaled += 1
+  }
+
+  out.setTitle('Resized with QuietKit')
+  out.setProducer('QuietKit')
+  out.setCreator('QuietKit')
+  out.setCreationDate(new Date())
+
+  const saved = await out.save()
+  return {
+    blob: new Blob([new Uint8Array(saved)], { type: 'application/pdf' }),
+    pages: out.getPageCount(),
+    scaled,
   }
 }
 

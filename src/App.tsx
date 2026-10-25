@@ -14,6 +14,7 @@ import { JpgToPdf } from './pages/JpgToPdf'
 import { PdfText } from './pages/PdfText'
 import { PdfPageNumbers } from './pages/PdfPageNumbers'
 import { PdfMetadata } from './pages/PdfMetadata'
+import { PdfResize } from './pages/PdfResize'
 import { Pricing } from './pages/Pricing'
 import { Privacy } from './pages/Privacy'
 import { About } from './pages/About'
@@ -47,6 +48,7 @@ export default function App() {
           <Route path="/tools/pdf-text" element={<PdfText />} />
           <Route path="/tools/pdf-page-numbers" element={<PdfPageNumbers />} />
           <Route path="/tools/pdf-metadata" element={<PdfMetadata />} />
+          <Route path="/tools/pdf-resize" element={<PdfResize />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/remove-location-from-photo" element={<RemoveLocationPhoto />} />
           <Route path="/guides/compress-image-to-100kb" element={<CompressTo100kb />} />

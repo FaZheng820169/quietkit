@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Twelve tools, no filler</span>
+              <span className="eyebrow">Thirteen tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -189,6 +189,13 @@ export function Home() {
               title="Add PDF page numbers"
               description="Stamp a number in any corner, start at any number, and see the first page before you download."
               meta="Preview · Any format"
+            />
+            <ToolCard
+              to="/tools/pdf-resize"
+              icon={<FileIcon size={22} />}
+              title="Resize PDF pages"
+              description="Make every page one sheet — A4, Letter or A3 — fitted to show the whole page or filled to cover it."
+              meta="Print · One sheet"
             />
           </div>
 
