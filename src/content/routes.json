@@ -26,7 +26,7 @@
   },
   "/tools/metadata-cleaner": {
     "title": "Remove EXIF and GPS metadata from photos",
-    "description": "See the hidden EXIF data in your photos, including GPS coordinates, then strip it in one click. Nothing is uploaded; the file is rewritten in your browser.",
+    "description": "See the hidden EXIF data in your photos, including GPS coordinates, then strip it from one file or a whole folder. Cleaned copies come back as a ZIP; nothing is uploaded.",
     "priority": "0.9"
   },
   "/tools/pdf-merge": {

@@ -46,7 +46,7 @@ export function Tools() {
               to="/tools/metadata-cleaner"
               icon={<PinIcon size={22} />}
               title="Remove photo metadata"
-              description="Inspect EXIF, GPS and XMP fields inside a photo, then rewrite the file without them."
+              description="Inspect EXIF, GPS and XMP fields in one photo or a whole folder, then rewrite every file without them."
               meta="Privacy"
             />
             <ToolCard
@@ -90,9 +90,9 @@ export function Tools() {
             <span className="panel-title">On the workbench</span>
             <div className="split" style={{ gap: 24 }}>
               <p className="small muted">
-                Next up: batch metadata cleaning for whole folders and a PDF text extraction preview.
-                Page reorder, rotation, JPG to PDF and HEIC decoding all ship — each runs entirely
-                in the tab.
+                Next up: a PDF text extraction preview, so you can copy a paragraph without
+                opening Acrobat. Batch metadata cleaning, page reorder, rotation, JPG to PDF and
+                HEIC decoding all ship — each runs entirely in the tab.
               </p>
               <p className="small muted">
                 Want a specific tool? The fastest way to get it built is to ask for it — every

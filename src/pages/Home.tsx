@@ -131,7 +131,7 @@ export function Home() {
               to="/tools/metadata-cleaner"
               icon={<PinIcon size={22} />}
               title="Remove photo metadata"
-              description="See the GPS coordinates, camera model and timestamps hidden in your photos, then strip them out."
+              description="See the GPS coordinates, camera model and timestamps hidden in your photos, then strip one file or an entire folder."
               meta="EXIF · GPS · XMP"
             />
             <ToolCard
