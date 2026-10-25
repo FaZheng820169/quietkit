@@ -109,6 +109,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/json-formatter">JSON formatter</Link>
               </li>
+              <li>
+                <Link to="/tools/hash-generator">Hash generator</Link>
+              </li>
             </ul>
           </div>
 
@@ -219,6 +222,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/json-formatter-without-upload">Format JSON without the upload</Link>
+              </li>
+              <li>
+                <Link to="/guides/hash-generator-without-upload">Hash files without the upload</Link>
               </li>
             </ul>
           </div>

@@ -154,6 +154,11 @@
     "description": "Format, validate and minify JSON with precise error locations. Sort keys, copy or download the result. The parser runs locally in your browser — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/hash-generator": {
+    "title": "Hash generator — SHA-256, SHA-512, SHA-1, no upload",
+    "description": "Compute SHA-256, SHA-512, SHA-384 and SHA-1 hashes of text or files entirely in your browser. Verify downloads and check integrity — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -332,6 +337,11 @@
   "/guides/json-formatter-without-upload": {
     "title": "Format JSON without pasting it into a server",
     "description": "Why a server-side formatter sees every byte you paste, how to read a parse error, and what a local formatter gives you instead.",
+    "priority": "0.8"
+  },
+  "/guides/hash-generator-without-upload": {
+    "title": "Hash files without uploading them",
+    "description": "Why a file you want to verify is often one you do not want to share, which algorithm to trust, and how to check a download locally.",
     "priority": "0.8"
   },
   "/pricing": {

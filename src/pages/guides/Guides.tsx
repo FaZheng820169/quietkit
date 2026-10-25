@@ -248,6 +248,13 @@ const articles = [
       'Why a server-side formatter sees every byte you paste, how to read a parse error, and what a local formatter gives you instead.',
     tag: 'Developer',
   },
+  {
+    to: '/guides/hash-generator-without-upload',
+    title: 'Hash files without uploading them',
+    description:
+      'Why a file you want to verify is often one you do not want to share, which algorithm to trust, and how to check a download locally.',
+    tag: 'Security',
+  },
 ]
 
 export function Guides() {

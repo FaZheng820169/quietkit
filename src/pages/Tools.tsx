@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Twenty-nine tools. Zero uploads.</h1>
+          <h1>Thirty tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -223,6 +223,13 @@ export function Tools() {
               title="JSON formatter"
               description="Validate, format and minify JSON with precise error locations. Sort keys alphabetically, copy or download the result — all locally."
               meta="Developer · Validation / format"
+            />
+            <ToolCard
+              to="/tools/hash-generator"
+              icon={<LockIcon size={22} />}
+              title="Hash generator"
+              description="Compute SHA-256, SHA-512, SHA-384 and SHA-1 hashes of text or files. Verify downloads and check integrity — nothing is uploaded."
+              meta="Security · SHA / integrity"
             />
           </div>
 

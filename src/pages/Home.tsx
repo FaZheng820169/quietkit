@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Twenty-nine tools, no filler</span>
+              <span className="eyebrow">Thirty tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -309,6 +309,13 @@ export function Home() {
               description="Paste JSON, see if it parses, format it with two spaces or tabs, minify it for production, sort keys for a clean diff."
               meta="Developer · Validation / format"
             />
+            <ToolCard
+              to="/tools/hash-generator"
+              icon={<LockIcon size={22} />}
+              title="Hash generator"
+              description="Drop a file or paste text, get SHA-256 and SHA-512 instantly. Verify a download without uploading it to a checker."
+              meta="Security · SHA / integrity"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -504,6 +511,11 @@ export function Home() {
                 to: '/guides/json-formatter-without-upload',
                 title: 'Format JSON without the upload',
                 body: 'Why a server-side formatter sees every byte, how to read a parse error, and what a local formatter gives you.',
+              },
+              {
+                to: '/guides/hash-generator-without-upload',
+                title: 'Hash files without the upload',
+                body: 'Why a file you want to verify is often one you do not want to share, and which algorithm to trust.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

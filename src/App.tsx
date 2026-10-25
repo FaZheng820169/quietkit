@@ -31,6 +31,7 @@ import { PasswordGenerator } from './pages/PasswordGenerator'
 import { WatermarkImage } from './pages/WatermarkImage'
 import { ColorConverter } from './pages/ColorConverter'
 import { JsonFormatter } from './pages/JsonFormatter'
+import { HashGenerator } from './pages/HashGenerator'
 import { Pricing } from './pages/Pricing'
 import { Privacy } from './pages/Privacy'
 import { About } from './pages/About'
@@ -71,6 +72,7 @@ import { PasswordGeneratorGuide } from './pages/guides/PasswordGeneratorGuide'
 import { WatermarkImageGuide } from './pages/guides/WatermarkImageGuide'
 import { ColorConverterGuide } from './pages/guides/ColorConverterGuide'
 import { JsonFormatterGuide } from './pages/guides/JsonFormatterGuide'
+import { HashGeneratorGuide } from './pages/guides/HashGeneratorGuide'
 
 export default function App() {
   return (
@@ -108,6 +110,7 @@ export default function App() {
           <Route path="/tools/image-watermark" element={<WatermarkImage />} />
           <Route path="/tools/color-converter" element={<ColorConverter />} />
           <Route path="/tools/json-formatter" element={<JsonFormatter />} />
+          <Route path="/tools/hash-generator" element={<HashGenerator />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/remove-location-from-photo" element={<RemoveLocationPhoto />} />
           <Route path="/guides/compress-image-to-100kb" element={<CompressTo100kb />} />
@@ -144,6 +147,7 @@ export default function App() {
           <Route path="/guides/watermark-image-without-upload" element={<WatermarkImageGuide />} />
           <Route path="/guides/color-converter-without-upload" element={<ColorConverterGuide />} />
           <Route path="/guides/json-formatter-without-upload" element={<JsonFormatterGuide />} />
+          <Route path="/guides/hash-generator-without-upload" element={<HashGeneratorGuide />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />
