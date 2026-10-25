@@ -122,6 +122,13 @@ const articles = [
       'Delete versus extract, why a rebuilt file beats a white box, and what survives a rebuild.',
     tag: 'Documents',
   },
+  {
+    to: '/guides/rotate-pdf-without-upload',
+    title: 'Rotate a PDF without uploading it',
+    description:
+      'Why scans come out sideways, what the /Rotate flag changes, and how to fix only the wrong pages.',
+    tag: 'Documents',
+  },
 ]
 
 export function Guides() {

@@ -133,6 +133,9 @@ export function Footer() {
               <li>
                 <Link to="/guides/remove-pdf-pages-without-upload">Remove PDF pages</Link>
               </li>
+              <li>
+                <Link to="/guides/rotate-pdf-without-upload">Rotate a PDF</Link>
+              </li>
             </ul>
           </div>
 

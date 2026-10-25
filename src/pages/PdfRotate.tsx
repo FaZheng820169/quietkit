@@ -283,6 +283,11 @@ export function PdfRotate() {
                 </Link>
               </li>
               <li>
+                <Link to="/guides/rotate-pdf-without-upload" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Guide: why scans come out sideways
+                </Link>
+              </li>
+              <li>
                 <Link to="/guides/heic-to-jpg" className="row" style={{ gap: 8 }}>
                   <CheckIcon size={15} /> Convert those phone photos to JPEG
                 </Link>

@@ -338,6 +338,11 @@ export function Home() {
                 title: 'Remove PDF pages, really',
                 body: 'Delete versus extract, why a rebuilt file beats a white box, and what survives.',
               },
+              {
+                to: '/guides/rotate-pdf-without-upload',
+                title: 'Fix sideways scans',
+                body: 'What the /Rotate flag actually changes, which angle to pick, and how to fix only the wrong pages.',
+              },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">
                 <h3 style={{ fontSize: 19 }}>{article.title}</h3>
