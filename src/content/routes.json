@@ -189,6 +189,11 @@
     "description": "Convert text to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case or CONSTANT_CASE. Handles acronyms and digits, converts identifier lists line by line. Runs locally — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/slug-generator": {
+    "title": "Slug generator — title to URL slug, no upload",
+    "description": "Turn titles into clean URL slugs: accents folded (é→e, ß→ss), emoji stripped, contractions joined, custom separator and max length. Converts a whole list line by line. Runs locally — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -402,6 +407,11 @@
   "/guides/case-conversion-without-upload": {
     "title": "Convert text case without pasting it into a server",
     "description": "What separates camelCase from PascalCase, how title case decides which words stay small, why acronyms break naive converters — and how to do every conversion locally.",
+    "priority": "0.8"
+  },
+  "/guides/slug-generator-without-upload": {
+    "title": "Generate URL slugs without pasting titles into a server",
+    "description": "What makes a good URL slug, how accents and apostrophes should fold, why WordPress slugs outlive redesigns — and how to slug a whole list of titles locally.",
     "priority": "0.8"
   },
   "/pricing": {

@@ -297,6 +297,13 @@ const articles = [
       'What separates camelCase from PascalCase, how title case decides which words stay small, why acronyms break naive converters — and how to do every conversion locally.',
     tag: 'Writing',
   },
+  {
+    to: '/guides/slug-generator-without-upload',
+    title: 'Generate URL slugs without pasting titles into a server',
+    description:
+      'What makes a good URL slug, how accents and apostrophes should fold, why hyphens beat underscores — and how to slug a whole list of titles locally.',
+    tag: 'Writing',
+  },
 ]
 
 export function Guides() {

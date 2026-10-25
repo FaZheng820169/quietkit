@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Thirty-six tools, no filler</span>
+              <span className="eyebrow">Thirty-seven tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -358,6 +358,13 @@ export function Home() {
               description="All nine case styles at once — UPPER, lower, Title, Sentence, camel, Pascal, snake, kebab, CONSTANT — with acronyms handled."
               meta="Writing · Transform"
             />
+            <ToolCard
+              to="/tools/slug-generator"
+              icon={<FileIcon size={22} />}
+              title="Slug generator"
+              description="Titles to clean URL slugs — accents folded, emoji stripped, contractions joined. One title or a whole list, line by line."
+              meta="Writing · URL"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -588,6 +595,11 @@ export function Home() {
                 to: '/guides/case-conversion-without-upload',
                 title: 'Case conversion without a server',
                 body: 'Why acronyms break naive converters, which words Title Case keeps small, and why re-lettering text is a local job.',
+              },
+              {
+                to: '/guides/slug-generator-without-upload',
+                title: 'Slugs without a server',
+                body: 'Why don’t becomes dont, how accents fold, why hyphens beat underscores — and why an unpublished title should not be uploaded to be hyphenated.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

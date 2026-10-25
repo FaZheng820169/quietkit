@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Thirty-six tools. Zero uploads.</h1>
+          <h1>Thirty-seven tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -272,6 +272,13 @@ export function Tools() {
               title="Case converter"
               description="UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case and CONSTANT_CASE — all nine at once."
               meta="Writing · Transform"
+            />
+            <ToolCard
+              to="/tools/slug-generator"
+              icon={<FileIcon size={22} />}
+              title="Slug generator"
+              description="Turn titles into clean URL slugs — accents folded, emoji stripped, contractions joined, with separator and length control. Line by line."
+              meta="Writing · URL"
             />
           </div>
 

@@ -130,6 +130,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/case-converter">Case converter</Link>
               </li>
+              <li>
+                <Link to="/tools/slug-generator">Slug generator</Link>
+              </li>
             </ul>
           </div>
 
@@ -261,6 +264,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/case-conversion-without-upload">Case conversion without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/slug-generator-without-upload">Slugs without a server</Link>
               </li>
             </ul>
           </div>
