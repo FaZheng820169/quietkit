@@ -178,6 +178,13 @@ const articles = [
       'Clean and compress the photos, merge and number the PDFs, one ZIP back — why the two lanes and their order matter.',
     tag: 'Workflow',
   },
+  {
+    to: '/guides/ocr-image-without-upload',
+    title: 'OCR an image without uploading it',
+    description:
+      'How an OCR engine reads characters inside your browser, which images work well, and why handwriting stays out of reach.',
+    tag: 'Images',
+  },
 ]
 
 export function Guides() {

@@ -79,6 +79,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/batch">Batch a folder</Link>
               </li>
+              <li>
+                <Link to="/tools/image-ocr">Image to text</Link>
+              </li>
             </ul>
           </div>
 
@@ -159,6 +162,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/batch-process-folder-without-upload">Batch a folder</Link>
+              </li>
+              <li>
+                <Link to="/guides/ocr-image-without-upload">OCR an image</Link>
               </li>
             </ul>
           </div>

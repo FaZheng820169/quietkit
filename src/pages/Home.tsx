@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Nineteen tools, no filler</span>
+              <span className="eyebrow">Twenty tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -238,6 +238,13 @@ export function Home() {
               title="Batch a folder"
               description="One folder in, one ZIP out: photos cleaned, converted and compressed; PDFs merged, numbered and resized — in a single pass."
               meta="Folder · ZIP"
+            />
+            <ToolCard
+              to="/tools/image-ocr"
+              icon={<ImageIcon size={22} />}
+              title="Image to text (OCR)"
+              description="Turn a screenshot, receipt or scanned page into plain text with an OCR engine that runs on your device — English, no upload."
+              meta="OCR · English"
             />
           </div>
 
@@ -384,6 +391,11 @@ export function Home() {
                 to: '/guides/batch-process-folder-without-upload',
                 title: 'Batch a whole folder, locally',
                 body: 'Photos cleaned and compressed, PDFs merged and numbered — one ZIP, nothing uploaded.',
+              },
+              {
+                to: '/guides/ocr-image-without-upload',
+                title: 'OCR an image, locally',
+                body: 'How an OCR engine reads characters on your device, which images work, and why handwriting fails.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

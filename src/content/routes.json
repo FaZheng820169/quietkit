@@ -104,6 +104,11 @@
     "description": "Drop a folder of photos and PDFs. Photos are stripped of EXIF and GPS data, converted and compressed; PDFs are merged in name order, numbered and resized to A4. One ZIP back, nothing uploaded.",
     "priority": "0.9"
   },
+  "/tools/image-ocr": {
+    "title": "Image to text: OCR in your browser, no upload",
+    "description": "Extract text from screenshots, receipts and scanned pages with an OCR engine that runs entirely on your device. English text, plain-text output, nothing uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -232,6 +237,11 @@
   "/guides/batch-process-folder-without-upload": {
     "title": "Process a whole folder of files without uploading anything",
     "description": "How to clean, convert and compress a folder of photos and merge, number and resize its PDFs in one pass — on your own machine, with the two lanes and the order that makes them work.",
+    "priority": "0.8"
+  },
+  "/guides/ocr-image-without-upload": {
+    "title": "Extract text from an image without uploading it",
+    "description": "How OCR can run entirely in the browser, which images read cleanly and which never will, what to expect from the output, and how to verify nothing is uploaded.",
     "priority": "0.8"
   },
   "/pricing": {
