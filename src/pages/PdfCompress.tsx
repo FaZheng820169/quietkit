@@ -384,6 +384,11 @@ export function PdfCompress() {
               style={{ listStyle: 'none', margin: 0, padding: 0, fontSize: 14 }}
             >
               <li>
+                <Link to="/guides/compress-pdf-without-upload" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Read the full guide
+                </Link>
+              </li>
+              <li>
                 <Link to="/tools/pdf-split" className="row" style={{ gap: 8 }}>
                   <CheckIcon size={15} /> Split a long scan first
                 </Link>

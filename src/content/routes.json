@@ -104,6 +104,11 @@
     "description": "Which watermark settings fit a draft, a confidential report or an issued copy, what a text layer does to the page, and how to stamp a PDF locally in the browser.",
     "priority": "0.8"
   },
+  "/guides/compress-pdf-without-upload": {
+    "title": "How to compress a PDF without uploading it",
+    "description": "What PDF compression really does, which files shrink and which refuse to, what a rebuilt copy keeps and drops — and how to do the whole thing locally.",
+    "priority": "0.8"
+  },
   "/guides": {
     "title": "Guides — files, metadata and privacy",
     "description": "Practical guides on photo metadata, image compression and local PDF handling. Short, specific, and linked to a tool that does the work.",

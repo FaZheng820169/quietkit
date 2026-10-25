@@ -526,6 +526,11 @@ export function PdfWatermark() {
               style={{ listStyle: 'none', margin: 0, padding: 0, fontSize: 14 }}
             >
               <li>
+                <Link to="/guides/watermark-pdf-without-upload" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Read the full guide
+                </Link>
+              </li>
+              <li>
                 <Link to="/tools/pdf-page-numbers" className="row" style={{ gap: 8 }}>
                   <CheckIcon size={15} /> Add page numbers as well
                 </Link>

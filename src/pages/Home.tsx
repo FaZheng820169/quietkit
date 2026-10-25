@@ -282,6 +282,11 @@ export function Home() {
                 body: 'Status, ownership and protection marks want different settings — and why a text layer beats flattening.',
               },
               {
+                to: '/guides/compress-pdf-without-upload',
+                title: 'Compress a PDF, honestly',
+                body: 'Which files shrink and which refuse to, what a rebuilt copy drops — with real before-and-after numbers.',
+              },
+              {
                 to: '/guides/exif-viewer',
                 title: 'What an EXIF viewer shows',
                 body: 'The metadata families, the risky fields, and what f-stop, ISO and focal length mean.',

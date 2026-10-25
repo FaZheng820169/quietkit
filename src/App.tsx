@@ -30,6 +30,7 @@ import { MergePdfGuide } from './pages/guides/MergePdfGuide'
 import { SplitPdfGuide } from './pages/guides/SplitPdfGuide'
 import { PdfToJpgGuide } from './pages/guides/PdfToJpgGuide'
 import { WatermarkPdfGuide } from './pages/guides/WatermarkPdfGuide'
+import { CompressPdfGuide } from './pages/guides/CompressPdfGuide'
 import { ExifGuide } from './pages/guides/ExifGuide'
 import { ConvertPngToJpg } from './pages/guides/ConvertPngToJpg'
 import { WhatIsWebp } from './pages/guides/WhatIsWebp'
@@ -67,6 +68,7 @@ export default function App() {
           <Route path="/guides/split-pdf-without-upload" element={<SplitPdfGuide />} />
           <Route path="/guides/pdf-to-jpg-without-upload" element={<PdfToJpgGuide />} />
           <Route path="/guides/watermark-pdf-without-upload" element={<WatermarkPdfGuide />} />
+          <Route path="/guides/compress-pdf-without-upload" element={<CompressPdfGuide />} />
           <Route path="/guides/exif-viewer" element={<ExifGuide />} />
           <Route path="/guides/convert-png-to-jpg" element={<ConvertPngToJpg />} />
           <Route path="/guides/what-is-webp" element={<WhatIsWebp />} />

@@ -46,6 +46,13 @@ const articles = [
     tag: 'Documents',
   },
   {
+    to: '/guides/compress-pdf-without-upload',
+    title: 'Compress a PDF without uploading it',
+    description:
+      'Which files shrink and which refuse to, what a rebuilt copy keeps — with real before-and-after numbers.',
+    tag: 'Documents',
+  },
+  {
     to: '/guides/exif-viewer',
     title: 'What an EXIF viewer shows you',
     description:
