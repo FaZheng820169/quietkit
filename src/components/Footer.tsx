@@ -97,6 +97,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/favicon">Favicon generator</Link>
               </li>
+              <li>
+                <Link to="/tools/password-generator">Password generator</Link>
+              </li>
             </ul>
           </div>
 
@@ -195,6 +198,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/favicon-without-upload">Favicons without the upload</Link>
+              </li>
+              <li>
+                <Link to="/guides/password-generator-without-upload">Passwords without the upload</Link>
               </li>
             </ul>
           </div>

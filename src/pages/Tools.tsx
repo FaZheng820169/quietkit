@@ -1,5 +1,5 @@
 import { ToolCard } from '../components/ToolCard'
-import { FileIcon, ImageIcon, PinIcon, QrIcon } from '../components/Icons'
+import { FileIcon, ImageIcon, LockIcon, PinIcon, QrIcon } from '../components/Icons'
 import { routeMeta, useSeo } from '../lib/seo'
 
 export function Tools() {
@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Twenty-five tools. Zero uploads.</h1>
+          <h1>Twenty-six tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -195,6 +195,13 @@ export function Tools() {
               title="Favicon generator"
               description="Turn one logo into a complete favicon set — multi-resolution ICO, Apple touch icon, Android Chrome icons and a web manifest."
               meta="Images · ICO / PNG / manifest"
+            />
+            <ToolCard
+              to="/tools/password-generator"
+              icon={<LockIcon size={22} />}
+              title="Password generator"
+              description="Cryptographically random passwords with configurable length and character sets. Strength meter, batch output, copy to clipboard — nothing uploaded."
+              meta="Security · Local crypto"
             />
           </div>
 

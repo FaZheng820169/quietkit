@@ -220,6 +220,13 @@ const articles = [
       'What a modern favicon set contains, why a local generator beats a server, and how to install the files on your site.',
     tag: 'Images',
   },
+  {
+    to: '/guides/password-generator-without-upload',
+    title: 'Generate passwords without uploading them',
+    description:
+      'Why a server-side generator has to see your password first, what actually makes a password strong, and how to verify a generator is local.',
+    tag: 'Security',
+  },
 ]
 
 export function Guides() {

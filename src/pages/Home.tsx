@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Twenty-five tools, no filler</span>
+              <span className="eyebrow">Twenty-six tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -281,6 +281,13 @@ export function Home() {
               description="Drop one logo and get a full favicon set — ICO, Apple touch icon, Android Chrome icons and a web manifest — ready to unzip into your site root."
               meta="Images · ICO / PNG / manifest"
             />
+            <ToolCard
+              to="/tools/password-generator"
+              icon={<LockIcon size={22} />}
+              title="Password generator"
+              description="Strong random passwords from your browser's own crypto source — 12 to 64 characters, batches of five or ten, one click to copy."
+              meta="Security · Local crypto"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -456,6 +463,11 @@ export function Home() {
                 to: '/guides/favicon-without-upload',
                 title: 'Favicons without the upload',
                 body: 'What a modern favicon set contains, why a local generator beats a server, and how to install the files.',
+              },
+              {
+                to: '/guides/password-generator-without-upload',
+                title: 'Passwords without the upload',
+                body: 'Why server-side generators see your password first, what makes one strong, and how to verify a generator is local.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">
