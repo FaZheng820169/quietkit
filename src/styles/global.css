@@ -966,6 +966,37 @@ select {
   border-bottom: 0;
 }
 
+.text-preview {
+  margin: 16px 0 0;
+  padding: 16px 18px;
+  max-height: 460px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--paper-2);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 13.5px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  tab-size: 4;
+}
+
+.text-preview.placeholder {
+  color: var(--ink-3);
+  font-style: italic;
+  min-height: 120px;
+}
+
+@media (max-width: 520px) {
+  .text-preview {
+    max-height: 340px;
+    padding: 13px 14px;
+    font-size: 13px;
+  }
+}
+
 /* ---------- prose ---------- */
 
 .prose h2 {

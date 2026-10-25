@@ -251,6 +251,11 @@ export function PdfReorder() {
                 </Link>
               </li>
               <li>
+                <Link to="/tools/pdf-text" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Copy the text out of it
+                </Link>
+              </li>
+              <li>
                 <Link to="/tools/jpg-to-pdf" className="row" style={{ gap: 8 }}>
                   <CheckIcon size={15} /> Build a PDF from photos
                 </Link>

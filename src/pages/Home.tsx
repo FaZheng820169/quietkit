@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: 'Is QuietKit really free?',
-    a: 'The tools are free with no watermark, no account and no file limits. Future pro features (batch folders, presets, desktop app) will be paid, but the current tools stay free.',
+    a: 'The tools are free with no watermark, no account and no file limits. Future pro features (saved presets, a desktop app) will be paid, but the current tools stay free.',
   },
   {
     q: 'Which browsers are supported?',
@@ -40,8 +40,8 @@ export function Home() {
               Your files never leave <em>this tab</em>.
             </h1>
             <p className="hero-lede">
-              Compress photos, remove the location data hiding inside them, and merge PDFs —
-              without uploading a single byte to anyone.
+              Compress photos, remove the location data hiding inside them, and merge or read
+              PDFs — without uploading a single byte to anyone.
             </p>
             <div className="hero-actions">
               <Link className="btn btn-primary btn-lg" to="/tools/image-compressor">
@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Nine tools, no filler</span>
+              <span className="eyebrow">Ten tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -168,6 +168,13 @@ export function Home() {
               title="JPG to PDF"
               description="Receipts, scans and phone photos into one PDF — ordered, A4 or Letter, GPS removed."
               meta="Photos · One PDF"
+            />
+            <ToolCard
+              to="/tools/pdf-text"
+              icon={<FileIcon size={22} />}
+              title="Extract PDF text"
+              description="Copy the words out of a PDF page by page, or download the whole document as plain text."
+              meta="Copy · .txt"
             />
           </div>
 

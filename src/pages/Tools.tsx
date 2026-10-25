@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Nine tools. Zero uploads.</h1>
+          <h1>Ten tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -78,6 +78,13 @@ export function Tools() {
               meta="Documents"
             />
             <ToolCard
+              to="/tools/pdf-text"
+              icon={<FileIcon size={22} />}
+              title="Extract PDF text"
+              description="Copy a paragraph or the whole document as plain text. Scanned pages are reported as scans, not fake text."
+              meta="Documents"
+            />
+            <ToolCard
               to="/tools/jpg-to-pdf"
               icon={<ImageIcon size={22} />}
               title="JPG to PDF"
@@ -90,9 +97,9 @@ export function Tools() {
             <span className="panel-title">On the workbench</span>
             <div className="split" style={{ gap: 24 }}>
               <p className="small muted">
-                Next up: a PDF text extraction preview, so you can copy a paragraph without
-                opening Acrobat. Batch metadata cleaning, page reorder, rotation, JPG to PDF and
-                HEIC decoding all ship — each runs entirely in the tab.
+                Next up: batch resizing for whole folders, and a page-number stamp you can add
+                before printing. Text extraction, folder-wide metadata cleaning, page reorder,
+                rotation, JPG to PDF and HEIC decoding all ship — each runs entirely in the tab.
               </p>
               <p className="small muted">
                 Want a specific tool? The fastest way to get it built is to ask for it — every

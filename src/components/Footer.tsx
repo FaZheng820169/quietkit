@@ -47,6 +47,9 @@ export function Footer() {
                 <Link to="/tools/pdf-reorder">Reorder PDF pages</Link>
               </li>
               <li>
+                <Link to="/tools/pdf-text">Extract PDF text</Link>
+              </li>
+              <li>
                 <Link to="/tools/jpg-to-pdf">JPG to PDF</Link>
               </li>
             </ul>

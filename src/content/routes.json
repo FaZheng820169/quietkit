@@ -6,7 +6,7 @@
   },
   "/tools": {
     "title": "All tools — private browser-local file utilities",
-    "description": "The full QuietKit toolbox: compress, convert or resize images, remove EXIF and GPS metadata, build a PDF from photos, merge PDFs, then delete, reorder or rotate pages. Every tool runs locally in your browser.",
+    "description": "The full QuietKit toolbox: compress, convert or resize images, remove EXIF and GPS metadata, build a PDF from photos, merge PDFs, extract text, then delete, reorder or rotate pages. Every tool runs locally in your browser.",
     "priority": "0.8"
   },
   "/tools/image-compressor": {
@@ -52,6 +52,11 @@
   "/tools/jpg-to-pdf": {
     "title": "JPG to PDF — combine photos into one PDF, no upload",
     "description": "Turn JPG, PNG and HEIC images into one PDF in the order you choose, on A4, Letter or fitted pages. Photos are processed locally and stripped of GPS metadata.",
+    "priority": "0.9"
+  },
+  "/tools/pdf-text": {
+    "title": "Extract text from a PDF in your browser, no upload",
+    "description": "Copy or download the text inside a PDF page by page, or as one plain-text file. Scans are reported honestly instead of silently returning nothing. Nothing is uploaded.",
     "priority": "0.9"
   },
   "/guides": {
@@ -101,7 +106,7 @@
   },
   "/pricing": {
     "title": "Pricing — free tools, one planned pro tier",
-    "description": "QuietKit tools are free with no limits and no account. A one-time pro tier for batch folders and presets is in development.",
+    "description": "QuietKit tools are free with no limits and no account. A one-time pro tier for saved presets and batch folders across many tools is in development.",
     "priority": "0.6"
   },
   "/privacy": {

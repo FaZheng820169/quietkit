@@ -278,6 +278,11 @@ export function PdfMerge() {
                   <CheckIcon size={15} /> Remove photo metadata
                 </Link>
               </li>
+              <li>
+                <Link to="/tools/pdf-text" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Copy text out of the merged PDF
+                </Link>
+              </li>
             </ul>
           </div>
         </aside>
