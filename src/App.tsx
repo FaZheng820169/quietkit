@@ -34,6 +34,7 @@ import { JsonFormatter } from './pages/JsonFormatter'
 import { HashGenerator } from './pages/HashGenerator'
 import { MarkdownPreview } from './pages/MarkdownPreview'
 import { TextDiff } from './pages/TextDiff'
+import { Base64 } from './pages/Base64'
 import { Pricing } from './pages/Pricing'
 import { Privacy } from './pages/Privacy'
 import { About } from './pages/About'
@@ -77,6 +78,7 @@ import { JsonFormatterGuide } from './pages/guides/JsonFormatterGuide'
 import { HashGeneratorGuide } from './pages/guides/HashGeneratorGuide'
 import { MarkdownPreviewGuide } from './pages/guides/MarkdownPreviewGuide'
 import { TextDiffGuide } from './pages/guides/TextDiffGuide'
+import { Base64Guide } from './pages/guides/Base64Guide'
 
 export default function App() {
   return (
@@ -117,6 +119,7 @@ export default function App() {
           <Route path="/tools/hash-generator" element={<HashGenerator />} />
           <Route path="/tools/markdown-preview" element={<MarkdownPreview />} />
           <Route path="/tools/text-diff" element={<TextDiff />} />
+          <Route path="/tools/base64" element={<Base64 />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/remove-location-from-photo" element={<RemoveLocationPhoto />} />
           <Route path="/guides/compress-image-to-100kb" element={<CompressTo100kb />} />
@@ -156,6 +159,7 @@ export default function App() {
           <Route path="/guides/hash-generator-without-upload" element={<HashGeneratorGuide />} />
           <Route path="/guides/markdown-preview-without-upload" element={<MarkdownPreviewGuide />} />
           <Route path="/guides/text-diff-without-upload" element={<TextDiffGuide />} />
+          <Route path="/guides/base64-without-upload" element={<Base64Guide />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />

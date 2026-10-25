@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Thirty-two tools. Zero uploads.</h1>
+          <h1>Thirty-three tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -244,6 +244,13 @@ export function Tools() {
               title="Text diff"
               description="Paste two versions of a contract, config or draft and see exactly what changed — line by line, word by word, with a unified diff to export."
               meta="Documents · Compare"
+            />
+            <ToolCard
+              to="/tools/base64"
+              icon={<FileIcon size={22} />}
+              title="Base64 encoder & decoder"
+              description="Encode text or files to Base64 and decode them back — Unicode-safe, with a URL-safe variant for tokens and links."
+              meta="Developer · Encode / decode"
             />
           </div>
 

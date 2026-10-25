@@ -169,6 +169,11 @@
     "description": "Paste two versions of a contract, config or draft and see exactly what changed, line by line and word by word. Copy or download a unified diff. Runs locally — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/base64": {
+    "title": "Base64 encoder and decoder — Unicode-safe, no upload",
+    "description": "Encode text or files to Base64 and decode them back, with a URL-safe variant. Handles Unicode correctly and runs entirely in your browser — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -362,6 +367,11 @@
   "/guides/text-diff-without-upload": {
     "title": "Compare two texts without uploading either one",
     "description": "Contracts, configs and drafts are exactly the texts you should not paste into a server. How line diffing works, what a unified diff is, and how to compare locally.",
+    "priority": "0.8"
+  },
+  "/guides/base64-without-upload": {
+    "title": "Base64 encode and decode without pasting data into a server",
+    "description": "Why btoa breaks on Unicode, what the URL-safe variant changes, when decoding fails honestly — and how to encode tokens, credentials and snippets locally.",
     "priority": "0.8"
   },
   "/pricing": {

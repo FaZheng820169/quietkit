@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Thirty-two tools, no filler</span>
+              <span className="eyebrow">Thirty-three tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -330,6 +330,13 @@ export function Home() {
               description="Two versions of a contract or config, pasted side by side — every changed line and word highlighted, with a unified diff to export."
               meta="Compare · Unified diff"
             />
+            <ToolCard
+              to="/tools/base64"
+              icon={<FileIcon size={22} />}
+              title="Base64 encoder & decoder"
+              description="Text or files to Base64 and back — Unicode-safe, URL-safe variant, honest errors on invalid or binary input."
+              meta="Developer · Encode / decode"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -540,6 +547,11 @@ export function Home() {
                 to: '/guides/text-diff-without-upload',
                 title: 'Compare two texts without a server',
                 body: 'Contracts and configs are exactly what you should not paste into a website — diff them locally instead.',
+              },
+              {
+                to: '/guides/base64-without-upload',
+                title: 'Base64 without a server',
+                body: 'Why btoa breaks on Unicode, what the URL-safe variant changes, and why credentials should never go through an online encoder.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

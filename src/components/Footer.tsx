@@ -118,6 +118,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/text-diff">Text diff</Link>
               </li>
+              <li>
+                <Link to="/tools/base64">Base64 encoder</Link>
+              </li>
             </ul>
           </div>
 
@@ -237,6 +240,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/text-diff-without-upload">Compare texts without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/base64-without-upload">Base64 without a server</Link>
               </li>
             </ul>
           </div>

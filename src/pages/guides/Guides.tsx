@@ -269,6 +269,13 @@ const articles = [
       'Contracts, configs and drafts are exactly what you should not paste into a server — how line diffing works, what a unified diff is, and how to compare locally.',
     tag: 'Documents',
   },
+  {
+    to: '/guides/base64-without-upload',
+    title: 'Base64 encode and decode without pasting data into a server',
+    description:
+      'Why btoa breaks on Unicode, what the URL-safe variant changes, when decoding fails honestly — and why credentials should never go through an online encoder.',
+    tag: 'Developer',
+  },
 ]
 
 export function Guides() {
