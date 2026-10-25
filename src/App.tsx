@@ -9,6 +9,7 @@ import { MetadataCleaner } from './pages/MetadataCleaner'
 import { PdfMerge } from './pages/PdfMerge'
 import { PdfPages } from './pages/PdfPages'
 import { PdfRotate } from './pages/PdfRotate'
+import { PdfReorder } from './pages/PdfReorder'
 import { JpgToPdf } from './pages/JpgToPdf'
 import { Pricing } from './pages/Pricing'
 import { Privacy } from './pages/Privacy'
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="/tools/pdf-merge" element={<PdfMerge />} />
           <Route path="/tools/pdf-remove-pages" element={<PdfPages />} />
           <Route path="/tools/pdf-rotate" element={<PdfRotate />} />
+          <Route path="/tools/pdf-reorder" element={<PdfReorder />} />
           <Route path="/tools/jpg-to-pdf" element={<JpgToPdf />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/remove-location-from-photo" element={<RemoveLocationPhoto />} />

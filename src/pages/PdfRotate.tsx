@@ -268,6 +268,11 @@ export function PdfRotate() {
                 </Link>
               </li>
               <li>
+                <Link to="/tools/pdf-reorder" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Also fix the page order
+                </Link>
+              </li>
+              <li>
                 <Link to="/tools/pdf-merge" className="row" style={{ gap: 8 }}>
                   <CheckIcon size={15} /> Merge the rotated file with others
                 </Link>

@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Eight tools, no filler</span>
+              <span className="eyebrow">Nine tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -154,6 +154,13 @@ export function Home() {
               title="Rotate PDF pages"
               description="A scanner fed the wrong way leaves every page sideways. Turn them 90° or 180°, all or just the wrong ones."
               meta="90° · 180° · ranges"
+            />
+            <ToolCard
+              to="/tools/pdf-reorder"
+              icon={<FileIcon size={22} />}
+              title="Reorder PDF pages"
+              description="Signature page at the end? Type “4, 1-3, 5” and the order is fixed without dragging thumbnails."
+              meta="Order · Ranges"
             />
             <ToolCard
               to="/tools/jpg-to-pdf"
