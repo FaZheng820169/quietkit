@@ -133,6 +133,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/slug-generator">Slug generator</Link>
               </li>
+              <li>
+                <Link to="/tools/uuid-generator">UUID generator</Link>
+              </li>
             </ul>
           </div>
 
@@ -267,6 +270,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/slug-generator-without-upload">Slugs without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/uuid-generator-without-upload">UUIDs without a server</Link>
               </li>
             </ul>
           </div>

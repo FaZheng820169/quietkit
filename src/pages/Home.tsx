@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Thirty-seven tools, no filler</span>
+              <span className="eyebrow">Thirty-eight tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -365,6 +365,13 @@ export function Home() {
               description="Titles to clean URL slugs — accents folded, emoji stripped, contractions joined. One title or a whole list, line by line."
               meta="Writing · URL"
             />
+            <ToolCard
+              to="/tools/uuid-generator"
+              icon={<LockIcon size={22} />}
+              title="UUID generator"
+              description="Random v4 UUIDs in batches of up to 1,000 — standard, plain, braced or URN, with honest collision odds."
+              meta="Developer · Random ids"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -600,6 +607,11 @@ export function Home() {
                 to: '/guides/slug-generator-without-upload',
                 title: 'Slugs without a server',
                 body: 'Why don’t becomes dont, how accents fold, why hyphens beat underscores — and why an unpublished title should not be uploaded to be hyphenated.',
+              },
+              {
+                to: '/guides/uuid-generator-without-upload',
+                title: 'UUIDs without a server',
+                body: 'What the 122 random bits in a v4 UUID mean, how likely a collision really is, and why an id you are about to use should not pass through an API.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

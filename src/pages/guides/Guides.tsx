@@ -304,6 +304,13 @@ const articles = [
       'What makes a good URL slug, how accents and apostrophes should fold, why hyphens beat underscores — and how to slug a whole list of titles locally.',
     tag: 'Writing',
   },
+  {
+    to: '/guides/uuid-generator-without-upload',
+    title: 'Generate UUIDs without a server knowing them',
+    description:
+      'What a version 4 UUID actually is, how likely a collision really is, and why an id you are about to use should not pass through an API.',
+    tag: 'Developer',
+  },
 ]
 
 export function Guides() {
