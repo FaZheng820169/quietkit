@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Thirty tools, no filler</span>
+              <span className="eyebrow">Thirty-one tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -316,6 +316,13 @@ export function Home() {
               description="Drop a file or paste text, get SHA-256 and SHA-512 instantly. Verify a download without uploading it to a checker."
               meta="Security · SHA / integrity"
             />
+            <ToolCard
+              to="/tools/markdown-preview"
+              icon={<FileIcon size={22} />}
+              title="Markdown preview"
+              description="Write Markdown and see it rendered live. Copy or download clean HTML — drafts never leave your device."
+              meta="Writer · Markdown"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -516,6 +523,11 @@ export function Home() {
                 to: '/guides/hash-generator-without-upload',
                 title: 'Hash files without the upload',
                 body: 'Why a file you want to verify is often one you do not want to share, and which algorithm to trust.',
+              },
+              {
+                to: '/guides/markdown-preview-without-upload',
+                title: 'Preview Markdown without a server',
+                body: 'Drafts are the most sensitive text you write — render them locally, with raw HTML shown as text.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

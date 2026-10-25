@@ -255,6 +255,13 @@ const articles = [
       'Why a file you want to verify is often one you do not want to share, which algorithm to trust, and how to check a download locally.',
     tag: 'Security',
   },
+  {
+    to: '/guides/markdown-preview-without-upload',
+    title: 'Preview Markdown without pasting drafts into a server',
+    description:
+      'Drafts are the most sensitive text you write — render them locally, with raw HTML shown as text and clean HTML to copy.',
+    tag: 'Writing',
+  },
 ]
 
 export function Guides() {

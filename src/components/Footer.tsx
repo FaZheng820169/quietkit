@@ -112,6 +112,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/hash-generator">Hash generator</Link>
               </li>
+              <li>
+                <Link to="/tools/markdown-preview">Markdown preview</Link>
+              </li>
             </ul>
           </div>
 
@@ -225,6 +228,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/hash-generator-without-upload">Hash files without the upload</Link>
+              </li>
+              <li>
+                <Link to="/guides/markdown-preview-without-upload">Preview Markdown without a server</Link>
               </li>
             </ul>
           </div>

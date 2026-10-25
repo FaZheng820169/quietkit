@@ -159,6 +159,11 @@
     "description": "Compute SHA-256, SHA-512, SHA-384 and SHA-1 hashes of text or files entirely in your browser. Verify downloads and check integrity — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/markdown-preview": {
+    "title": "Markdown preview — write, render and export HTML, no upload",
+    "description": "Write Markdown and see it rendered live. Copy or download clean HTML, or keep the .md file. The renderer runs locally in your browser — drafts never leave your device.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -342,6 +347,11 @@
   "/guides/hash-generator-without-upload": {
     "title": "Hash files without uploading them",
     "description": "Why a file you want to verify is often one you do not want to share, which algorithm to trust, and how to check a download locally.",
+    "priority": "0.8"
+  },
+  "/guides/markdown-preview-without-upload": {
+    "title": "Preview Markdown without pasting drafts into a server",
+    "description": "Why an online Markdown renderer sees every draft you paste, what a safe local renderer must do about raw HTML, and how to export clean HTML from your browser.",
     "priority": "0.8"
   },
   "/pricing": {
