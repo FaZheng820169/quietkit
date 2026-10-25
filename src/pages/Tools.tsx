@@ -1,14 +1,9 @@
 import { ToolCard } from '../components/ToolCard'
 import { FileIcon, ImageIcon, PinIcon } from '../components/Icons'
-import { useSeo } from '../lib/seo'
+import { routeMeta, useSeo } from '../lib/seo'
 
 export function Tools() {
-  useSeo({
-    title: 'All tools — private, browser-local file utilities | QuietKit',
-    description:
-      'The full QuietKit toolbox: compress images, remove EXIF and GPS metadata, and merge PDFs. Every tool runs locally in your browser.',
-    path: '/tools',
-  })
+  useSeo(routeMeta('/tools'))
 
   return (
     <>

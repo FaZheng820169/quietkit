@@ -1,12 +1,7 @@
-import { useSeo } from '../lib/seo'
+import { routeMeta, useSeo } from '../lib/seo'
 
 export function Privacy() {
-  useSeo({
-    title: 'Privacy policy | QuietKit',
-    description:
-      'QuietKit processes files locally in your browser. This policy explains what that means, what is measured, and what is never collected.',
-    path: '/privacy',
-  })
+  useSeo(routeMeta('/privacy'))
 
   return (
     <>

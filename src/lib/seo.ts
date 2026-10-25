@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import routes from '../content/routes.json'
 
 const SITE = 'QuietKit'
 
@@ -7,6 +8,20 @@ type Seo = {
   description: string
   path?: string
   jsonLd?: Record<string, unknown>
+}
+
+type RouteMeta = { title: string; description: string; priority: string }
+
+const meta = routes as Record<string, RouteMeta>
+
+/**
+ * Single source of truth for per-route titles and descriptions. The same JSON
+ * is read by scripts/postbuild.mjs so the shipped HTML carries them too.
+ */
+export function routeMeta(path: string) {
+  const entry = meta[path]
+  if (!entry) throw new Error(`No route metadata for ${path}`)
+  return { title: entry.title, description: entry.description, path }
 }
 
 function upsertMeta(selector: string, attrs: Record<string, string>) {

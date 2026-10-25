@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Article } from '../../components/Article'
 import { AdSlot } from '../../components/AdSlot'
-import { faqJsonLd, useSeo } from '../../lib/seo'
+import { faqJsonLd, routeMeta, useSeo } from '../../lib/seo'
 
 const faqs = [
   {
@@ -23,13 +23,7 @@ const faqs = [
 ]
 
 export function CompressTo100kb() {
-  useSeo({
-    title: 'How to compress an image to 100 KB (or 200 KB, 500 KB) without losing quality',
-    description:
-      'A practical method for hitting a file-size limit: which setting to change first, why resizing beats lowering quality, and how to check the result before uploading.',
-    path: '/guides/compress-image-to-100kb',
-    jsonLd: faqJsonLd(faqs),
-  })
+  useSeo({ ...routeMeta('/guides/compress-image-to-100kb'), jsonLd: faqJsonLd(faqs) })
 
   return (
     <Article

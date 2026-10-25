@@ -1,12 +1,8 @@
 import { Link } from 'react-router-dom'
-import { useSeo } from '../lib/seo'
+import { routeMeta, useSeo } from '../lib/seo'
 
 export function NotFound() {
-  useSeo({
-    title: 'Page not found | QuietKit',
-    description: 'That page does not exist. Head back to the QuietKit toolbox.',
-    path: '/404',
-  })
+  useSeo(routeMeta('/404'))
 
   return (
     <section className="section" style={{ textAlign: 'center' }}>

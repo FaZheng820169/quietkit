@@ -1,13 +1,8 @@
 import { Link } from 'react-router-dom'
-import { useSeo } from '../lib/seo'
+import { routeMeta, useSeo } from '../lib/seo'
 
 export function About() {
-  useSeo({
-    title: 'About QuietKit — why these tools exist',
-    description:
-      'QuietKit is a small set of file tools built on one rule: your files should not have to leave your device to be useful.',
-    path: '/about',
-  })
+  useSeo(routeMeta('/about'))
 
   return (
     <>

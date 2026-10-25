@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { CheckIcon } from '../components/Icons'
-import { useSeo } from '../lib/seo'
+import { routeMeta, useSeo } from '../lib/seo'
 
 const freeFeatures = [
   'All three tools, unlimited files',
@@ -18,12 +18,7 @@ const proFeatures = [
 ]
 
 export function Pricing() {
-  useSeo({
-    title: 'Pricing — free tools, a planned pro tier | QuietKit',
-    description:
-      'QuietKit tools are free with no limits and no account. A one-time pro tier for batch folders and presets is in development.',
-    path: '/pricing',
-  })
+  useSeo(routeMeta('/pricing'))
 
   return (
     <>

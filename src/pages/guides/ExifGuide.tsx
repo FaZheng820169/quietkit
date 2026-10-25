@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Article } from '../../components/Article'
 import { AdSlot } from '../../components/AdSlot'
-import { faqJsonLd, useSeo } from '../../lib/seo'
+import { faqJsonLd, routeMeta, useSeo } from '../../lib/seo'
 
 const faqs = [
   {
@@ -23,13 +23,7 @@ const faqs = [
 ]
 
 export function ExifGuide() {
-  useSeo({
-    title: 'EXIF viewer: what your photos reveal and how to read the metadata',
-    description:
-      'A plain-language guide to photo metadata: what EXIF, XMP and IPTC contain, how to view them without uploading, and which fields expose your location.',
-    path: '/guides/exif-viewer',
-    jsonLd: faqJsonLd(faqs),
-  })
+  useSeo({ ...routeMeta('/guides/exif-viewer'), jsonLd: faqJsonLd(faqs) })
 
   return (
     <Article

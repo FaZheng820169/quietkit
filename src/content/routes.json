@@ -1,0 +1,72 @@
+{
+  "/": {
+    "title": "QuietKit — private file tools that never upload",
+    "description": "Compress photos, strip EXIF metadata and merge PDFs entirely in your browser. No uploads, no accounts, no servers. Free and instant.",
+    "priority": "1.0"
+  },
+  "/tools": {
+    "title": "All tools — private browser-local file utilities",
+    "description": "The full QuietKit toolbox: compress images, remove EXIF and GPS metadata, and merge PDFs. Every tool runs locally in your browser.",
+    "priority": "0.8"
+  },
+  "/tools/image-compressor": {
+    "title": "Compress images in your browser, no upload",
+    "description": "Free image compressor for JPEG, PNG and WebP. Resize, set a quality level and download — all processed locally in your browser with no uploads.",
+    "priority": "0.9"
+  },
+  "/tools/metadata-cleaner": {
+    "title": "Remove EXIF and GPS metadata from photos",
+    "description": "See the hidden EXIF data in your photos, including GPS coordinates, then strip it in one click. Nothing is uploaded; the file is rewritten in your browser.",
+    "priority": "0.9"
+  },
+  "/tools/pdf-merge": {
+    "title": "Merge PDF files locally, no upload",
+    "description": "Combine several PDFs into one document in the order you choose. Everything happens inside your browser, so contracts and scans never leave your device.",
+    "priority": "0.9"
+  },
+  "/guides": {
+    "title": "Guides — files, metadata and privacy",
+    "description": "Practical guides on photo metadata, image compression and local PDF handling. Short, specific, and linked to a tool that does the work.",
+    "priority": "0.8"
+  },
+  "/guides/remove-location-from-photo": {
+    "title": "How to remove location data from a photo",
+    "description": "Step-by-step: find and delete the GPS coordinates inside a photo on iPhone, Android or Windows, and why editing the metadata beats taking a screenshot.",
+    "priority": "0.8"
+  },
+  "/guides/compress-image-to-100kb": {
+    "title": "Compress an image to 100 KB without losing quality",
+    "description": "A practical method for hitting a file-size limit: which setting to change first, why resizing beats lowering quality, and how to check the result before uploading.",
+    "priority": "0.8"
+  },
+  "/guides/merge-pdf-without-upload": {
+    "title": "Merge PDFs without uploading them",
+    "description": "Combining contracts, scans and invoices usually means uploading them to a stranger's server. Here is how to merge PDFs entirely inside your browser instead.",
+    "priority": "0.8"
+  },
+  "/guides/exif-viewer": {
+    "title": "EXIF viewer: what your photos really reveal",
+    "description": "A plain-language guide to photo metadata: what EXIF, XMP and IPTC contain, how to view them without uploading, and which fields expose your location.",
+    "priority": "0.8"
+  },
+  "/pricing": {
+    "title": "Pricing — free tools, one planned pro tier",
+    "description": "QuietKit tools are free with no limits and no account. A one-time pro tier for batch folders and presets is in development.",
+    "priority": "0.6"
+  },
+  "/privacy": {
+    "title": "Privacy policy | QuietKit",
+    "description": "QuietKit processes files locally in your browser. This policy explains what that means, what is measured, and what is never collected.",
+    "priority": "0.3"
+  },
+  "/about": {
+    "title": "About QuietKit — why these tools exist",
+    "description": "QuietKit is a small set of file tools built on one rule: your files should not have to leave your device to be useful.",
+    "priority": "0.4"
+  },
+  "/404": {
+    "title": "Page not found | QuietKit",
+    "description": "That page does not exist. Head back to the QuietKit toolbox.",
+    "priority": "0.1"
+  }
+}

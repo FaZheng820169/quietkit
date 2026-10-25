@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Article } from '../../components/Article'
 import { AdSlot } from '../../components/AdSlot'
-import { faqJsonLd, useSeo } from '../../lib/seo'
+import { faqJsonLd, routeMeta, useSeo } from '../../lib/seo'
 
 const faqs = [
   {
@@ -23,13 +23,7 @@ const faqs = [
 ]
 
 export function MergePdfGuide() {
-  useSeo({
-    title: 'Merge PDF files without uploading them — why it matters and how to do it',
-    description:
-      'Combining contracts, scans and invoices usually means uploading them to a stranger’s server. Here is how to merge PDFs entirely inside your browser instead.',
-    path: '/guides/merge-pdf-without-upload',
-    jsonLd: faqJsonLd(faqs),
-  })
+  useSeo({ ...routeMeta('/guides/merge-pdf-without-upload'), jsonLd: faqJsonLd(faqs) })
 
   return (
     <Article

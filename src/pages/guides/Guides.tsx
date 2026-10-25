@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRightIcon } from '../../components/Icons'
-import { useSeo } from '../../lib/seo'
+import { routeMeta, useSeo } from '../../lib/seo'
 
 const articles = [
   {
@@ -34,12 +34,7 @@ const articles = [
 ]
 
 export function Guides() {
-  useSeo({
-    title: 'Guides — plain answers about files, metadata and privacy | QuietKit',
-    description:
-      'Practical guides on photo metadata, image compression and local PDF handling. Short, specific, and linked to a tool that does the work.',
-    path: '/guides',
-  })
+  useSeo(routeMeta('/guides'))
 
   return (
     <>

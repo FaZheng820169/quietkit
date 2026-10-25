@@ -4,7 +4,7 @@ import { Dropzone } from '../components/Dropzone'
 import { AdSlot } from '../components/AdSlot'
 import { DownloadIcon, FileIcon, TrashIcon, LockIcon, CheckIcon } from '../components/Icons'
 import { downloadBlob, formatBytes } from '../lib/files'
-import { faqJsonLd, toolJsonLd, useSeo } from '../lib/seo'
+import { faqJsonLd, routeMeta, toolJsonLd, useSeo } from '../lib/seo'
 
 type Part = { id: string; file: File; pages?: number; error?: string }
 
@@ -29,10 +29,7 @@ const faqs = [
 
 export function PdfMerge() {
   useSeo({
-    title: 'Merge PDF files locally — no upload | QuietKit',
-    description:
-      'Combine several PDFs into one document in the order you choose. Everything happens inside your browser, so contracts and scans never leave your device.',
-    path: '/tools/pdf-merge',
+    ...routeMeta('/tools/pdf-merge'),
     jsonLd: {
       '@context': 'https://schema.org',
       '@graph': [

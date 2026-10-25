@@ -5,7 +5,7 @@ import { AdSlot } from '../components/AdSlot'
 import { DownloadIcon, PinIcon, ShieldIcon, TrashIcon, LockIcon, CheckIcon } from '../components/Icons'
 import { inspectFile, stripMetadata, type MetaReport } from '../lib/exif'
 import { baseName, downloadBlob, extensionOf, formatBytes } from '../lib/files'
-import { faqJsonLd, toolJsonLd, useSeo } from '../lib/seo'
+import { faqJsonLd, routeMeta, toolJsonLd, useSeo } from '../lib/seo'
 
 const faqs = [
   {
@@ -32,10 +32,7 @@ const faqs = [
 
 export function MetadataCleaner() {
   useSeo({
-    title: 'Remove EXIF & GPS metadata from photos — locally | QuietKit',
-    description:
-      'See the hidden EXIF data in your photos — including GPS coordinates — and strip it in one click. Nothing is uploaded; the file is rewritten in your browser.',
-    path: '/tools/metadata-cleaner',
+    ...routeMeta('/tools/metadata-cleaner'),
     jsonLd: {
       '@context': 'https://schema.org',
       '@graph': [

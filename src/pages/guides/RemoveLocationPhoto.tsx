@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Article } from '../../components/Article'
 import { AdSlot } from '../../components/AdSlot'
-import { faqJsonLd, useSeo } from '../../lib/seo'
+import { faqJsonLd, routeMeta, useSeo } from '../../lib/seo'
 
 const faqs = [
   {
@@ -27,13 +27,7 @@ const faqs = [
 ]
 
 export function RemoveLocationPhoto() {
-  useSeo({
-    title: 'How to remove location data from a photo (iPhone, Android, Windows)',
-    description:
-      'Step-by-step: find and delete the GPS coordinates inside a photo on iPhone, Android or Windows — and why editing the metadata beats taking a screenshot.',
-    path: '/guides/remove-location-from-photo',
-    jsonLd: faqJsonLd(faqs),
-  })
+  useSeo({ ...routeMeta('/guides/remove-location-from-photo'), jsonLd: faqJsonLd(faqs) })
 
   return (
     <Article

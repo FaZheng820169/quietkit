@@ -5,7 +5,7 @@ import { AdSlot } from '../components/AdSlot'
 import { DownloadIcon, ImageIcon, TrashIcon, LockIcon, CheckIcon } from '../components/Icons'
 import { compressImage, outputExtension, type CompressFormat, type CompressResult } from '../lib/image'
 import { baseName, downloadBlob, formatBytes, percentSaved } from '../lib/files'
-import { faqJsonLd, toolJsonLd, useSeo } from '../lib/seo'
+import { faqJsonLd, routeMeta, toolJsonLd, useSeo } from '../lib/seo'
 
 type Item = {
   id: string
@@ -37,10 +37,7 @@ const faqs = [
 
 export function ImageCompressor() {
   useSeo({
-    title: 'Compress images in your browser — no upload | QuietKit',
-    description:
-      'Free image compressor for JPEG, PNG and WebP. Resize, set a quality level and download — all processed locally in your browser with no uploads.',
-    path: '/tools/image-compressor',
+    ...routeMeta('/tools/image-compressor'),
     jsonLd: {
       '@context': 'https://schema.org',
       '@graph': [

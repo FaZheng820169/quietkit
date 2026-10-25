@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { ToolCard } from '../components/ToolCard'
 import { AdSlot } from '../components/AdSlot'
 import { FileIcon, ImageIcon, ShieldIcon, PinIcon, BoltIcon, LockIcon, CheckIcon } from '../components/Icons'
-import { faqJsonLd, useSeo } from '../lib/seo'
+import { faqJsonLd, routeMeta, useSeo } from '../lib/seo'
 
 const faqs = [
   {
@@ -28,13 +28,7 @@ const faqs = [
 ]
 
 export function Home() {
-  useSeo({
-    title: 'QuietKit — Private file tools that never upload your files',
-    description:
-      'Compress photos, strip EXIF metadata and merge PDFs entirely in your browser. No uploads, no accounts, no servers. Free and instant.',
-    path: '/',
-    jsonLd: faqJsonLd(faqs),
-  })
+  useSeo({ ...routeMeta('/'), jsonLd: faqJsonLd(faqs) })
 
   return (
     <>
