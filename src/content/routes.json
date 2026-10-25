@@ -184,6 +184,11 @@
     "description": "Crop versus fit, why pixels are the only unit that matters, how to resize a whole folder in one pass — and why a local resizer beats uploading personal photos.",
     "priority": "0.8"
   },
+  "/guides/remove-pdf-pages-without-upload": {
+    "title": "Remove pages from a PDF without uploading it",
+    "description": "Delete versus extract, why a rebuilt file beats a white box, what bookmarks and links survive a rebuild, and how to cut pages locally with range syntax.",
+    "priority": "0.8"
+  },
   "/pricing": {
     "title": "Pricing — free tools, one planned pro tier",
     "description": "QuietKit tools are free with no limits and no account. A one-time pro tier for saved presets and batch folders across many tools is in development.",

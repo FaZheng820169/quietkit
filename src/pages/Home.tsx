@@ -333,6 +333,11 @@ export function Home() {
                 title: 'Resize to exact pixels',
                 body: 'Crop versus fit, why pixels are the only unit, and how to do a whole folder at once.',
               },
+              {
+                to: '/guides/remove-pdf-pages-without-upload',
+                title: 'Remove PDF pages, really',
+                body: 'Delete versus extract, why a rebuilt file beats a white box, and what survives.',
+              },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">
                 <h3 style={{ fontSize: 19 }}>{article.title}</h3>

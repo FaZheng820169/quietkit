@@ -130,6 +130,9 @@ export function Footer() {
               <li>
                 <Link to="/guides/resize-image-without-upload">Resize to exact pixels</Link>
               </li>
+              <li>
+                <Link to="/guides/remove-pdf-pages-without-upload">Remove PDF pages</Link>
+              </li>
             </ul>
           </div>
 

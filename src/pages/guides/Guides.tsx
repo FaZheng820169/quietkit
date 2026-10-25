@@ -115,6 +115,13 @@ const articles = [
       'Crop versus fit, why pixels are the only unit that matters, and how to resize a whole folder in one pass.',
     tag: 'Images',
   },
+  {
+    to: '/guides/remove-pdf-pages-without-upload',
+    title: 'Remove pages from a PDF',
+    description:
+      'Delete versus extract, why a rebuilt file beats a white box, and what survives a rebuild.',
+    tag: 'Documents',
+  },
 ]
 
 export function Guides() {

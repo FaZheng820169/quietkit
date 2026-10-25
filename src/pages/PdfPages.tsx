@@ -248,6 +248,11 @@ export function PdfPages() {
                 </Link>
               </li>
               <li>
+                <Link to="/guides/remove-pdf-pages-without-upload" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Guide: delete vs extract, done locally
+                </Link>
+              </li>
+              <li>
                 <Link to="/guides/merge-pdf-without-upload" className="row" style={{ gap: 8 }}>
                   <CheckIcon size={15} /> Guide: why local PDF tools matter
                 </Link>
