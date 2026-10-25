@@ -164,6 +164,13 @@ const articles = [
       'Format, position and starting number — why a stamp beats typing, and why numbering comes last.',
     tag: 'Documents',
   },
+  {
+    to: '/guides/resize-pdf-pages-without-upload',
+    title: 'Resize PDF pages to one sheet',
+    description:
+      'How mixed page sizes happen, fit versus fill, and why vector text stays sharp at any size.',
+    tag: 'Documents',
+  },
 ]
 
 export function Guides() {

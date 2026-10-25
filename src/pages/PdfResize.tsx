@@ -401,6 +401,11 @@ export function PdfResize() {
                   <CheckIcon size={15} /> Shrink the photos inside it
                 </Link>
               </li>
+              <li>
+                <Link to="/guides/resize-pdf-pages-without-upload" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Guide: one sheet, every page
+                </Link>
+              </li>
             </ul>
           </div>
         </aside>

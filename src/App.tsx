@@ -48,6 +48,7 @@ import { ExtractPdfTextGuide } from './pages/guides/ExtractPdfTextGuide'
 import { ConvertImagesGuide } from './pages/guides/ConvertImagesGuide'
 import { StripPhotoMetadataGuide } from './pages/guides/StripPhotoMetadataGuide'
 import { PageNumbersGuide } from './pages/guides/PageNumbersGuide'
+import { ResizePdfGuide } from './pages/guides/ResizePdfGuide'
 
 export default function App() {
   return (
@@ -98,6 +99,7 @@ export default function App() {
           <Route path="/guides/convert-images-without-upload" element={<ConvertImagesGuide />} />
           <Route path="/guides/remove-exif-metadata-without-upload" element={<StripPhotoMetadataGuide />} />
           <Route path="/guides/add-page-numbers-to-pdf-without-upload" element={<PageNumbersGuide />} />
+          <Route path="/guides/resize-pdf-pages-without-upload" element={<ResizePdfGuide />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />

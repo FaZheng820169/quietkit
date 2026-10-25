@@ -151,6 +151,9 @@ export function Footer() {
               <li>
                 <Link to="/guides/add-page-numbers-to-pdf-without-upload">Number PDF pages</Link>
               </li>
+              <li>
+                <Link to="/guides/resize-pdf-pages-without-upload">Resize PDF pages</Link>
+              </li>
             </ul>
           </div>
 

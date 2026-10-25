@@ -368,6 +368,11 @@ export function Home() {
                 title: 'Number PDF pages',
                 body: 'Format, position and starting number — why a stamp beats typing, and why it comes last.',
               },
+              {
+                to: '/guides/resize-pdf-pages-without-upload',
+                title: 'One sheet size, every page',
+                body: 'How mixed page sizes happen, fit versus fill, and why vector text stays sharp.',
+              },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">
                 <h3 style={{ fontSize: 19 }}>{article.title}</h3>

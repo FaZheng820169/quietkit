@@ -219,6 +219,11 @@
     "description": "Format, position and starting number — the three decisions in order, why a stamp beats a text editor, and how to number a PDF locally.",
     "priority": "0.8"
   },
+  "/guides/resize-pdf-pages-without-upload": {
+    "title": "Resize PDF pages to A4 or Letter without uploading the file",
+    "description": "How documents end up with mixed page sizes, what fit versus fill means, why text stays sharp, and how to normalise every page locally.",
+    "priority": "0.8"
+  },
   "/pricing": {
     "title": "Pricing — free tools, one planned pro tier",
     "description": "QuietKit tools are free with no limits and no account. A one-time pro tier for saved presets and batch folders across many tools is in development.",
