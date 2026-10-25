@@ -984,6 +984,17 @@ select {
   height: auto;
 }
 
+.sign-pad {
+  display: block;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-sm);
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 44px, rgba(20, 20, 15, 0.05) 45px),
+    #fff;
+  touch-action: none;
+  cursor: crosshair;
+}
+
 .stamp-preview-label {
   user-select: none;
 }

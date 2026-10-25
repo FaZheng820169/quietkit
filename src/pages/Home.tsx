@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Twenty-two tools, no filler</span>
+              <span className="eyebrow">Twenty-three tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -260,6 +260,13 @@ export function Home() {
               description="Type into the fields, tick the boxes and pick the options of a real PDF form — then download it flattened or still editable."
               meta="Forms · Flatten"
             />
+            <ToolCard
+              to="/tools/pdf-sign"
+              icon={<FileIcon size={22} />}
+              title="Sign a PDF"
+              description="Draw or type a signature, click where it belongs, download the signed copy — document and signature never leave the tab."
+              meta="Sign · Local"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -420,6 +427,11 @@ export function Home() {
                 to: '/guides/fill-pdf-form-without-upload',
                 title: 'Fill a PDF form, locally',
                 body: 'AcroForm versus flat pages, editable versus flattened, and why identity numbers stay on your device.',
+              },
+              {
+                to: '/guides/sign-pdf-without-upload',
+                title: 'Sign a PDF, locally',
+                body: 'Electronic versus digital signatures, what makes one valid, and why the file and the signature stay on your device.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

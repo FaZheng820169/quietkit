@@ -199,6 +199,13 @@ const articles = [
       'The two kinds of PDF form, editable versus flattened copies, and why identity numbers belong on your own device.',
     tag: 'Documents',
   },
+  {
+    to: '/guides/sign-pdf-without-upload',
+    title: 'Sign a PDF without uploading it',
+    description:
+      'Electronic versus digital signatures, what makes one valid, and why the document and the signature stay on your device.',
+    tag: 'Documents',
+  },
 ]
 
 export function Guides() {

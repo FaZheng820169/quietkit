@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Twenty-two tools. Zero uploads.</h1>
+          <h1>Twenty-three tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -175,6 +175,13 @@ export function Tools() {
               description="Type into the fields, tick the boxes and pick the options of a real PDF form, then download a filled copy — flattened or still editable."
               meta="Forms · Flatten"
             />
+            <ToolCard
+              to="/tools/pdf-sign"
+              icon={<FileIcon size={22} />}
+              title="Sign a PDF"
+              description="Draw or type your signature and click where it belongs — one page or every page, with a live preview. Document and signature stay on your device."
+              meta="Sign · No upload"
+            />
           </div>
 
           <div className="panel" style={{ marginTop: 26 }}>
@@ -183,8 +190,9 @@ export function Tools() {
               <p className="small muted">
                 Shipped from the bench: a batch workflow that runs several tools over one folder
                 in a single pass, an OCR reader that turns pictures of words into plain text,
-                a form filler that types into a PDF's fields and flattens the answers, and an
-                AVIF converter that works in both directions.
+                a form filler that types into a PDF's fields and flattens the answers, an
+                AVIF converter that works in both directions, and a signing tool that stamps a
+                drawn or typed signature onto the pages you pick.
                 Comparison, watermarking, compression, PDF to JPG rendering,
                 splitting, page-size rebuilding, metadata inspection, page numbering, folder-wide
                 resizing and metadata cleaning, text extraction, page reorder, rotation, JPG to

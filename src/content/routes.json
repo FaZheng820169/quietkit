@@ -119,6 +119,11 @@
     "description": "Type into the text fields, tick the checkboxes and pick the options of a PDF form, then download a filled copy — flattened or still editable. Runs entirely in your browser.",
     "priority": "0.9"
   },
+  "/tools/pdf-sign": {
+    "title": "Sign a PDF in your browser, no upload",
+    "description": "Draw or type your signature, click where it belongs on the page, and download a signed copy. The document and your signature never leave your device.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -262,6 +267,11 @@
   "/guides/fill-pdf-form-without-upload": {
     "title": "Fill in a PDF form without uploading it",
     "description": "The two kinds of PDF form, editable versus flattened copies, what a local filler will not do, and how to fill a form entirely inside your browser.",
+    "priority": "0.8"
+  },
+  "/guides/sign-pdf-without-upload": {
+    "title": "Sign a PDF without uploading it — or your signature",
+    "description": "Electronic versus digital signatures, what makes one legally valid, how to place a signature so it looks written — and how to do it all on your own device.",
     "priority": "0.8"
   },
   "/pricing": {

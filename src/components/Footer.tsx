@@ -88,6 +88,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/pdf-form-fill">Fill a PDF form</Link>
               </li>
+              <li>
+                <Link to="/tools/pdf-sign">Sign a PDF</Link>
+              </li>
             </ul>
           </div>
 
@@ -177,6 +180,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/fill-pdf-form-without-upload">Fill a PDF form</Link>
+              </li>
+              <li>
+                <Link to="/guides/sign-pdf-without-upload">Sign a PDF locally</Link>
               </li>
             </ul>
           </div>
