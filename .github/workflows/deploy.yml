@@ -32,6 +32,10 @@ jobs:
         env:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
           SITE_URL: https://fazheng820169.github.io
+          # Set both repository secrets to switch ads on. Left empty, AdSlot
+          # renders nothing and ads.txt is not written.
+          VITE_ADSENSE_CLIENT: ${{ secrets.ADSENSE_CLIENT }}
+          VITE_ADSENSE_SLOT: ${{ secrets.ADSENSE_SLOT }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

@@ -104,6 +104,19 @@ writeFileSync(
   `User-agent: *\nAllow: /\n\nSitemap: ${urlFor('sitemap.xml')}\n`,
 )
 
+// AdSense asks for ads.txt at the domain root. On a custom domain that is
+// exactly where this file lands; on the github.io project subpath it is
+// advisory only, which is one more reason to move to a domain of our own.
+const adsenseClient = process.env.VITE_ADSENSE_CLIENT
+if (adsenseClient) {
+  const publisher = adsenseClient.replace(/^ca-/, '')
+  writeFileSync(
+    resolve(dist, 'ads.txt'),
+    `google.com, ${publisher}, DIRECT, f08c47fec0942fa0\n`,
+  )
+  console.log(`postbuild: ads.txt for ${publisher}`)
+}
+
 console.log(
   `postbuild: ${sitemapRoutes.length + 1} route shells + sitemap for ${urlFor('')}`,
 )

@@ -18,7 +18,7 @@ export function Privacy() {
 
       <section className="section">
         <div className="container-narrow prose">
-          <p className="muted small mono">Last updated: 25 October 2026</p>
+          <p className="muted small mono">Last updated: 26 October 2026</p>
 
           <h2>1. Your files stay on your device</h2>
           <p>
@@ -38,24 +38,27 @@ export function Privacy() {
 
           <h2>3. What is measured</h2>
           <p>
-            We use a privacy-friendly analytics script that records aggregate page views (page
-            path, referrer domain, country and device type). It does not use cookies, does not
-            fingerprint your browser, and cannot identify you. This data is used to decide which
-            tools to build next.
+            No analytics script runs on this site today. There is no page-view counter, no cookie
+            set by us and no fingerprinting, so we cannot see which pages you open. If a cookieless
+            aggregate counter is added later, it will record a page path, a referrer domain, a
+            country and a device type — never a file, a file name or anything that identifies a
+            person — and this page will say so before it goes live.
           </p>
 
           <h2>4. Advertising</h2>
           <p>
-            QuietKit may display advertising to cover hosting costs. Ad slots, when enabled, are
-            served by Google AdSense, which is governed by Google’s own privacy policy and may use
-            cookies for frequency capping. Ads never receive your files, because the files never
-            leave your browser.
+            No advertising is loaded today. When ad slots are switched on they will be served by
+            Google AdSense, visibly labelled on the page, and governed by Google’s own privacy
+            policy, which may use cookies for frequency capping. Ads never receive your files,
+            because the files never leave your browser. Where the law requires consent for
+            personalised ads, the slot stays empty until that consent is given.
           </p>
 
           <h2>5. Local storage</h2>
           <p>
-            Preferences such as your last chosen image quality are stored in your browser’s local
-            storage. Clearing site data removes them. No preference is ever sent to us.
+            Nothing is stored in your browser today: no cookies set by QuietKit, no saved
+            preferences, no identifiers. If saved presets arrive with Pro, they will live in local
+            storage on your device and will never be transmitted.
           </p>
 
           <h2>6. Third parties</h2>

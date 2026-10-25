@@ -3,18 +3,18 @@ import { CheckIcon } from '../components/Icons'
 import { routeMeta, useSeo } from '../lib/seo'
 
 const freeFeatures = [
-  'All three tools, unlimited files',
+  'All seventeen tools, unlimited files',
   'No watermark on any result',
   'No account, no email',
   'Works offline once loaded',
-  'Batch download for images',
+  'Files never leave your browser',
 ]
 
 const proFeatures = [
-  'Folder-level batch processing',
+  'A queue that runs a folder of files',
   'Saved presets per tool',
-  'Image size target (“get under 200 KB”)',
-  'Offline desktop build (Windows, macOS)',
+  'No ads on any page',
+  'One licence, no renewal',
 ]
 
 export function Pricing() {
@@ -28,7 +28,8 @@ export function Pricing() {
           <h1>Free today. Pro when it is actually useful.</h1>
           <p>
             Charging money for a tool that costs almost nothing to run would be strange. The free
-            tier is the product; pro exists for people who process folders, not files.
+            tier is the product; Pro exists for people who process folders rather than files — and
+            for anyone who would rather not see the ads that keep the free tier running.
           </p>
         </div>
       </section>
@@ -62,7 +63,7 @@ export function Pricing() {
                 <h2 style={{ fontSize: 24, marginTop: 10 }}>Pro</h2>
               </div>
               <div className="price">
-                $29 <span>one-time, planned</span>
+                $19 <span>one-time, planned</span>
               </div>
               <ul className="price-list">
                 {proFeatures.map((feature) => (
@@ -75,8 +76,8 @@ export function Pricing() {
                 Not on sale yet
               </button>
               <p className="small muted">
-                Pro ships only when folder processing and presets work reliably. Until then, there
-                is nothing to buy — and nothing missing from the free tools.
+                Pro ships only when folder processing and presets work reliably. Until then there is
+                nothing to buy — and the free tools stay free.
               </p>
             </div>
           </div>
@@ -84,8 +85,9 @@ export function Pricing() {
           <div className="panel" style={{ marginTop: 26 }}>
             <span className="panel-title">Why this is not a subscription</span>
             <p className="small muted" style={{ maxWidth: '70ch' }}>
-              The tools run on your hardware, so there is no per-file cost to cover. A one-time
-              price matches that reality. If QuietKit ever needs a server for a feature, that
+              The tools run on your hardware, so there is no per-file cost to cover. Hosting is paid
+              for by plainly marked advertising and by one-time Pro licences, which is why the price
+              is a one-off rather than a renewal. If QuietKit ever needs a server for a feature, that
               feature will be priced separately and clearly — not bundled into a plan that quietly
               raises its price each year.
             </p>

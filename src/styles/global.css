@@ -1154,19 +1154,16 @@ select {
 
 .ad-slot {
   display: grid;
-  place-items: center;
-  gap: 6px;
-  min-height: 92px;
-  padding: 16px;
-  border: 1px dashed var(--line-strong);
-  border-radius: var(--radius-sm);
-  background: var(--paper-2);
+  gap: 8px;
+  justify-items: center;
+}
+
+.ad-label {
   font-family: var(--mono);
-  font-size: 10.5px;
-  letter-spacing: 0.1em;
+  font-size: 10px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink-3);
-  text-align: center;
 }
 
 /* ---------- footer ---------- */
