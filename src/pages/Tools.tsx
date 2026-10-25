@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Thirty-three tools. Zero uploads.</h1>
+          <h1>Thirty-four tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -250,6 +250,13 @@ export function Tools() {
               icon={<FileIcon size={22} />}
               title="Base64 encoder & decoder"
               description="Encode text or files to Base64 and decode them back — Unicode-safe, with a URL-safe variant for tokens and links."
+              meta="Developer · Encode / decode"
+            />
+            <ToolCard
+              to="/tools/url-encoder"
+              icon={<FileIcon size={22} />}
+              title="URL encoder & decoder"
+              description="Percent-encode a value for a link or decode it back — component and full-URL modes, plus a query-string parser."
               meta="Developer · Encode / decode"
             />
           </div>

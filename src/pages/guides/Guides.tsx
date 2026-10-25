@@ -276,6 +276,13 @@ const articles = [
       'Why btoa breaks on Unicode, what the URL-safe variant changes, when decoding fails honestly — and why credentials should never go through an online encoder.',
     tag: 'Developer',
   },
+  {
+    to: '/guides/url-encoding-without-upload',
+    title: 'URL-encode and decode without pasting links into a server',
+    description:
+      'encodeURIComponent vs encodeURI, why %zz breaks a decoder, what + really means in a query string — and why tracking links should not go through an online decoder.',
+    tag: 'Developer',
+  },
 ]
 
 export function Guides() {

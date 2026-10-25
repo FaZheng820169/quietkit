@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Thirty-three tools, no filler</span>
+              <span className="eyebrow">Thirty-four tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -337,6 +337,13 @@ export function Home() {
               description="Text or files to Base64 and back — Unicode-safe, URL-safe variant, honest errors on invalid or binary input."
               meta="Developer · Encode / decode"
             />
+            <ToolCard
+              to="/tools/url-encoder"
+              icon={<FileIcon size={22} />}
+              title="URL encoder & decoder"
+              description="Percent-encode a value for a link or decode it back — component and full-URL modes, plus a query-string parser."
+              meta="Developer · Encode / decode"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -552,6 +559,11 @@ export function Home() {
                 to: '/guides/base64-without-upload',
                 title: 'Base64 without a server',
                 body: 'Why btoa breaks on Unicode, what the URL-safe variant changes, and why credentials should never go through an online encoder.',
+              },
+              {
+                to: '/guides/url-encoding-without-upload',
+                title: 'URL encoding without a server',
+                body: 'encodeURIComponent vs encodeURI, why %zz breaks a decoder, and why tracking links should not go through an online decoder.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

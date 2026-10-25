@@ -121,6 +121,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/base64">Base64 encoder</Link>
               </li>
+              <li>
+                <Link to="/tools/url-encoder">URL encoder</Link>
+              </li>
             </ul>
           </div>
 
@@ -243,6 +246,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/base64-without-upload">Base64 without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/url-encoding-without-upload">URL encoding without a server</Link>
               </li>
             </ul>
           </div>
