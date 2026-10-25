@@ -127,6 +127,9 @@ export function Footer() {
               <li>
                 <Link to="/guides/heic-to-jpg">HEIC to JPG</Link>
               </li>
+              <li>
+                <Link to="/guides/resize-image-without-upload">Resize to exact pixels</Link>
+              </li>
             </ul>
           </div>
 

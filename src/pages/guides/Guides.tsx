@@ -108,6 +108,13 @@ const articles = [
       'Why iPhones save HEIC, the four ways to convert it, and what happens to quality and GPS data.',
     tag: 'Formats',
   },
+  {
+    to: '/guides/resize-image-without-upload',
+    title: 'Resize to exact pixels, locally',
+    description:
+      'Crop versus fit, why pixels are the only unit that matters, and how to resize a whole folder in one pass.',
+    tag: 'Images',
+  },
 ]
 
 export function Guides() {

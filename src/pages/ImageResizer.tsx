@@ -591,6 +591,11 @@ export function ImageResizer() {
                 </Link>
               </li>
               <li>
+                <Link to="/guides/resize-image-without-upload" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Guide: resize without uploading
+                </Link>
+              </li>
+              <li>
                 <Link to="/guides/social-media-image-sizes" className="row" style={{ gap: 8 }}>
                   <CheckIcon size={15} /> Guide: sizes per platform
                 </Link>

@@ -40,6 +40,7 @@ import { ConvertPngToJpg } from './pages/guides/ConvertPngToJpg'
 import { WhatIsWebp } from './pages/guides/WhatIsWebp'
 import { SocialMediaImageSizes } from './pages/guides/SocialMediaImageSizes'
 import { HeicToJpg } from './pages/guides/HeicToJpg'
+import { ResizeImageGuide } from './pages/guides/ResizeImageGuide'
 
 export default function App() {
   return (
@@ -82,6 +83,7 @@ export default function App() {
           <Route path="/guides/what-is-webp" element={<WhatIsWebp />} />
           <Route path="/guides/social-media-image-sizes" element={<SocialMediaImageSizes />} />
           <Route path="/guides/heic-to-jpg" element={<HeicToJpg />} />
+          <Route path="/guides/resize-image-without-upload" element={<ResizeImageGuide />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />

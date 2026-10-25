@@ -328,6 +328,11 @@ export function Home() {
                 title: 'Social media image sizes',
                 body: 'One table for every platform, and why your subject keeps getting cropped.',
               },
+              {
+                to: '/guides/resize-image-without-upload',
+                title: 'Resize to exact pixels',
+                body: 'Crop versus fit, why pixels are the only unit, and how to do a whole folder at once.',
+              },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">
                 <h3 style={{ fontSize: 19 }}>{article.title}</h3>

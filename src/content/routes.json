@@ -179,6 +179,11 @@
     "description": "Why iPhones save photos as HEIC, how to convert them to JPEG on Windows, Mac, iPhone and Android, and how to do it in the browser without uploading anything.",
     "priority": "0.8"
   },
+  "/guides/resize-image-without-upload": {
+    "title": "Resize an image to exact pixels without uploading it",
+    "description": "Crop versus fit, why pixels are the only unit that matters, how to resize a whole folder in one pass — and why a local resizer beats uploading personal photos.",
+    "priority": "0.8"
+  },
   "/pricing": {
     "title": "Pricing — free tools, one planned pro tier",
     "description": "QuietKit tools are free with no limits and no account. A one-time pro tier for saved presets and batch folders across many tools is in development.",
