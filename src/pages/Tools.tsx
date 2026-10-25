@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Four tools. Zero uploads.</h1>
+          <h1>Five tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -49,15 +49,22 @@ export function Tools() {
               description="Combine any number of PDF files in the order you choose, without re-rendering pages."
               meta="Documents"
             />
+            <ToolCard
+              to="/tools/pdf-remove-pages"
+              icon={<FileIcon size={22} />}
+              title="Remove PDF pages"
+              description="Delete a blank or sensitive page, or extract a range into its own file, using ranges like 1-3, 7."
+              meta="Documents"
+            />
           </div>
 
           <div className="panel" style={{ marginTop: 26 }}>
             <span className="panel-title">On the workbench</span>
             <div className="split" style={{ gap: 24 }}>
               <p className="small muted">
-                Next up: splitting and rotating PDF pages, HEIC to JPEG conversion, and batch
+                Next up: rotating and reordering PDF pages, HEIC to JPEG conversion, and batch
                 metadata cleaning for whole folders. These need more browser support than the
-                current four, so they take longer to do properly.
+                current five, so they take longer to do properly.
               </p>
               <p className="small muted">
                 Want a specific tool? The fastest way to get it built is to ask for it — every

@@ -34,6 +34,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/pdf-merge">Merge PDFs</Link>
               </li>
+              <li>
+                <Link to="/tools/pdf-remove-pages">Remove PDF pages</Link>
+              </li>
             </ul>
           </div>
 

@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Four tools, no filler</span>
+              <span className="eyebrow">Five tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -133,6 +133,13 @@ export function Home() {
               title="Merge PDFs"
               description="Combine contracts, scans and exports into a single PDF in the order you choose. No page limits."
               meta="Any number of pages"
+            />
+            <ToolCard
+              to="/tools/pdf-remove-pages"
+              icon={<FileIcon size={22} />}
+              title="Remove PDF pages"
+              description="Cut a blank page, or extract a signed page into its own file — using ranges like 1-3, 7, 10-."
+              meta="Pages · Ranges"
             />
           </div>
 

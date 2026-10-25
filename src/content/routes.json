@@ -6,7 +6,7 @@
   },
   "/tools": {
     "title": "All tools — private browser-local file utilities",
-    "description": "The full QuietKit toolbox: compress or convert images, remove EXIF and GPS metadata, and merge PDFs. Every tool runs locally in your browser.",
+    "description": "The full QuietKit toolbox: compress or convert images, remove EXIF and GPS metadata, merge PDFs or delete pages from one. Every tool runs locally in your browser.",
     "priority": "0.8"
   },
   "/tools/image-compressor": {
@@ -27,6 +27,11 @@
   "/tools/pdf-merge": {
     "title": "Merge PDF files locally, no upload",
     "description": "Combine several PDFs into one document in the order you choose. Everything happens inside your browser, so contracts and scans never leave your device.",
+    "priority": "0.9"
+  },
+  "/tools/pdf-remove-pages": {
+    "title": "Remove or extract pages from a PDF, no upload",
+    "description": "Delete blank or sensitive pages from a PDF, or pull selected pages into a new file. Enter ranges like 1-3, 7, 10- and download — nothing is uploaded.",
     "priority": "0.9"
   },
   "/guides": {

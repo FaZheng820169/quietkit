@@ -6,6 +6,7 @@ import { ImageCompressor } from './pages/ImageCompressor'
 import { ImageConverter } from './pages/ImageConverter'
 import { MetadataCleaner } from './pages/MetadataCleaner'
 import { PdfMerge } from './pages/PdfMerge'
+import { PdfPages } from './pages/PdfPages'
 import { Pricing } from './pages/Pricing'
 import { Privacy } from './pages/Privacy'
 import { About } from './pages/About'
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/tools/image-converter" element={<ImageConverter />} />
           <Route path="/tools/metadata-cleaner" element={<MetadataCleaner />} />
           <Route path="/tools/pdf-merge" element={<PdfMerge />} />
+          <Route path="/tools/pdf-remove-pages" element={<PdfPages />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/remove-location-from-photo" element={<RemoveLocationPhoto />} />
           <Route path="/guides/compress-image-to-100kb" element={<CompressTo100kb />} />
