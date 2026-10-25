@@ -171,6 +171,13 @@ const articles = [
       'How mixed page sizes happen, fit versus fill, and why vector text stays sharp at any size.',
     tag: 'Documents',
   },
+  {
+    to: '/guides/batch-process-folder-without-upload',
+    title: 'Batch a whole folder, locally',
+    description:
+      'Clean and compress the photos, merge and number the PDFs, one ZIP back — why the two lanes and their order matter.',
+    tag: 'Workflow',
+  },
 ]
 
 export function Guides() {

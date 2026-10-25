@@ -380,6 +380,11 @@ export function Home() {
                 title: 'One sheet size, every page',
                 body: 'How mixed page sizes happen, fit versus fill, and why vector text stays sharp.',
               },
+              {
+                to: '/guides/batch-process-folder-without-upload',
+                title: 'Batch a whole folder, locally',
+                body: 'Photos cleaned and compressed, PDFs merged and numbered — one ZIP, nothing uploaded.',
+              },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">
                 <h3 style={{ fontSize: 19 }}>{article.title}</h3>

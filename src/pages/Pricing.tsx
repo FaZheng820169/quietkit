@@ -3,7 +3,8 @@ import { CheckIcon } from '../components/Icons'
 import { routeMeta, useSeo } from '../lib/seo'
 
 const freeFeatures = [
-  'All seventeen tools, unlimited files',
+  'All nineteen tools, unlimited files',
+  'Batch a whole folder in one pass',
   'No watermark on any result',
   'No account, no email',
   'Works offline once loaded',
@@ -11,7 +12,7 @@ const freeFeatures = [
 ]
 
 const proFeatures = [
-  'A queue that runs a folder of files',
+  'Custom batch chains you design yourself',
   'Saved presets per tool',
   'No ads on any page',
   'One licence, no renewal',
@@ -28,8 +29,9 @@ export function Pricing() {
           <h1>Free today. Pro when it is actually useful.</h1>
           <p>
             Charging money for a tool that costs almost nothing to run would be strange. The free
-            tier is the product; Pro exists for people who process folders rather than files — and
-            for anyone who would rather not see the ads that keep the free tier running.
+            tier is the product; Pro exists for people who want to design their own batch chains
+            and presets — and for anyone who would rather not see the ads that keep the free tier
+            running.
           </p>
         </div>
       </section>
@@ -76,7 +78,7 @@ export function Pricing() {
                 Not on sale yet
               </button>
               <p className="small muted">
-                Pro ships only when folder processing and presets work reliably. Until then there is
+                Pro ships only when custom chains and presets work reliably. Until then there is
                 nothing to buy — and the free tools stay free.
               </p>
             </div>

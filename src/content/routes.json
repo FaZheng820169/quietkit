@@ -229,9 +229,14 @@
     "description": "How documents end up with mixed page sizes, what fit versus fill means, why text stays sharp, and how to normalise every page locally.",
     "priority": "0.8"
   },
+  "/guides/batch-process-folder-without-upload": {
+    "title": "Process a whole folder of files without uploading anything",
+    "description": "How to clean, convert and compress a folder of photos and merge, number and resize its PDFs in one pass — on your own machine, with the two lanes and the order that makes them work.",
+    "priority": "0.8"
+  },
   "/pricing": {
     "title": "Pricing — free tools, one planned pro tier",
-    "description": "QuietKit tools are free with no limits and no account. A one-time pro tier for saved presets and batch folders across many tools is in development.",
+    "description": "QuietKit tools are free with no limits and no account, including folder batching. A one-time pro tier for custom chains and saved presets is in development.",
     "priority": "0.6"
   },
   "/privacy": {

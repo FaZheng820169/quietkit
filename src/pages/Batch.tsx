@@ -656,6 +656,11 @@ export function Batch() {
                   <CheckIcon size={15} /> Guide: what metadata reveals
                 </Link>
               </li>
+              <li>
+                <Link to="/guides/batch-process-folder-without-upload" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Guide: why the two lanes work
+                </Link>
+              </li>
             </ul>
           </div>
 

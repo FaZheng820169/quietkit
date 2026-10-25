@@ -157,6 +157,9 @@ export function Footer() {
               <li>
                 <Link to="/guides/resize-pdf-pages-without-upload">Resize PDF pages</Link>
               </li>
+              <li>
+                <Link to="/guides/batch-process-folder-without-upload">Batch a folder</Link>
+              </li>
             </ul>
           </div>
 
