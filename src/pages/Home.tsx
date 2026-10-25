@@ -124,8 +124,8 @@ export function Home() {
               to="/tools/image-resizer"
               icon={<ImageIcon size={22} />}
               title="Resize images"
-              description="Exact pixels for a post, banner or passport photo — crop to fill or keep the whole frame."
-              meta="1080×1080 · custom"
+              description="Exact pixels for a post, banner or passport photo — one file or a whole folder, crop to fill or fit."
+              meta="1080×1080 · folder"
             />
             <ToolCard
               to="/tools/metadata-cleaner"

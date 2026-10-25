@@ -21,7 +21,7 @@
   },
   "/tools/image-resizer": {
     "title": "Resize an image to exact pixels — no upload",
-    "description": "Resize photos to 1080×1080, 1584×396, 600×600 or any custom size. Crop to fill or fit the whole image, processed locally with nothing uploaded.",
+    "description": "Resize photos to 1080×1080, 1584×396, 600×600 or any custom size. Crop to fill or fit the whole image, for one file or a whole folder — processed locally, nothing uploaded.",
     "priority": "0.9"
   },
   "/tools/metadata-cleaner": {

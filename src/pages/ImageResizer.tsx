@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Dropzone } from '../components/Dropzone'
 import { AdSlot } from '../components/AdSlot'
-import { DownloadIcon, ImageIcon, LockIcon, TrashIcon, CheckIcon } from '../components/Icons'
+import { DownloadIcon, ImageIcon, LockIcon, PlusIcon, TrashIcon, CheckIcon } from '../components/Icons'
 import { resizeImage, outputExtension, type ResizeResult } from '../lib/image'
 import { toDecodableImage } from '../lib/heic'
 import { baseName, downloadBlob, formatBytes } from '../lib/files'
@@ -19,10 +19,24 @@ const PRESETS = [
   { label: 'Passport 2×2 in', width: 600, height: 600, ratio: '2×2 in' },
 ]
 
+type BatchItem = {
+  id: string
+  file: File
+  sourceUrl: string
+  result?: ResizeResult
+  resultUrl?: string
+  error?: string
+  key?: string
+}
+
 const faqs = [
   {
     q: 'What is the difference between crop and fit?',
     a: 'Crop (cover) fills the whole frame and discards the edges that fall outside it — right for photos where a centred subject matters. Fit (contain) keeps every pixel and adds white bars where the aspect ratio differs — right for documents, screenshots and anything where nothing may be lost.',
+  },
+  {
+    q: 'Can I resize a whole folder at once?',
+    a: 'Yes. Drop several images or a folder — subfolders included — and the current size, sizing mode and format apply to every file. Outputs arrive as one ZIP, named with the target size, and the originals are never modified.',
   },
   {
     q: 'Will resizing to a larger size improve quality?',
@@ -38,6 +52,9 @@ const faqs = [
   },
 ]
 
+const isImageLike = (file: File) =>
+  file.type.startsWith('image/') || /\.(heic|heif|avif)$/i.test(file.name)
+
 export function ImageResizer() {
   useSeo({
     ...routeMeta('/tools/image-resizer'),
@@ -46,7 +63,7 @@ export function ImageResizer() {
       '@graph': [
         toolJsonLd(
           'QuietKit Image Resizer',
-          'Resize images to exact pixel dimensions with crop or fit presets, locally in the browser.',
+          'Resize one image or a whole folder to exact pixel dimensions with crop or fit presets, locally in the browser.',
           '/tools/image-resizer',
         ),
         faqJsonLd(faqs),
@@ -62,33 +79,73 @@ export function ImageResizer() {
   const [output, setOutput] = useState<{ data: ResizeResult; key: string; url: string } | null>(null)
   const [failure, setFailure] = useState<{ message: string; key: string } | null>(null)
   const [source, setSource] = useState<{ width: number; height: number } | null>(null)
+  const [batch, setBatch] = useState<BatchItem[]>([])
+  const [running, setRunning] = useState(false)
 
   const resultUrlRef = useRef('')
+  const batchUrls = useRef<string[]>([])
   const settingsKey = `${width}x${height}-${fit}-${format}`
   const result = output?.key === settingsKey ? output.data : null
   const error = failure?.key === settingsKey ? failure.message : null
   const busy = !!file && output?.key !== settingsKey && failure?.key !== settingsKey
   const previewUrl = output?.url ?? ''
 
-  const pick = (files: File[]) => {
-    const image = files.find(
-      (entry) => entry.type.startsWith('image/') || /\.(heic|heif)$/i.test(entry.name),
-    )
-    if (!image) return
-    if (resultUrlRef.current) URL.revokeObjectURL(resultUrlRef.current)
-    resultUrlRef.current = ''
-    setFile(image)
-    setSource(null)
-    setOutput(null)
-    setFailure(null)
+  useEffect(() => {
+    return () => {
+      if (resultUrlRef.current) URL.revokeObjectURL(resultUrlRef.current)
+      batchUrls.current.forEach((url) => URL.revokeObjectURL(url))
+    }
+  }, [])
 
-    toDecodableImage(image)
-      .then((decodable) => createImageBitmap(decodable))
-      .then((bitmap) => {
-        setSource({ width: bitmap.width, height: bitmap.height })
-        bitmap.close()
-      })
-      .catch(() => setSource(null))
+  const pick = (files: File[]) => {
+    const supported = files.filter(isImageLike)
+    if (supported.length === 0) return
+
+    if (supported.length === 1 && batch.length === 0) {
+      const image = supported[0]
+      if (resultUrlRef.current) URL.revokeObjectURL(resultUrlRef.current)
+      resultUrlRef.current = ''
+      setFile(image)
+      setSource(null)
+      setOutput(null)
+      setFailure(null)
+
+      toDecodableImage(image)
+        .then((decodable) => createImageBitmap(decodable))
+        .then((bitmap) => {
+          setSource({ width: bitmap.width, height: bitmap.height })
+          bitmap.close()
+        })
+        .catch(() => setSource(null))
+      return
+    }
+
+    const additions: BatchItem[] = supported.map((image) => {
+      const sourceUrl = URL.createObjectURL(image)
+      batchUrls.current.push(sourceUrl)
+      return { id: `${image.name}-${image.size}-${Math.random()}`, file: image, sourceUrl }
+    })
+
+    setBatch((prev) => {
+      const seeded: BatchItem[] =
+        prev.length > 0 || !file
+          ? prev
+          : (() => {
+              const sourceUrl = URL.createObjectURL(file)
+              batchUrls.current.push(sourceUrl)
+              return [{ id: `${file.name}-${file.size}-seed`, file, sourceUrl }]
+            })()
+      return [...seeded, ...additions]
+    })
+
+    if (file) {
+      if (resultUrlRef.current) URL.revokeObjectURL(resultUrlRef.current)
+      resultUrlRef.current = ''
+      setFile(null)
+      setSource(null)
+      setOutput(null)
+      setFailure(null)
+    }
   }
 
   useEffect(() => {
@@ -118,19 +175,27 @@ export function ImageResizer() {
     }
   }, [file, width, height, fit, format, settingsKey])
 
-  useEffect(() => {
-    return () => {
-      if (resultUrlRef.current) URL.revokeObjectURL(resultUrlRef.current)
-    }
-  }, [])
-
   const reset = () => {
     if (resultUrlRef.current) URL.revokeObjectURL(resultUrlRef.current)
     resultUrlRef.current = ''
+    batchUrls.current.forEach((url) => URL.revokeObjectURL(url))
+    batchUrls.current = []
     setFile(null)
     setOutput(null)
     setFailure(null)
     setSource(null)
+    setBatch([])
+  }
+
+  const removeItem = (id: string) => {
+    setBatch((prev) => {
+      const target = prev.find((item) => item.id === id)
+      if (target) {
+        URL.revokeObjectURL(target.sourceUrl)
+        if (target.resultUrl) URL.revokeObjectURL(target.resultUrl)
+      }
+      return prev.filter((item) => item.id !== id)
+    })
   }
 
   const download = () => {
@@ -138,8 +203,80 @@ export function ImageResizer() {
     downloadBlob(result.blob, `${baseName(file.name)}-${width}x${height}.${outputExtension(result.type)}`)
   }
 
+  const runBatch = async () => {
+    if (running || batch.length === 0) return
+    setRunning(true)
+    try {
+      for (const item of batch) {
+        if (item.result && item.key === settingsKey) continue
+        try {
+          const next = await resizeImage(item.file, { width, height, fit, format })
+          const url = URL.createObjectURL(next.blob)
+          batchUrls.current.push(url)
+          setBatch((prev) =>
+            prev.map((entry) =>
+              entry.id === item.id
+                ? { ...entry, result: next, resultUrl: url, key: settingsKey, error: undefined }
+                : entry,
+            ),
+          )
+        } catch {
+          setBatch((prev) =>
+            prev.map((entry) =>
+              entry.id === item.id
+                ? { ...entry, error: 'Could not resize this file', key: settingsKey }
+                : entry,
+            ),
+          )
+        }
+      }
+    } finally {
+      setRunning(false)
+    }
+  }
+
+  const downloadBatch = async () => {
+    const ready = batch.filter((item) => item.result && item.key === settingsKey)
+    if (ready.length === 0) return
+    const fileName = (item: BatchItem) =>
+      `${baseName(item.file.name)}-${width}x${height}.${outputExtension((item.result as ResizeResult).type)}`
+
+    if (ready.length === 1) {
+      downloadBlob((ready[0].result as ResizeResult).blob, fileName(ready[0]))
+      return
+    }
+
+    const { default: JSZip } = await import('jszip')
+    const zip = new JSZip()
+    const used = new Set<string>()
+    ready.forEach((item) => {
+      let name = fileName(item)
+      if (used.has(name)) {
+        const ext = outputExtension((item.result as ResizeResult).type)
+        let counter = 2
+        let candidate = `${baseName(item.file.name)}-${width}x${height}-${counter}.${ext}`
+        while (used.has(candidate)) {
+          counter += 1
+          candidate = `${baseName(item.file.name)}-${width}x${height}-${counter}.${ext}`
+        }
+        name = candidate
+      }
+      used.add(name)
+      zip.file(name, (item.result as ResizeResult).blob)
+    })
+    const blob = await zip.generateAsync({ type: 'blob' })
+    downloadBlob(blob, `quietkit-resized-${width}x${height}.zip`)
+  }
+
   const activePreset = PRESETS.find(
     (preset) => preset.width === width && preset.height === height,
+  )
+  const stale = batch.some((item) => item.key !== settingsKey)
+  const readyCount = batch.filter((item) => item.result && item.key === settingsKey).length
+  const beforeBytes = batch.reduce((sum, item) => sum + item.file.size, 0)
+  const afterBytes = batch.reduce(
+    (sum, item) => sum + (item.result && item.key === settingsKey ? item.result.blob.size : 0),
+    0,
   )
 
   return (
@@ -150,7 +287,8 @@ export function ImageResizer() {
           <h1>Resize an image to the exact size a platform asks for</h1>
           <p>
             Pick 1080×1080 for a post, 1584×396 for a banner, or type your own numbers. Crop to
-            fill or fit the whole picture — processed in this tab, with nothing uploaded.
+            fill or fit the whole picture — one image, or a whole folder at the same size.
+            Processed in this tab, with nothing uploaded.
           </p>
         </div>
       </section>
@@ -158,20 +296,135 @@ export function ImageResizer() {
       <div className="container workspace">
         <div>
           <div className="panel">
-            {!file ? (
+            {!file && batch.length === 0 ? (
               <Dropzone
                 accept="image/*,.heic,.heif"
-                title="Drop an image here, or click to choose"
-                hint="HEIC · JPEG · PNG · WebP · AVIF — resized locally"
+                multiple
+                title="Drop images here, or click to choose"
+                hint="HEIC · JPEG · PNG · WebP · AVIF — one file or a whole folder"
                 icon={<ImageIcon size={30} />}
                 onFiles={pick}
               />
+            ) : batch.length > 0 ? (
+              <>
+                <div className="row" style={{ justifyContent: 'space-between' }}>
+                  <span className="panel-title" style={{ marginBottom: 0 }}>
+                    {batch.length} image{batch.length === 1 ? '' : 's'} · target {width}×{height}
+                  </span>
+                  <button className="btn btn-sm" onClick={reset}>
+                    <TrashIcon size={14} /> Clear
+                  </button>
+                </div>
+
+                <div className="result-list">
+                  {batch.map((item) => {
+                    const fresh = item.result && item.key === settingsKey
+                    return (
+                      <div key={item.id} className="result-row">
+                        <img className="thumb" src={item.sourceUrl} alt="" loading="lazy" />
+                        <div style={{ minWidth: 0 }}>
+                          <div className="result-name">{item.file.name}</div>
+                          <div className="result-sub">
+                            {item.error ? (
+                              <span style={{ color: 'var(--danger)' }}>{item.error}</span>
+                            ) : fresh ? (
+                              <>
+                                {item.result?.width}×{item.result?.height} ·{' '}
+                                {formatBytes(item.result?.blob.size ?? 0)} ·{' '}
+                                {formatBytes(item.file.size)} in
+                              </>
+                            ) : item.result ? (
+                              'settings changed — resize again'
+                            ) : (
+                              `${formatBytes(item.file.size)} · waiting`
+                            )}
+                          </div>
+                        </div>
+                        <div className="row" style={{ gap: 6 }}>
+                          {fresh && item.resultUrl && (
+                            <button
+                              className="btn btn-sm"
+                              onClick={() => {
+                                if (item.resultUrl && item.result) {
+                                  downloadBlob(item.result.blob, `${baseName(item.file.name)}-${width}x${height}.${outputExtension(item.result.type)}`)
+                                }
+                              }}
+                              aria-label={`Download resized ${item.file.name}`}
+                            >
+                              <DownloadIcon size={14} />
+                            </button>
+                          )}
+                          <button
+                            className="btn btn-sm"
+                            onClick={() => removeItem(item.id)}
+                            aria-label={`Remove ${item.file.name}`}
+                          >
+                            <TrashIcon size={14} />
+                          </button>
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+
+                <div className="row" style={{ marginTop: 20, justifyContent: 'space-between' }}>
+                  <button className="btn btn-forest" onClick={runBatch} disabled={running}>
+                    {running
+                      ? 'Resizing locally…'
+                      : stale || readyCount === 0
+                        ? `Resize ${batch.length} image${batch.length === 1 ? '' : 's'}`
+                        : 'Resize again'}
+                  </button>
+                  {readyCount > 0 && (
+                    <button className="btn" onClick={downloadBatch}>
+                      <DownloadIcon size={16} />{' '}
+                      {readyCount === 1 ? 'Download' : `Download ${readyCount} as ZIP`}
+                    </button>
+                  )}
+                </div>
+
+                {readyCount > 0 && (
+                  <div className="stat-grid" style={{ marginTop: 18 }}>
+                    <div className="stat">
+                      <dt>Resized</dt>
+                      <dd>
+                        {readyCount} of {batch.length}
+                      </dd>
+                    </div>
+                    <div className="stat">
+                      <dt>Before</dt>
+                      <dd>{formatBytes(beforeBytes)}</dd>
+                    </div>
+                    <div className="stat">
+                      <dt>After</dt>
+                      <dd>{formatBytes(afterBytes)}</dd>
+                    </div>
+                  </div>
+                )}
+
+                <div className="row" style={{ marginTop: 16 }}>
+                  <label className="btn btn-sm" style={{ cursor: 'pointer' }}>
+                    <PlusIcon size={14} /> Add images
+                    <input
+                      type="file"
+                      accept="image/*,.heic,.heif"
+                      multiple
+                      className="sr-only"
+                      onChange={(event) => {
+                        if (event.target.files) pick(Array.from(event.target.files))
+                        event.currentTarget.value = ''
+                      }}
+                    />
+                  </label>
+                </div>
+              </>
             ) : (
               <>
                 <div className="row" style={{ justifyContent: 'space-between' }}>
                   <span className="panel-title" style={{ marginBottom: 0 }}>
-                    {file.name}
-                    {source ? ` · ${source.width}×${source.height}` : ''} · {formatBytes(file.size)}
+                    {file?.name}
+                    {source ? ` · ${source.width}×${source.height}` : ''} ·{' '}
+                    {formatBytes(file?.size ?? 0)}
                   </span>
                   <button className="btn btn-sm" onClick={reset}>
                     <TrashIcon size={14} /> Start over
@@ -300,6 +553,11 @@ export function ImageResizer() {
               </div>
             </div>
             {busy && <p className="small muted" style={{ marginTop: 10 }}>Resizing locally…</p>}
+            {batch.length > 0 && (
+              <p className="small muted" style={{ marginTop: 10 }}>
+                These settings apply to all {batch.length} images when you press Resize.
+              </p>
+            )}
           </div>
 
           <div style={{ marginTop: 20 }}>
@@ -367,6 +625,15 @@ export function ImageResizer() {
               proportions differ. Best for documents, slides and screenshots.
             </li>
           </ul>
+
+          <h3>A whole folder at one size</h3>
+          <p>
+            Listing photos, a seller's catalogue or a set of screenshots usually needs the same
+            dimensions everywhere. Drop the folder — subfolders included — choose the size once,
+            and every JPEG, PNG, WebP, AVIF or HEIC file is resized with the same rule. Results
+            are named <code>name-1080x1080.jpg</code> and packaged into one ZIP, so the originals
+            stay untouched.
+          </p>
 
           <h3>A note on upscaling</h3>
           <p>

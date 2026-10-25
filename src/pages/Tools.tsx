@@ -39,7 +39,7 @@ export function Tools() {
               to="/tools/image-resizer"
               icon={<ImageIcon size={22} />}
               title="Resize images"
-              description="Hit an exact pixel size — social presets, custom dimensions, crop to fill or fit whole image."
+              description="Hit an exact pixel size — social presets, custom dimensions, crop to fill or fit whole image — for one file or an entire folder."
               meta="Images"
             />
             <ToolCard
@@ -97,8 +97,8 @@ export function Tools() {
             <span className="panel-title">On the workbench</span>
             <div className="split" style={{ gap: 24 }}>
               <p className="small muted">
-                Next up: batch resizing for whole folders, and a page-number stamp you can add
-                before printing. Text extraction, folder-wide metadata cleaning, page reorder,
+                Next up: a page-number stamp you can add before printing, and a PDF metadata
+                viewer. Folder-wide resizing and metadata cleaning, text extraction, page reorder,
                 rotation, JPG to PDF and HEIC decoding all ship — each runs entirely in the tab.
               </p>
               <p className="small muted">
