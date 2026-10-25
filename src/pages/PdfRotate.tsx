@@ -4,6 +4,7 @@ import { Dropzone } from '../components/Dropzone'
 import { AdSlot } from '../components/AdSlot'
 import { DownloadIcon, FileIcon, LockIcon, CheckIcon, TrashIcon } from '../components/Icons'
 import { downloadBlob, formatBytes } from '../lib/files'
+import { EncryptedPdfError } from '../lib/pdfErrors'
 import { faqJsonLd, routeMeta, toolJsonLd, useSeo } from '../lib/seo'
 
 type Angle = 90 | 180 | 270
@@ -77,8 +78,12 @@ export function PdfRotate() {
     try {
       const { countPdfPages } = await import('../lib/pdf')
       setPageCount(await countPdfPages(pdf))
-    } catch {
-      setError('This PDF could not be read. It may be password-protected or damaged.')
+    } catch (caught) {
+      setError(
+        caught instanceof EncryptedPdfError
+          ? caught.message
+          : 'This PDF could not be read. It may be damaged.',
+      )
     }
   }
 

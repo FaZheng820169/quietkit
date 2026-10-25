@@ -4,6 +4,7 @@ import { Dropzone } from '../components/Dropzone'
 import { AdSlot } from '../components/AdSlot'
 import { DownloadIcon, FileIcon, TrashIcon, LockIcon, CheckIcon } from '../components/Icons'
 import { downloadBlob, formatBytes } from '../lib/files'
+import { EncryptedPdfError } from '../lib/pdfErrors'
 import { faqJsonLd, routeMeta, toolJsonLd, useSeo } from '../lib/seo'
 
 type Part = { id: string; file: File; pages?: number; error?: string }
@@ -19,7 +20,7 @@ const faqs = [
   },
   {
     q: 'Are password-protected PDFs supported?',
-    a: 'Files that open without a password usually work. If a PDF requires a password to open, the browser cannot read it and you should unlock it in your PDF reader first.',
+    a: 'No. An encrypted PDF is refused even when your reader opens it without asking for a password, because the page data stays encrypted inside the file and a merged copy would come out broken. Save an unprotected copy — printing to PDF does it — then merge that copy here.',
   },
   {
     q: 'Does merging reduce quality?',
@@ -64,10 +65,18 @@ export function PdfMerge() {
       try {
         const pages = await countPdfPages(part.file)
         setParts((prev) => prev.map((entry) => (entry.id === part.id ? { ...entry, pages } : entry)))
-      } catch {
+      } catch (caught) {
         setParts((prev) =>
           prev.map((entry) =>
-            entry.id === part.id ? { ...entry, error: 'Password-protected or damaged' } : entry,
+            entry.id === part.id
+              ? {
+                  ...entry,
+                  error:
+                    caught instanceof EncryptedPdfError
+                      ? 'Password-protected · unlock it first'
+                      : 'Damaged or unreadable',
+                }
+              : entry,
           ),
         )
       }
@@ -99,8 +108,12 @@ export function PdfMerge() {
       const { mergePdfs } = await import('../lib/pdf')
       const merged = await mergePdfs(usable.map((part) => part.file))
       setResult(merged)
-    } catch {
-      setError('One of the files could not be read. Remove it and try again.')
+    } catch (caught) {
+      setError(
+        caught instanceof EncryptedPdfError
+          ? caught.message
+          : 'One of the files could not be read. Remove it and try again.',
+      )
     } finally {
       setBusy(false)
     }
@@ -305,7 +318,7 @@ export function PdfMerge() {
 
           <h3>When merging fails</h3>
           <ul>
-            <li>Encrypted PDFs: remove the open password in your PDF reader, then retry.</li>
+            <li>Encrypted PDFs are refused: save an unprotected copy in your PDF reader, then retry.</li>
             <li>Damaged downloads: open the file once locally to confirm it renders.</li>
             <li>Very large scans: close other tabs; the merge needs the whole document set in memory.</li>
           </ul>

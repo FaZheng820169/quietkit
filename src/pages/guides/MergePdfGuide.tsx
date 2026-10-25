@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: 'Can I merge password-protected PDFs?',
-    a: 'Only if they open without a password. A file that prompts for a password cannot be read by the browser at all; unlock it in your PDF reader first.',
+    a: 'No. A PDF with encryption is refused even when your viewer opens it without asking for a password, because the page data stays encrypted inside the file. Save an unprotected copy first — printing to PDF works — then merge that copy.',
   },
 ]
 

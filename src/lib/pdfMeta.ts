@@ -221,11 +221,16 @@ export async function stripPdfMetadata(file: File): Promise<PdfCleanResult> {
   }
 
   let idRemoved = false
-  const fileId = doc.context.trailerInfo.ID
-  if (fileId) {
-    doc.context.trailerInfo.ID = undefined
-    if (fileId instanceof PDFRef) doc.context.delete(fileId)
-    idRemoved = true
+  // In an encrypted file the first /ID string is part of the key that decrypts
+  // every stream. Removing it would turn the output into unreadable noise, so
+  // the identifier is kept and the file stays openable with the same password.
+  if (!doc.isEncrypted) {
+    const fileId = doc.context.trailerInfo.ID
+    if (fileId) {
+      doc.context.trailerInfo.ID = undefined
+      if (fileId instanceof PDFRef) doc.context.delete(fileId)
+      idRemoved = true
+    }
   }
 
   const saved = await doc.save()

@@ -13,6 +13,7 @@ import {
   type ResizeResult,
 } from '../lib/pdfLayout'
 import { baseName, downloadBlob, formatBytes } from '../lib/files'
+import { EncryptedPdfError } from '../lib/pdfErrors'
 import { faqJsonLd, routeMeta, toolJsonLd, useSeo } from '../lib/seo'
 
 const SHAPES: { value: PdfPaper; label: string; hint: string }[] = [
@@ -92,8 +93,12 @@ export function PdfResize() {
     try {
       const { readPdfPageBoxes } = await import('../lib/pdf')
       setBoxes(await readPdfPageBoxes(pdf))
-    } catch {
-      setError('This PDF could not be read. It may be damaged.')
+    } catch (caught) {
+      setError(
+        caught instanceof EncryptedPdfError
+          ? caught.message
+          : 'This PDF could not be read. It may be damaged.',
+      )
     } finally {
       setReading(false)
     }
@@ -116,8 +121,8 @@ export function PdfResize() {
       setResult(await mod.resizePdfPages(file, { paper, orientation, mode }))
     } catch (err) {
       setError(
-        err instanceof mod.EncryptedPdfError
-          ? 'This PDF is password-protected. Remove the password in a viewer first, then resize it.'
+        err instanceof EncryptedPdfError
+          ? err.message
           : 'Could not rebuild this PDF. It may be damaged or use an unsupported structure.',
       )
     } finally {

@@ -11,6 +11,7 @@ import {
 } from '../lib/pdfLayout'
 import { openPdfPreview, type PdfPreview } from '../lib/pdfjs'
 import { baseName, downloadBlob, formatBytes } from '../lib/files'
+import { ENCRYPTED_PDF_HELP } from '../lib/pdfErrors'
 import { faqJsonLd, routeMeta, toolJsonLd, useSeo } from '../lib/seo'
 
 const PREVIEW_WIDTH = 620
@@ -145,8 +146,12 @@ export function PdfPageNumbers() {
       const next = await openPdfPreview(pdf)
       previewRef.current = next
       setPreview(next)
-    } catch {
-      setError('This PDF could not be opened. It may be encrypted or damaged.')
+    } catch (caught) {
+      setError(
+        (caught as { name?: string } | null)?.name === 'PasswordException'
+          ? ENCRYPTED_PDF_HELP
+          : 'This PDF could not be opened. It may be damaged.',
+      )
     }
   }
 

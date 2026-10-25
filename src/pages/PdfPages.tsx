@@ -4,6 +4,7 @@ import { Dropzone } from '../components/Dropzone'
 import { AdSlot } from '../components/AdSlot'
 import { DownloadIcon, FileIcon, LockIcon, CheckIcon, TrashIcon } from '../components/Icons'
 import { downloadBlob, formatBytes } from '../lib/files'
+import { EncryptedPdfError } from '../lib/pdfErrors'
 import { faqJsonLd, routeMeta, toolJsonLd, useSeo } from '../lib/seo'
 
 type Mode = 'remove' | 'keep'
@@ -28,7 +29,7 @@ const faqs = [
   },
   {
     q: 'Why does it refuse my password-protected PDF?',
-    a: 'A PDF that needs a password to open must be decrypted by your reader first. Open it, save an unprotected copy, and then edit that copy here.',
+    a: 'Because the page data is encrypted inside the file, rebuilding it would produce a broken copy — even if your reader opens it without asking for a password. Open it in your reader, save or print an unprotected copy, then edit that copy here.',
   },
 ]
 
@@ -69,8 +70,12 @@ export function PdfPages() {
     try {
       const { countPdfPages } = await import('../lib/pdf')
       setPageCount(await countPdfPages(pdf))
-    } catch {
-      setError('This PDF could not be read. It may be password-protected or damaged.')
+    } catch (caught) {
+      setError(
+        caught instanceof EncryptedPdfError
+          ? caught.message
+          : 'This PDF could not be read. It may be damaged.',
+      )
     }
   }
 

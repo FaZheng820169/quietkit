@@ -10,13 +10,9 @@ import {
   type ResizeOptions,
   type ResizeResult,
 } from './pdfLayout'
+import { EncryptedPdfError } from './pdfErrors'
 
-export class EncryptedPdfError extends Error {
-  constructor() {
-    super('This PDF is password-protected')
-    this.name = 'EncryptedPdfError'
-  }
-}
+export { EncryptedPdfError, ENCRYPTED_PDF_HELP } from './pdfErrors'
 
 function normalizeAngle(angle: number): number {
   return ((angle % 360) + 360) % 360
@@ -30,6 +26,7 @@ export type PdfPart = {
 export async function countPdfPages(file: File): Promise<number> {
   const bytes = await file.arrayBuffer()
   const doc = await PDFDocument.load(bytes, { ignoreEncryption: true })
+  if (doc.isEncrypted) throw new EncryptedPdfError(file.name)
   return doc.getPageCount()
 }
 
@@ -40,6 +37,7 @@ export async function mergePdfs(files: File[]): Promise<{ blob: Blob; pages: num
   for (const file of files) {
     const bytes = await file.arrayBuffer()
     const src = await PDFDocument.load(bytes, { ignoreEncryption: true })
+    if (src.isEncrypted) throw new EncryptedPdfError(file.name)
     const copied = await out.copyPages(src, src.getPageIndices())
     copied.forEach((page) => out.addPage(page))
     pages += copied.length
@@ -66,6 +64,7 @@ export async function stampPageNumbers(
 ): Promise<PageNumberResult> {
   const bytes = await file.arrayBuffer()
   const doc = await PDFDocument.load(bytes, { ignoreEncryption: true })
+  if (doc.isEncrypted) throw new EncryptedPdfError(file.name)
   const font = await doc.embedFont(StandardFonts.Helvetica)
   const total = doc.getPageCount()
   const size = options.fontSize
@@ -165,6 +164,7 @@ export async function rotatePdfPages(
 ): Promise<RotateResult> {
   const bytes = await file.arrayBuffer()
   const doc = await PDFDocument.load(bytes, { ignoreEncryption: true })
+  if (doc.isEncrypted) throw new EncryptedPdfError(file.name)
   const total = doc.getPageCount()
   const targets = input.trim()
     ? parsePageRanges(input, total)
@@ -192,6 +192,7 @@ export async function editPdfPages(
 ): Promise<PageEditResult> {
   const bytes = await file.arrayBuffer()
   const src = await PDFDocument.load(bytes, { ignoreEncryption: true })
+  if (src.isEncrypted) throw new EncryptedPdfError(file.name)
   const total = src.getPageCount()
   const selected = parsePageRanges(input, total)
 
@@ -231,6 +232,7 @@ export type ReorderResult = {
 export async function reorderPdfPages(file: File, input: string): Promise<ReorderResult> {
   const bytes = await file.arrayBuffer()
   const src = await PDFDocument.load(bytes, { ignoreEncryption: true })
+  if (src.isEncrypted) throw new EncryptedPdfError(file.name)
   const total = src.getPageCount()
   const order = parsePageOrder(input, total)
 
@@ -255,6 +257,7 @@ export async function reorderPdfPages(file: File, input: string): Promise<Reorde
 export async function readPdfPageBoxes(file: File): Promise<PdfPageBox[]> {
   const bytes = await file.arrayBuffer()
   const doc = await PDFDocument.load(bytes, { ignoreEncryption: true, updateMetadata: false })
+  if (doc.isEncrypted) throw new EncryptedPdfError(file.name)
 
   return doc.getPages().map((page) => {
     const box = page.getCropBox()
