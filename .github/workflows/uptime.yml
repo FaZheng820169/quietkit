@@ -1,0 +1,37 @@
+name: Uptime check
+
+on:
+  schedule:
+    - cron: '17 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the live site and every tool route
+        run: |
+          set -e
+          BASE="https://fazheng820169.github.io/quietkit"
+          for path in "/" "/tools" "/tools/image-compressor" "/tools/metadata-cleaner" "/tools/pdf-merge"; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 "$BASE$path")
+            echo "$path -> $code"
+            if [ "$code" != "200" ]; then
+              echo "::error::$path returned $code"
+              exit 1
+            fi
+          done
+
+      - name: Open an issue when the site is down
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "Uptime check failed $(date -u +%Y-%m-%d)" \
+            --body "The scheduled uptime check could not reach the site. Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
