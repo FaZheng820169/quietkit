@@ -4,6 +4,7 @@ import { Dropzone } from '../components/Dropzone'
 import { AdSlot } from '../components/AdSlot'
 import { DownloadIcon, ImageIcon, LockIcon, TrashIcon, CheckIcon } from '../components/Icons'
 import { resizeImage, outputExtension, type ResizeResult } from '../lib/image'
+import { toDecodableImage } from '../lib/heic'
 import { baseName, downloadBlob, formatBytes } from '../lib/files'
 import { faqJsonLd, routeMeta, toolJsonLd, useSeo } from '../lib/seo'
 
@@ -70,7 +71,9 @@ export function ImageResizer() {
   const previewUrl = output?.url ?? ''
 
   const pick = (files: File[]) => {
-    const image = files.find((entry) => entry.type.startsWith('image/'))
+    const image = files.find(
+      (entry) => entry.type.startsWith('image/') || /\.(heic|heif)$/i.test(entry.name),
+    )
     if (!image) return
     if (resultUrlRef.current) URL.revokeObjectURL(resultUrlRef.current)
     resultUrlRef.current = ''
@@ -79,7 +82,8 @@ export function ImageResizer() {
     setOutput(null)
     setFailure(null)
 
-    createImageBitmap(image)
+    toDecodableImage(image)
+      .then((decodable) => createImageBitmap(decodable))
       .then((bitmap) => {
         setSource({ width: bitmap.width, height: bitmap.height })
         bitmap.close()
@@ -156,9 +160,9 @@ export function ImageResizer() {
           <div className="panel">
             {!file ? (
               <Dropzone
-                accept="image/*"
+                accept="image/*,.heic,.heif"
                 title="Drop an image here, or click to choose"
-                hint="JPEG · PNG · WebP · AVIF — resized locally"
+                hint="HEIC · JPEG · PNG · WebP · AVIF — resized locally"
                 icon={<ImageIcon size={30} />}
                 onFiles={pick}
               />

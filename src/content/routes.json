@@ -15,8 +15,8 @@
     "priority": "0.9"
   },
   "/tools/image-converter": {
-    "title": "Convert PNG to JPG, JPG to WebP — no upload",
-    "description": "Convert images between JPEG, PNG and WebP in batches inside your browser. Transparent areas become white in JPEG, and nothing is uploaded.",
+    "title": "Convert HEIC to JPG, PNG to JPG, JPG to WebP",
+    "description": "Convert iPhone HEIC photos and JPEG, PNG or WebP images in batches inside your browser. Transparent areas become white in JPEG, and nothing is uploaded.",
     "priority": "0.9"
   },
   "/tools/image-resizer": {
@@ -77,6 +77,11 @@
   "/guides/social-media-image-sizes": {
     "title": "Social media image sizes (2026) and why images get cropped",
     "description": "The pixel sizes that matter for Instagram, X, LinkedIn, Facebook, YouTube, Pinterest and TikTok, plus the two settings that keep your subject in frame.",
+    "priority": "0.8"
+  },
+  "/guides/heic-to-jpg": {
+    "title": "How to convert HEIC to JPG (without uploading photos)",
+    "description": "Why iPhones save photos as HEIC, how to convert them to JPEG on Windows, Mac, iPhone and Android, and how to do it in the browser without uploading anything.",
     "priority": "0.8"
   },
   "/pricing": {

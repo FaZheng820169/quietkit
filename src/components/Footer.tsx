@@ -67,6 +67,9 @@ export function Footer() {
               <li>
                 <Link to="/guides/social-media-image-sizes">Image sizes</Link>
               </li>
+              <li>
+                <Link to="/guides/heic-to-jpg">HEIC to JPG</Link>
+              </li>
             </ul>
           </div>
 

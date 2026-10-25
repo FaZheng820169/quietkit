@@ -24,12 +24,12 @@ const faqs = [
     a: 'JPEG has no alpha channel, so transparent areas have to be filled with a colour. QuietKit fills them with white — the same choice Photoshop makes by default — which is correct for photos and documents but will look wrong on a logo meant for a dark background. Keep PNG for anything with transparency.',
   },
   {
-    q: 'Can I convert iPhone HEIC files here?',
-    a: 'Only if your browser can decode HEIC. Safari can, Chrome and Firefox usually cannot, because the codec is not part of the browser. If a HEIC file fails, export it as JPEG from the Photos app first, then convert it here.',
+    q: 'Can I convert iPhone HEIC files to JPEG here?',
+    a: 'Yes. Chrome, Edge and Firefox have no HEIC decoder built in, so QuietKit loads a WebAssembly decoder only when a HEIC file appears, converts it to JPEG in this tab, then re-encodes it to whatever format you picked. The first HEIC file adds a one-off download of roughly 1 MB for the decoder; every file after that is fast. Nothing is uploaded at any point.',
   },
   {
     q: 'Why is the converted file sometimes larger?',
-    a: 'Format conversion is not compression. A JPEG photo converted to PNG becomes lossless and much bigger; a PNG screenshot converted to JPEG usually shrinks by 70–90%. The result list always shows the real before and after size, so you can judge each file rather than trusting a promise.',
+    a: 'Format conversion is not compression. A JPEG photo converted to PNG becomes lossless and much bigger; a PNG screenshot converted to JPEG usually shrinks by 70–90%. HEIC to JPEG is the one case where the output is reliably larger, often twice the size, because HEIC is the more efficient format — that is the price of compatibility. The result list always shows the real before and after size, so you can judge each file rather than trusting a promise.',
   },
   {
     q: 'Do the images get uploaded during conversion?',
@@ -103,7 +103,7 @@ export function ImageConverter() {
                     doneKey: settingsKey,
                     error:
                       error instanceof Error
-                        ? `${error.message} If this is a HEIC file, export it as JPEG first.`
+                        ? error.message
                         : 'Could not process this file.',
                   }
                 : entry,
@@ -120,7 +120,9 @@ export function ImageConverter() {
   }, [items.length, settingsKey, format, lossy, quality])
 
   const addFiles = (files: File[]) => {
-    const images = files.filter((file) => file.type.startsWith('image/'))
+    const images = files.filter(
+      (file) => file.type.startsWith('image/') || /\.(heic|heif)$/i.test(file.name),
+    )
     setItems((prev) => [
       ...prev,
       ...images.map((file) => ({ id: `${file.name}-${file.size}-${Math.random()}`, file })),
@@ -170,10 +172,11 @@ export function ImageConverter() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">Tool · Images</span>
-          <h1>Convert images between JPG, PNG and WebP</h1>
+          <h1>Convert HEIC, JPG, PNG and WebP images</h1>
           <p>
-            Turn a phone photo into an uploadable JPEG, a screenshot into a WebP, or a PNG into
-            a smaller file — one file or fifty, all inside this tab. Nothing is sent anywhere.
+            Turn an iPhone HEIC into a JPEG anyone can open, a screenshot into a WebP, or a PNG
+            into a smaller file — one file or fifty, all inside this tab. Nothing is sent
+            anywhere.
           </p>
         </div>
       </section>
@@ -183,10 +186,10 @@ export function ImageConverter() {
           <div className="panel">
             {items.length === 0 ? (
               <Dropzone
-                accept="image/jpeg,image/png,image/webp,image/avif,image/heic"
+                accept="image/jpeg,image/png,image/webp,image/avif,image/heic,image/heif,.heic,.heif"
                 multiple
                 title="Drop images to convert, or click to choose"
-                hint="JPEG · PNG · WebP · AVIF — converted locally, in batches"
+                hint="HEIC · JPEG · PNG · WebP · AVIF — converted locally, in batches"
                 icon={<ImageIcon size={30} />}
                 onFiles={addFiles}
               />
@@ -413,7 +416,7 @@ function AddMore({ onFiles }: { onFiles: (files: File[]) => void }) {
       <input
         ref={ref}
         type="file"
-        accept="image/*"
+        accept="image/*,.heic,.heif"
         multiple
         className="sr-only"
         onChange={(event) => {

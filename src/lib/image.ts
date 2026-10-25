@@ -1,3 +1,5 @@
+import { toDecodableImage } from './heic'
+
 export type CompressFormat = 'original' | 'image/jpeg' | 'image/webp' | 'image/png'
 
 export type CompressOptions = {
@@ -28,11 +30,12 @@ function targetType(file: File, format: CompressFormat): string {
 }
 
 export async function compressImage(file: File, options: CompressOptions): Promise<CompressResult> {
+  const source = await toDecodableImage(file)
   let bitmap: ImageBitmap
   try {
-    bitmap = await createImageBitmap(file, { imageOrientation: 'from-image' })
+    bitmap = await createImageBitmap(source, { imageOrientation: 'from-image' })
   } catch {
-    bitmap = await createImageBitmap(file)
+    bitmap = await createImageBitmap(source)
   }
 
   const limit = options.maxDimension
@@ -127,11 +130,12 @@ export type ResizeResult = {
 
 /** Resizes to exact pixel dimensions, cropping or padding to reach the aspect ratio. */
 export async function resizeImage(file: File, options: ResizeOptions): Promise<ResizeResult> {
+  const source = await toDecodableImage(file)
   let bitmap: ImageBitmap
   try {
-    bitmap = await createImageBitmap(file, { imageOrientation: 'from-image' })
+    bitmap = await createImageBitmap(source, { imageOrientation: 'from-image' })
   } catch {
-    bitmap = await createImageBitmap(file)
+    bitmap = await createImageBitmap(source)
   }
 
   const { width, height, fit, format } = options

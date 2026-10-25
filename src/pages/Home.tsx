@@ -117,8 +117,8 @@ export function Home() {
               to="/tools/image-converter"
               icon={<ImageIcon size={22} />}
               title="Convert images"
-              description="Turn PNG into JPEG, screenshots into WebP, or a whole folder into one format — in a single pass."
-              meta="JPG · PNG · WebP"
+              description="Turn an iPhone HEIC into JPEG, PNG into JPEG, or a whole folder into WebP — in a single pass, without uploading."
+              meta="HEIC · JPG · PNG · WebP"
             />
             <ToolCard
               to="/tools/image-resizer"

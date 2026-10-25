@@ -52,6 +52,13 @@ const articles = [
       'One table for Instagram, X, LinkedIn, YouTube and the rest — plus why your subject gets cropped.',
     tag: 'Sizes',
   },
+  {
+    to: '/guides/heic-to-jpg',
+    title: 'Convert HEIC to JPG',
+    description:
+      'Why iPhones save HEIC, the four ways to convert it, and what happens to quality and GPS data.',
+    tag: 'Formats',
+  },
 ]
 
 export function Guides() {

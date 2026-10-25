@@ -112,7 +112,9 @@ export function ImageCompressor() {
   }, [items.length, settingsKey, format, maxDimension, quality, targetBytes])
 
   const addFiles = (files: File[]) => {
-    const images = files.filter((file) => file.type.startsWith('image/'))
+    const images = files.filter(
+      (file) => file.type.startsWith('image/') || /\.(heic|heif)$/i.test(file.name),
+    )
     setItems((prev) => [
       ...prev,
       ...images.map((file) => ({ id: `${file.name}-${file.size}-${Math.random()}`, file })),
@@ -178,10 +180,10 @@ export function ImageCompressor() {
           <div className="panel">
             {items.length === 0 ? (
               <Dropzone
-                accept="image/jpeg,image/png,image/webp,image/avif"
+                accept="image/jpeg,image/png,image/webp,image/avif,image/heic,image/heif,.heic,.heif"
                 multiple
                 title="Drop images here, or click to choose"
-                hint="JPEG · PNG · WebP · up to as many files as your memory allows"
+                hint="HEIC · JPEG · PNG · WebP — as many files as your memory allows"
                 icon={<ImageIcon size={30} />}
                 onFiles={addFiles}
               />

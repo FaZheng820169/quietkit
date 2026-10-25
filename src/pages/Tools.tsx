@@ -69,9 +69,9 @@ export function Tools() {
             <span className="panel-title">On the workbench</span>
             <div className="split" style={{ gap: 24 }}>
               <p className="small muted">
-                Next up: rotating and reordering PDF pages, HEIC to JPEG conversion, and batch
-                metadata cleaning for whole folders. These need more browser support than the
-                current six, so they take longer to do properly.
+                Next up: rotating and reordering PDF pages, and batch metadata cleaning for whole
+                folders. HEIC to JPEG shipped — the converter decodes iPhone photos with a
+                WASM decoder that only loads when a HEIC file appears.
               </p>
               <p className="small muted">
                 Want a specific tool? The fastest way to get it built is to ask for it — every
