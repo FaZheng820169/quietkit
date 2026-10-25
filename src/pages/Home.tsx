@@ -175,6 +175,16 @@ export function Home() {
                 title: 'What an EXIF viewer shows',
                 body: 'The metadata families, the risky fields, and what f-stop, ISO and focal length mean.',
               },
+              {
+                to: '/guides/convert-png-to-jpg',
+                title: 'Convert PNG to JPG, properly',
+                body: 'What transparency costs you, which quality to pick, and how to batch it.',
+              },
+              {
+                to: '/guides/what-is-webp',
+                title: 'What is a WebP file?',
+                body: 'Where WebP wins, and the email and print workflows where it still fails.',
+              },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">
                 <h3 style={{ fontSize: 19 }}>{article.title}</h3>

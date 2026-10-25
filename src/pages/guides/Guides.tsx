@@ -31,6 +31,20 @@ const articles = [
       'The metadata families, the fields that expose your location, and what the numbers mean.',
     tag: 'Metadata',
   },
+  {
+    to: '/guides/convert-png-to-jpg',
+    title: 'Convert PNG to JPG without uploading',
+    description:
+      'What you lose when transparency goes away, which quality setting to pick, and how to do it in batches.',
+    tag: 'Formats',
+  },
+  {
+    to: '/guides/what-is-webp',
+    title: 'What is a WebP file?',
+    description:
+      'Where WebP beats JPEG and PNG, and the places — email, print, forms — where it still fails.',
+    tag: 'Formats',
+  },
 ]
 
 export function Guides() {

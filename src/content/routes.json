@@ -54,6 +54,16 @@
     "description": "A plain-language guide to photo metadata: what EXIF, XMP and IPTC contain, how to view them without uploading, and which fields expose your location.",
     "priority": "0.8"
   },
+  "/guides/convert-png-to-jpg": {
+    "title": "Convert PNG to JPG without uploading the file",
+    "description": "What actually changes when transparency disappears, which quality setting to use, and how to convert a whole folder in one pass without an upload.",
+    "priority": "0.8"
+  },
+  "/guides/what-is-webp": {
+    "title": "What is a WebP file, and when to use one?",
+    "description": "WebP versus JPEG and PNG: where it saves 25–35%, how transparency and animation work, and the email, print and form uploads that still reject it.",
+    "priority": "0.8"
+  },
   "/pricing": {
     "title": "Pricing — free tools, one planned pro tier",
     "description": "QuietKit tools are free with no limits and no account. A one-time pro tier for batch folders and presets is in development.",

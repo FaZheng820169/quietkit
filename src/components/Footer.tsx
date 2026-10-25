@@ -26,6 +26,9 @@ export function Footer() {
                 <Link to="/tools/image-compressor">Compress images</Link>
               </li>
               <li>
+                <Link to="/tools/image-converter">Convert images</Link>
+              </li>
+              <li>
                 <Link to="/tools/metadata-cleaner">Remove photo metadata</Link>
               </li>
               <li>
@@ -48,6 +51,12 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/exif-viewer">Read EXIF data</Link>
+              </li>
+              <li>
+                <Link to="/guides/convert-png-to-jpg">Convert PNG to JPG</Link>
+              </li>
+              <li>
+                <Link to="/guides/what-is-webp">What is WebP</Link>
               </li>
             </ul>
           </div>
