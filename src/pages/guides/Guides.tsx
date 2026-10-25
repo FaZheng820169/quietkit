@@ -234,6 +234,13 @@ const articles = [
       'Why online watermarking defeats the point, how to choose tiled or centred, and how to protect a whole folder locally.',
     tag: 'Images',
   },
+  {
+    to: '/guides/color-converter-without-upload',
+    title: 'Convert colours without uploading your brand palette',
+    description:
+      'What HEX, RGB and HSL are each for, why contrast ratios matter more than taste, and how to build a palette locally.',
+    tag: 'Design',
+  },
 ]
 
 export function Guides() {

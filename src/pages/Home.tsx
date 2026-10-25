@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Twenty-seven tools, no filler</span>
+              <span className="eyebrow">Twenty-eight tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -295,6 +295,13 @@ export function Home() {
               description="Drop a photo, type the text, preview the watermark, download. Tiled or centred, one image or a whole folder as ZIP."
               meta="Images · JPEG / PNG / WebP"
             />
+            <ToolCard
+              to="/tools/color-converter"
+              icon={<ImageIcon size={22} />}
+              title="Color converter"
+              description="Type a HEX code or pick a colour, see RGB and HSL instantly, check contrast against white and black, grab a palette."
+              meta="Design · HEX / RGB / HSL"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -480,6 +487,11 @@ export function Home() {
                 to: '/guides/watermark-image-without-upload',
                 title: 'Watermark photos without the upload',
                 body: 'Why online watermarking defeats the point, tiled versus centred, and how to protect a whole folder locally.',
+              },
+              {
+                to: '/guides/color-converter-without-upload',
+                title: 'Convert colours without the upload',
+                body: 'What HEX, RGB and HSL are each for, why contrast ratios matter, and how to build a palette locally.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

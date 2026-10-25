@@ -144,6 +144,11 @@
     "description": "Add a tiled or centred text watermark to photos and screenshots. Preview the result, batch a whole folder, download as ZIP — everything runs locally in your browser.",
     "priority": "0.9"
   },
+  "/tools/color-converter": {
+    "title": "Color converter — HEX, RGB, HSL with contrast and palette",
+    "description": "Convert between HEX, RGB and HSL. Check WCAG contrast ratios, see complementary and analogous colours, and copy CSS-ready values — all locally in your browser.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -312,6 +317,11 @@
   "/guides/watermark-image-without-upload": {
     "title": "Watermark photos without uploading them",
     "description": "Why online watermarking defeats the point, how to choose tiled or centred, and how to protect a whole folder locally.",
+    "priority": "0.8"
+  },
+  "/guides/color-converter-without-upload": {
+    "title": "Convert colours without uploading your brand palette",
+    "description": "What HEX, RGB and HSL are each for, why contrast ratios matter more than taste, and how to build a palette locally.",
     "priority": "0.8"
   },
   "/pricing": {

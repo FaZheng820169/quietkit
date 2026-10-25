@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Twenty-seven tools. Zero uploads.</h1>
+          <h1>Twenty-eight tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -209,6 +209,13 @@ export function Tools() {
               title="Image watermark"
               description="Add a tiled or centred text watermark to photos and screenshots. Preview the result, batch a whole folder, download as ZIP — all in your browser."
               meta="Images · JPEG / PNG / WebP"
+            />
+            <ToolCard
+              to="/tools/color-converter"
+              icon={<ImageIcon size={22} />}
+              title="Color converter"
+              description="Convert between HEX, RGB and HSL. Check WCAG contrast ratios, see complementary and analogous palettes, copy CSS-ready values."
+              meta="Design · HEX / RGB / HSL"
             />
           </div>
 
