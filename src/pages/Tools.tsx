@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Twenty-four tools. Zero uploads.</h1>
+          <h1>Twenty-five tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -189,6 +189,13 @@ export function Tools() {
               description="Turn a link, Wi-Fi password or any text into a static QR code with live preview — PNG or SVG, no redirect service in the middle."
               meta="Everyday · PNG / SVG"
             />
+            <ToolCard
+              to="/tools/favicon"
+              icon={<ImageIcon size={22} />}
+              title="Favicon generator"
+              description="Turn one logo into a complete favicon set — multi-resolution ICO, Apple touch icon, Android Chrome icons and a web manifest."
+              meta="Images · ICO / PNG / manifest"
+            />
           </div>
 
           <div className="panel" style={{ marginTop: 26 }}>
@@ -199,8 +206,9 @@ export function Tools() {
                 in a single pass, an OCR reader that turns pictures of words into plain text,
                 a form filler that types into a PDF's fields and flattens the answers, an
                 AVIF converter that works in both directions, a signing tool that stamps a
-                drawn or typed signature onto the pages you pick, and a QR generator whose
-                static codes answer to no redirect server.
+                drawn or typed signature onto the pages you pick, a QR generator whose
+                static codes answer to no redirect server, and a favicon builder that turns
+                one logo into a full ICO/PNG/manifest set.
                 Comparison, watermarking, compression, PDF to JPG rendering,
                 splitting, page-size rebuilding, metadata inspection, page numbering, folder-wide
                 resizing and metadata cleaning, text extraction, page reorder, rotation, JPG to

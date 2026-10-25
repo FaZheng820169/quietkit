@@ -26,6 +26,7 @@ import { ImageOcr } from './pages/ImageOcr'
 import { PdfFormFill } from './pages/PdfFormFill'
 import { PdfSign } from './pages/PdfSign'
 import { QrCode } from './pages/QrCode'
+import { Favicon } from './pages/Favicon'
 import { Pricing } from './pages/Pricing'
 import { Privacy } from './pages/Privacy'
 import { About } from './pages/About'
@@ -61,6 +62,7 @@ import { OcrImageGuide } from './pages/guides/OcrImageGuide'
 import { FillPdfFormGuide } from './pages/guides/FillPdfFormGuide'
 import { SignPdfGuide } from './pages/guides/SignPdfGuide'
 import { QrCodeGuide } from './pages/guides/QrCodeGuide'
+import { FaviconGuide } from './pages/guides/FaviconGuide'
 
 export default function App() {
   return (
@@ -93,6 +95,7 @@ export default function App() {
           <Route path="/tools/pdf-form-fill" element={<PdfFormFill />} />
           <Route path="/tools/pdf-sign" element={<PdfSign />} />
           <Route path="/tools/qr-code" element={<QrCode />} />
+          <Route path="/tools/favicon" element={<Favicon />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/remove-location-from-photo" element={<RemoveLocationPhoto />} />
           <Route path="/guides/compress-image-to-100kb" element={<CompressTo100kb />} />
@@ -124,6 +127,7 @@ export default function App() {
           <Route path="/guides/fill-pdf-form-without-upload" element={<FillPdfFormGuide />} />
           <Route path="/guides/sign-pdf-without-upload" element={<SignPdfGuide />} />
           <Route path="/guides/qr-code-without-upload" element={<QrCodeGuide />} />
+          <Route path="/guides/favicon-without-upload" element={<FaviconGuide />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />

@@ -213,6 +213,13 @@ const articles = [
       'Static versus dynamic codes, why free generators expire, and how to print a code that answers to nobody.',
     tag: 'Everyday',
   },
+  {
+    to: '/guides/favicon-without-upload',
+    title: 'Favicons without uploading your logo',
+    description:
+      'What a modern favicon set contains, why a local generator beats a server, and how to install the files on your site.',
+    tag: 'Images',
+  },
 ]
 
 export function Guides() {

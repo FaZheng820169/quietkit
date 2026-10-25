@@ -94,6 +94,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/qr-code">QR code generator</Link>
               </li>
+              <li>
+                <Link to="/tools/favicon">Favicon generator</Link>
+              </li>
             </ul>
           </div>
 
@@ -189,6 +192,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/qr-code-without-upload">QR codes without tracking</Link>
+              </li>
+              <li>
+                <Link to="/guides/favicon-without-upload">Favicons without the upload</Link>
               </li>
             </ul>
           </div>

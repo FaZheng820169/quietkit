@@ -129,6 +129,11 @@
     "description": "Turn a link, Wi-Fi password or any text into a static QR code with a live preview. Choose error correction, colours and size, download PNG or SVG — generated locally, nothing uploaded.",
     "priority": "0.9"
   },
+  "/tools/favicon": {
+    "title": "Favicon generator — ICO, PNG and manifest from one image",
+    "description": "Turn one logo into a complete favicon set: multi-resolution ICO, Apple touch icon, Android Chrome icons and a web manifest. Everything runs locally in your browser.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -282,6 +287,11 @@
   "/guides/qr-code-without-upload": {
     "title": "Make a QR code that doesn't track people — or expire",
     "description": "Static versus dynamic codes, why free generators expire, what error correction really buys, how big to print, and how to make a code locally that answers to nobody.",
+    "priority": "0.8"
+  },
+  "/guides/favicon-without-upload": {
+    "title": "Favicons without uploading your logo",
+    "description": "What a modern favicon set contains, why a local generator beats uploading your logo to a server, and how to install the files on your site.",
     "priority": "0.8"
   },
   "/pricing": {
