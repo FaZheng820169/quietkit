@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Sixteen tools. Zero uploads.</h1>
+          <h1>Seventeen tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -55,6 +55,13 @@ export function Tools() {
               title="Inspect PDF metadata"
               description="Read the author, producer, dates and XMP packet a PDF carries, then download a copy with the property block emptied."
               meta="Privacy · Documents"
+            />
+            <ToolCard
+              to="/tools/pdf-compress"
+              icon={<FileIcon size={22} />}
+              title="Compress a PDF"
+              description="Rebuild heavy scans at 110–200 DPI and see the real before-and-after size. Text becomes pixels; links and forms are dropped."
+              meta="Documents"
             />
             <ToolCard
               to="/tools/pdf-merge"
@@ -140,10 +147,10 @@ export function Tools() {
             <div className="split" style={{ gap: 24 }}>
               <p className="small muted">
                 Next up: a comparison view for PDFs — put two versions side by side and see what
-                changed. Watermarking, PDF to JPG rendering, splitting, page-size rebuilding,
-                metadata inspection, page numbering, folder-wide resizing and metadata cleaning,
-                text extraction, page reorder, rotation, JPG to PDF and HEIC decoding all ship —
-                each runs entirely in the tab.
+                changed. Watermarking, compression, PDF to JPG rendering, splitting, page-size
+                rebuilding, metadata inspection, page numbering, folder-wide resizing and metadata
+                cleaning, text extraction, page reorder, rotation, JPG to PDF and HEIC decoding all
+                ship — each runs entirely in the tab.
               </p>
               <p className="small muted">
                 Want a specific tool? The fastest way to get it built is to ask for it — every

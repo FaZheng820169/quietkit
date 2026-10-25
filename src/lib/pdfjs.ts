@@ -43,6 +43,28 @@ export async function openPdfInfo(file: File): Promise<PdfInfo> {
   }
 }
 
+/** True when page 1 carries real selectable text, used to warn before flattening. */
+export async function pdfHasText(file: File): Promise<boolean> {
+  const pdfjs = await getPdfjs()
+  const bytes = new Uint8Array(await file.arrayBuffer())
+  const task = pdfjs.getDocument({ data: bytes })
+  try {
+    const doc = await task.promise
+    const page = await doc.getPage(1)
+    const content = await page.getTextContent()
+    page.cleanup()
+    const characters = content.items.reduce(
+      (sum, item) => sum + ('str' in item ? String(item.str).trim().length : 0),
+      0,
+    )
+    return characters >= 12
+  } catch {
+    return false
+  } finally {
+    await task.destroy()
+  }
+}
+
 export type PdfPreview = {
   pageCount: number
   render: (

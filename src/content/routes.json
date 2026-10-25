@@ -29,6 +29,11 @@
     "description": "See the hidden EXIF data in your photos, including GPS coordinates, then strip it from one file or a whole folder. Cleaned copies come back as a ZIP; nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/pdf-compress": {
+    "title": "Compress a PDF locally, no upload",
+    "description": "Shrink heavy PDFs by rebuilding each page as a JPEG at 110, 150 or 200 DPI. See the real before-and-after size. Runs entirely in the browser, nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/tools/pdf-merge": {
     "title": "Merge PDF files locally, no upload",
     "description": "Combine several PDFs into one document in the order you choose. Everything happens inside your browser, so contracts and scans never leave your device.",

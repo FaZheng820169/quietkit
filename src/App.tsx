@@ -18,6 +18,7 @@ import { PdfMetadata } from './pages/PdfMetadata'
 import { PdfResize } from './pages/PdfResize'
 import { PdfSplit } from './pages/PdfSplit'
 import { PdfToJpg } from './pages/PdfToJpg'
+import { PdfCompress } from './pages/PdfCompress'
 import { Pricing } from './pages/Pricing'
 import { Privacy } from './pages/Privacy'
 import { About } from './pages/About'
@@ -58,6 +59,7 @@ export default function App() {
           <Route path="/tools/pdf-resize" element={<PdfResize />} />
           <Route path="/tools/pdf-split" element={<PdfSplit />} />
           <Route path="/tools/pdf-to-jpg" element={<PdfToJpg />} />
+          <Route path="/tools/pdf-compress" element={<PdfCompress />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/remove-location-from-photo" element={<RemoveLocationPhoto />} />
           <Route path="/guides/compress-image-to-100kb" element={<CompressTo100kb />} />

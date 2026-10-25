@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Sixteen tools, no filler</span>
+              <span className="eyebrow">Seventeen tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -140,6 +140,13 @@ export function Home() {
               title="Inspect PDF metadata"
               description="See who a PDF says wrote it, which program produced it and when — then download a copy with the property block emptied."
               meta="Author · XMP · Dates"
+            />
+            <ToolCard
+              to="/tools/pdf-compress"
+              icon={<FileIcon size={22} />}
+              title="Compress a PDF"
+              description="Rebuild a 20 MB scan at a lower resolution and compare the real sizes before keeping the copy — locally, page by page."
+              meta="110 · 150 · 200 DPI"
             />
             <ToolCard
               to="/tools/pdf-merge"
