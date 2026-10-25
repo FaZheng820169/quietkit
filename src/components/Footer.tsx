@@ -148,6 +148,9 @@ export function Footer() {
               <li>
                 <Link to="/guides/remove-exif-metadata-without-upload">Strip photo metadata</Link>
               </li>
+              <li>
+                <Link to="/guides/add-page-numbers-to-pdf-without-upload">Number PDF pages</Link>
+              </li>
             </ul>
           </div>
 

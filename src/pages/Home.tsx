@@ -363,6 +363,11 @@ export function Home() {
                 title: 'Strip photo metadata',
                 body: 'The fields that expose you, why screenshots fall short, and how to clean a whole folder.',
               },
+              {
+                to: '/guides/add-page-numbers-to-pdf-without-upload',
+                title: 'Number PDF pages',
+                body: 'Format, position and starting number — why a stamp beats typing, and why it comes last.',
+              },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">
                 <h3 style={{ fontSize: 19 }}>{article.title}</h3>

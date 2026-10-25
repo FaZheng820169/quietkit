@@ -487,6 +487,11 @@ export function PdfPageNumbers() {
                   <CheckIcon size={15} /> Merge the numbered files
                 </Link>
               </li>
+              <li>
+                <Link to="/guides/add-page-numbers-to-pdf-without-upload" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Guide: number pages properly
+                </Link>
+              </li>
             </ul>
           </div>
         </aside>

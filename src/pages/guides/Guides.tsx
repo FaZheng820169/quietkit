@@ -157,6 +157,13 @@ const articles = [
       'The fields that expose you, why screenshots fall short, and how to clean a whole folder in one pass.',
     tag: 'Metadata',
   },
+  {
+    to: '/guides/add-page-numbers-to-pdf-without-upload',
+    title: 'Add page numbers to a PDF',
+    description:
+      'Format, position and starting number — why a stamp beats typing, and why numbering comes last.',
+    tag: 'Documents',
+  },
 ]
 
 export function Guides() {
