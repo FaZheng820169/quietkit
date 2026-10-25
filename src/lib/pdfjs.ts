@@ -10,6 +10,39 @@ export async function getPdfjs() {
   return pdfjs
 }
 
+export type PdfInfo = {
+  pageCount: number
+  /** Size of page 1 in PDF points (72 per inch). */
+  pageWidth: number
+  pageHeight: number
+  destroy: () => Promise<void>
+}
+
+/** Reads the page count and page-1 size without rendering anything. */
+export async function openPdfInfo(file: File): Promise<PdfInfo> {
+  const pdfjs = await getPdfjs()
+  const bytes = new Uint8Array(await file.arrayBuffer())
+  const task = pdfjs.getDocument({ data: bytes })
+  const doc = await task.promise
+
+  try {
+    const page = await doc.getPage(1)
+    const box = page.getViewport({ scale: 1 })
+    page.cleanup()
+    return {
+      pageCount: doc.numPages,
+      pageWidth: box.width,
+      pageHeight: box.height,
+      destroy: async () => {
+        await task.destroy()
+      },
+    }
+  } catch (caught) {
+    await task.destroy()
+    throw caught
+  }
+}
+
 export type PdfPreview = {
   pageCount: number
   render: (

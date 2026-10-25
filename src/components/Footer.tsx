@@ -56,6 +56,9 @@ export function Footer() {
                 <Link to="/tools/pdf-split">Split a PDF</Link>
               </li>
               <li>
+                <Link to="/tools/pdf-to-jpg">PDF to JPG</Link>
+              </li>
+              <li>
                 <Link to="/tools/pdf-resize">Resize PDF pages</Link>
               </li>
               <li>

@@ -6,7 +6,7 @@
   },
   "/tools": {
     "title": "All tools — private browser-local file utilities",
-    "description": "The full QuietKit toolbox: compress, convert or resize images, remove EXIF and GPS metadata, inspect and strip the metadata inside a PDF, resize PDF pages to A4 or Letter, split a PDF into separate files, build a PDF from photos, merge PDFs, add page numbers, extract text, then delete, reorder or rotate pages. Every tool runs locally in your browser.",
+    "description": "The full QuietKit toolbox: compress, convert or resize images, remove EXIF and GPS metadata, inspect and strip the metadata inside a PDF, resize PDF pages to A4 or Letter, split a PDF into separate files, turn PDF pages into JPG images, build a PDF from photos, merge PDFs, add page numbers, extract text, then delete, reorder or rotate pages. Every tool runs locally in your browser.",
     "priority": "0.8"
   },
   "/tools/image-compressor": {
@@ -77,6 +77,11 @@
   "/tools/pdf-split": {
     "title": "Split a PDF into separate files, no upload",
     "description": "Cut one PDF into a file per page, fixed-size chunks, or your own ranges like 1-3, 4-9, 10-. Pages are copied rather than re-rendered, parts download as a ZIP, and nothing is uploaded.",
+    "priority": "0.9"
+  },
+  "/tools/pdf-to-jpg": {
+    "title": "PDF to JPG at 150–300 DPI, no upload",
+    "description": "Turn PDF pages into JPEG images at 150, 200 or 300 DPI. Choose pages, keep a white background, download one file or a ZIP — rendered in your browser, nothing uploaded.",
     "priority": "0.9"
   },
   "/guides": {

@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Fourteen tools, no filler</span>
+              <span className="eyebrow">Fifteen tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -203,6 +203,13 @@ export function Home() {
               title="Split a PDF"
               description="Cut one document into a file per page, equal chunks or your own ranges, and take the parts away as a ZIP."
               meta="Any pages · ZIP"
+            />
+            <ToolCard
+              to="/tools/pdf-to-jpg"
+              icon={<ImageIcon size={22} />}
+              title="PDF to JPG"
+              description="Turn pages into JPEGs at 150, 200 or 300 DPI — one per page, white background, ZIP for a whole document."
+              meta="150–300 DPI · ZIP"
             />
           </div>
 

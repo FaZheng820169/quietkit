@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Fourteen tools. Zero uploads.</h1>
+          <h1>Fifteen tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -113,6 +113,13 @@ export function Tools() {
               meta="Documents"
             />
             <ToolCard
+              to="/tools/pdf-to-jpg"
+              icon={<FileIcon size={22} />}
+              title="PDF to JPG"
+              description="Render pages to JPEG at 150, 200 or 300 DPI — one image per page, white background, ZIP when you need several."
+              meta="Documents · Images"
+            />
+            <ToolCard
               to="/tools/jpg-to-pdf"
               icon={<ImageIcon size={22} />}
               title="JPG to PDF"
@@ -126,9 +133,10 @@ export function Tools() {
             <div className="split" style={{ gap: 24 }}>
               <p className="small muted">
                 Next up: a comparison view for PDFs — put two versions side by side and see what
-                changed. Splitting, page-size rebuilding, metadata inspection, page numbering,
-                folder-wide resizing and metadata cleaning, text extraction, page reorder, rotation,
-                JPG to PDF and HEIC decoding all ship — each runs entirely in the tab.
+                changed. PDF to JPG rendering, splitting, page-size rebuilding, metadata inspection,
+                page numbering, folder-wide resizing and metadata cleaning, text extraction, page
+                reorder, rotation, JPG to PDF and HEIC decoding all ship — each runs entirely in
+                the tab.
               </p>
               <p className="small muted">
                 Want a specific tool? The fastest way to get it built is to ask for it — every
