@@ -317,6 +317,11 @@ export function JpgToPdf() {
             <span className="panel-title">Related</span>
             <ul className="stack-sm" style={{ listStyle: 'none', margin: 0, padding: 0, fontSize: 14 }}>
               <li>
+                <Link to="/guides/jpg-to-pdf-without-upload" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Read the full guide
+                </Link>
+              </li>
+              <li>
                 <Link to="/tools/pdf-merge" className="row" style={{ gap: 8 }}>
                   <CheckIcon size={15} /> Merge existing PDFs instead
                 </Link>

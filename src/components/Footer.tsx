@@ -104,6 +104,9 @@ export function Footer() {
                 <Link to="/guides/remove-pdf-metadata">Strip PDF metadata</Link>
               </li>
               <li>
+                <Link to="/guides/jpg-to-pdf-without-upload">Photos to PDF</Link>
+              </li>
+              <li>
                 <Link to="/guides/exif-viewer">Read EXIF data</Link>
               </li>
               <li>

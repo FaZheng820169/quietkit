@@ -292,6 +292,11 @@ export function Home() {
                 body: 'The author, company and dates a PDF carries invisibly — and how to take the luggage tag off.',
               },
               {
+                to: '/guides/jpg-to-pdf-without-upload',
+                title: 'Photos into one PDF',
+                body: 'Receipts and signed forms photographed on a phone — page size, order and HEIC, handled locally.',
+              },
+              {
                 to: '/guides/exif-viewer',
                 title: 'What an EXIF viewer shows',
                 body: 'The metadata families, the risky fields, and what f-stop, ISO and focal length mean.',

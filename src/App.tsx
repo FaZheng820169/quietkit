@@ -32,6 +32,7 @@ import { PdfToJpgGuide } from './pages/guides/PdfToJpgGuide'
 import { WatermarkPdfGuide } from './pages/guides/WatermarkPdfGuide'
 import { CompressPdfGuide } from './pages/guides/CompressPdfGuide'
 import { RemovePdfMetadataGuide } from './pages/guides/RemovePdfMetadataGuide'
+import { JpgToPdfGuide } from './pages/guides/JpgToPdfGuide'
 import { ExifGuide } from './pages/guides/ExifGuide'
 import { ConvertPngToJpg } from './pages/guides/ConvertPngToJpg'
 import { WhatIsWebp } from './pages/guides/WhatIsWebp'
@@ -71,6 +72,7 @@ export default function App() {
           <Route path="/guides/watermark-pdf-without-upload" element={<WatermarkPdfGuide />} />
           <Route path="/guides/compress-pdf-without-upload" element={<CompressPdfGuide />} />
           <Route path="/guides/remove-pdf-metadata" element={<RemovePdfMetadataGuide />} />
+          <Route path="/guides/jpg-to-pdf-without-upload" element={<JpgToPdfGuide />} />
           <Route path="/guides/exif-viewer" element={<ExifGuide />} />
           <Route path="/guides/convert-png-to-jpg" element={<ConvertPngToJpg />} />
           <Route path="/guides/what-is-webp" element={<WhatIsWebp />} />

@@ -60,6 +60,13 @@ const articles = [
     tag: 'Documents',
   },
   {
+    to: '/guides/jpg-to-pdf-without-upload',
+    title: 'Turn photos into a PDF',
+    description:
+      'Receipts and ID scans photographed on a phone — page size, order and HEIC, assembled locally.',
+    tag: 'Documents',
+  },
+  {
     to: '/guides/exif-viewer',
     title: 'What an EXIF viewer shows you',
     description:

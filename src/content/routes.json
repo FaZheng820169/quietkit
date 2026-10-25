@@ -114,6 +114,11 @@
     "description": "What a PDF's property block reveals — author, company, software, dates — when it matters, and how to strip it locally without changing a single page.",
     "priority": "0.8"
   },
+  "/guides/jpg-to-pdf-without-upload": {
+    "title": "How to turn photos into a PDF without uploading them",
+    "description": "Receipts, ID scans and signed forms photographed on a phone — which page size to pick, how HEIC fits in, and how to assemble the PDF locally.",
+    "priority": "0.8"
+  },
   "/guides": {
     "title": "Guides — files, metadata and privacy",
     "description": "Practical guides on photo metadata, image compression and local PDF handling. Short, specific, and linked to a tool that does the work.",
