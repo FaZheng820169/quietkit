@@ -61,7 +61,9 @@ export function ImageCompressor() {
   const [busy, setBusy] = useState(false)
 
   const itemsRef = useRef<Item[]>(items)
-  itemsRef.current = items
+  useEffect(() => {
+    itemsRef.current = items
+  }, [items])
 
   const settingsKey = `${quality}|${maxDimension}|${format}`
 

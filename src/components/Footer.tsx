@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import { LockIcon } from './Icons'
 
+const YEAR = new Date().getFullYear()
+
 export function Footer() {
-  const year = new Date().getFullYear()
   return (
     <footer className="site-footer">
       <div className="container">
@@ -59,7 +60,7 @@ export function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>© {year} QuietKit. Built to be boring about your data.</span>
+          <span>© {YEAR} QuietKit. Built to be boring about your data.</span>
           <span className="mono">files processed locally · 0 uploads</span>
         </div>
       </div>
