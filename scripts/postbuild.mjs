@@ -2,7 +2,7 @@
  * Post-build: GitHub Pages needs a 404.html fallback for client-side routes,
  * and search engines need an up-to-date sitemap.
  */
-import { copyFileSync, writeFileSync } from 'node:fs'
+import { copyFileSync, mkdirSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
 const dist = resolve('dist')
@@ -24,6 +24,17 @@ const routes = [
 ]
 
 const today = new Date().toISOString().slice(0, 10)
+
+// Static hosts return a 404 status for unknown paths even when 404.html renders
+// the app. Pre-rendering a copy of the shell inside each route folder keeps deep
+// links at HTTP 200, which matters for crawlers.
+for (const route of routes) {
+  if (!route.path) continue
+  const dir = resolve(dist, route.path)
+  mkdirSync(dir, { recursive: true })
+  copyFileSync(resolve(dist, 'index.html'), resolve(dir, 'index.html'))
+}
+
 const urls = routes
   .map(
     (route) => `  <url>
