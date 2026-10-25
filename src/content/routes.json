@@ -109,6 +109,11 @@
     "description": "Extract text from screenshots, receipts and scanned pages with an OCR engine that runs entirely on your device. English text, plain-text output, nothing uploaded.",
     "priority": "0.9"
   },
+  "/tools/pdf-form-fill": {
+    "title": "Fill in a PDF form locally, no upload",
+    "description": "Type into the text fields, tick the checkboxes and pick the options of a PDF form, then download a filled copy — flattened or still editable. Runs entirely in your browser.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -242,6 +247,11 @@
   "/guides/ocr-image-without-upload": {
     "title": "Extract text from an image without uploading it",
     "description": "How OCR can run entirely in the browser, which images read cleanly and which never will, what to expect from the output, and how to verify nothing is uploaded.",
+    "priority": "0.8"
+  },
+  "/guides/fill-pdf-form-without-upload": {
+    "title": "Fill in a PDF form without uploading it",
+    "description": "The two kinds of PDF form, editable versus flattened copies, what a local filler will not do, and how to fill a form entirely inside your browser.",
     "priority": "0.8"
   },
   "/pricing": {

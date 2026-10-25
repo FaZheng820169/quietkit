@@ -82,6 +82,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/image-ocr">Image to text</Link>
               </li>
+              <li>
+                <Link to="/tools/pdf-form-fill">Fill a PDF form</Link>
+              </li>
             </ul>
           </div>
 
@@ -165,6 +168,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/ocr-image-without-upload">OCR an image</Link>
+              </li>
+              <li>
+                <Link to="/guides/fill-pdf-form-without-upload">Fill a PDF form</Link>
               </li>
             </ul>
           </div>

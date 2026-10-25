@@ -185,6 +185,13 @@ const articles = [
       'How an OCR engine reads characters inside your browser, which images work well, and why handwriting stays out of reach.',
     tag: 'Images',
   },
+  {
+    to: '/guides/fill-pdf-form-without-upload',
+    title: 'Fill a PDF form without uploading it',
+    description:
+      'The two kinds of PDF form, editable versus flattened copies, and why identity numbers belong on your own device.',
+    tag: 'Documents',
+  },
 ]
 
 export function Guides() {

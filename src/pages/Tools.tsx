@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Twenty tools. Zero uploads.</h1>
+          <h1>Twenty-one tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -161,6 +161,13 @@ export function Tools() {
               description="Read the words out of screenshots, receipts and scanned pages with an OCR engine that runs on your device — English text, plain-text output."
               meta="Images · Text out"
             />
+            <ToolCard
+              to="/tools/pdf-form-fill"
+              icon={<FileIcon size={22} />}
+              title="Fill a PDF form"
+              description="Type into the fields, tick the boxes and pick the options of a real PDF form, then download a filled copy — flattened or still editable."
+              meta="Forms · Flatten"
+            />
           </div>
 
           <div className="panel" style={{ marginTop: 26 }}>
@@ -168,7 +175,8 @@ export function Tools() {
             <div className="split" style={{ gap: 24 }}>
               <p className="small muted">
                 Shipped from the bench: a batch workflow that runs several tools over one folder
-                in a single pass, and an OCR reader that turns pictures of words into plain text.
+                in a single pass, an OCR reader that turns pictures of words into plain text, and
+                a form filler that types into a PDF's fields and flattens the answers.
                 Comparison, watermarking, compression, PDF to JPG rendering,
                 splitting, page-size rebuilding, metadata inspection, page numbering, folder-wide
                 resizing and metadata cleaning, text extraction, page reorder, rotation, JPG to

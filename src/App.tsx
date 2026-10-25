@@ -22,6 +22,7 @@ import { PdfCompress } from './pages/PdfCompress'
 import { PdfCompare } from './pages/PdfCompare'
 import { Batch } from './pages/Batch'
 import { ImageOcr } from './pages/ImageOcr'
+import { PdfFormFill } from './pages/PdfFormFill'
 import { Pricing } from './pages/Pricing'
 import { Privacy } from './pages/Privacy'
 import { About } from './pages/About'
@@ -53,6 +54,7 @@ import { PageNumbersGuide } from './pages/guides/PageNumbersGuide'
 import { ResizePdfGuide } from './pages/guides/ResizePdfGuide'
 import { BatchFolderGuide } from './pages/guides/BatchFolderGuide'
 import { OcrImageGuide } from './pages/guides/OcrImageGuide'
+import { FillPdfFormGuide } from './pages/guides/FillPdfFormGuide'
 
 export default function App() {
   return (
@@ -81,6 +83,7 @@ export default function App() {
           <Route path="/tools/pdf-compare" element={<PdfCompare />} />
           <Route path="/tools/batch" element={<Batch />} />
           <Route path="/tools/image-ocr" element={<ImageOcr />} />
+          <Route path="/tools/pdf-form-fill" element={<PdfFormFill />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/remove-location-from-photo" element={<RemoveLocationPhoto />} />
           <Route path="/guides/compress-image-to-100kb" element={<CompressTo100kb />} />
@@ -108,6 +111,7 @@ export default function App() {
           <Route path="/guides/resize-pdf-pages-without-upload" element={<ResizePdfGuide />} />
           <Route path="/guides/batch-process-folder-without-upload" element={<BatchFolderGuide />} />
           <Route path="/guides/ocr-image-without-upload" element={<OcrImageGuide />} />
+          <Route path="/guides/fill-pdf-form-without-upload" element={<FillPdfFormGuide />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />
