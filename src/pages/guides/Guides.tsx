@@ -227,6 +227,13 @@ const articles = [
       'Why a server-side generator has to see your password first, what actually makes a password strong, and how to verify a generator is local.',
     tag: 'Security',
   },
+  {
+    to: '/guides/watermark-image-without-upload',
+    title: 'Watermark photos without uploading them',
+    description:
+      'Why online watermarking defeats the point, how to choose tiled or centred, and how to protect a whole folder locally.',
+    tag: 'Images',
+  },
 ]
 
 export function Guides() {

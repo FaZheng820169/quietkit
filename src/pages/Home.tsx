@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Twenty-six tools, no filler</span>
+              <span className="eyebrow">Twenty-seven tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -288,6 +288,13 @@ export function Home() {
               description="Strong random passwords from your browser's own crypto source — 12 to 64 characters, batches of five or ten, one click to copy."
               meta="Security · Local crypto"
             />
+            <ToolCard
+              to="/tools/image-watermark"
+              icon={<ImageIcon size={22} />}
+              title="Image watermark"
+              description="Drop a photo, type the text, preview the watermark, download. Tiled or centred, one image or a whole folder as ZIP."
+              meta="Images · JPEG / PNG / WebP"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -468,6 +475,11 @@ export function Home() {
                 to: '/guides/password-generator-without-upload',
                 title: 'Passwords without the upload',
                 body: 'Why server-side generators see your password first, what makes one strong, and how to verify a generator is local.',
+              },
+              {
+                to: '/guides/watermark-image-without-upload',
+                title: 'Watermark photos without the upload',
+                body: 'Why online watermarking defeats the point, tiled versus centred, and how to protect a whole folder locally.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

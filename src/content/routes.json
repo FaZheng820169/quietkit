@@ -139,6 +139,11 @@
     "description": "Generate cryptographically random passwords with configurable length and character sets. Runs entirely in your browser with crypto.getRandomValues — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/image-watermark": {
+    "title": "Image watermark — tiled or centred text, no upload",
+    "description": "Add a tiled or centred text watermark to photos and screenshots. Preview the result, batch a whole folder, download as ZIP — everything runs locally in your browser.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -302,6 +307,11 @@
   "/guides/password-generator-without-upload": {
     "title": "Generate passwords without uploading them",
     "description": "Why a server-side generator has to see your password first, what actually makes a password strong, and how to verify a generator is local.",
+    "priority": "0.8"
+  },
+  "/guides/watermark-image-without-upload": {
+    "title": "Watermark photos without uploading them",
+    "description": "Why online watermarking defeats the point, how to choose tiled or centred, and how to protect a whole folder locally.",
     "priority": "0.8"
   },
   "/pricing": {

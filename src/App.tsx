@@ -28,6 +28,7 @@ import { PdfSign } from './pages/PdfSign'
 import { QrCode } from './pages/QrCode'
 import { Favicon } from './pages/Favicon'
 import { PasswordGenerator } from './pages/PasswordGenerator'
+import { WatermarkImage } from './pages/WatermarkImage'
 import { Pricing } from './pages/Pricing'
 import { Privacy } from './pages/Privacy'
 import { About } from './pages/About'
@@ -65,6 +66,7 @@ import { SignPdfGuide } from './pages/guides/SignPdfGuide'
 import { QrCodeGuide } from './pages/guides/QrCodeGuide'
 import { FaviconGuide } from './pages/guides/FaviconGuide'
 import { PasswordGeneratorGuide } from './pages/guides/PasswordGeneratorGuide'
+import { WatermarkImageGuide } from './pages/guides/WatermarkImageGuide'
 
 export default function App() {
   return (
@@ -99,6 +101,7 @@ export default function App() {
           <Route path="/tools/qr-code" element={<QrCode />} />
           <Route path="/tools/favicon" element={<Favicon />} />
           <Route path="/tools/password-generator" element={<PasswordGenerator />} />
+          <Route path="/tools/image-watermark" element={<WatermarkImage />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/remove-location-from-photo" element={<RemoveLocationPhoto />} />
           <Route path="/guides/compress-image-to-100kb" element={<CompressTo100kb />} />
@@ -132,6 +135,7 @@ export default function App() {
           <Route path="/guides/qr-code-without-upload" element={<QrCodeGuide />} />
           <Route path="/guides/favicon-without-upload" element={<FaviconGuide />} />
           <Route path="/guides/password-generator-without-upload" element={<PasswordGeneratorGuide />} />
+          <Route path="/guides/watermark-image-without-upload" element={<WatermarkImageGuide />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />

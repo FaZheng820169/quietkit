@@ -100,6 +100,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/password-generator">Password generator</Link>
               </li>
+              <li>
+                <Link to="/tools/image-watermark">Image watermark</Link>
+              </li>
             </ul>
           </div>
 
@@ -201,6 +204,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/password-generator-without-upload">Passwords without the upload</Link>
+              </li>
+              <li>
+                <Link to="/guides/watermark-image-without-upload">Watermark photos without the upload</Link>
               </li>
             </ul>
           </div>
