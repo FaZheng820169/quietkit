@@ -59,6 +59,9 @@ export function Footer() {
                 <Link to="/tools/pdf-compress">Compress a PDF</Link>
               </li>
               <li>
+                <Link to="/tools/pdf-compare">Compare PDFs</Link>
+              </li>
+              <li>
                 <Link to="/tools/pdf-split">Split a PDF</Link>
               </li>
               <li>

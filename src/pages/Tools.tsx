@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Seventeen tools. Zero uploads.</h1>
+          <h1>Eighteen tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -61,6 +61,13 @@ export function Tools() {
               icon={<FileIcon size={22} />}
               title="Compress a PDF"
               description="Rebuild heavy scans at 110–200 DPI and see the real before-and-after size. Text becomes pixels; links and forms are dropped."
+              meta="Documents"
+            />
+            <ToolCard
+              to="/tools/pdf-compare"
+              icon={<FileIcon size={22} />}
+              title="Compare PDFs"
+              description="Put two versions side by side, page through them together and highlight what changed, pixel by pixel."
               meta="Documents"
             />
             <ToolCard
@@ -146,11 +153,12 @@ export function Tools() {
             <span className="panel-title">On the workbench</span>
             <div className="split" style={{ gap: 24 }}>
               <p className="small muted">
-                Next up: a comparison view for PDFs — put two versions side by side and see what
-                changed. Watermarking, compression, PDF to JPG rendering, splitting, page-size
-                rebuilding, metadata inspection, page numbering, folder-wide resizing and metadata
-                cleaning, text extraction, page reorder, rotation, JPG to PDF and HEIC decoding all
-                ship — each runs entirely in the tab.
+                Next up: more guides for the tools that already ship, then a batch workflow that
+                runs several tools over one folder in a single pass. Comparison, watermarking,
+                compression, PDF to JPG rendering, splitting, page-size rebuilding, metadata
+                inspection, page numbering, folder-wide resizing and metadata cleaning, text
+                extraction, page reorder, rotation, JPG to PDF and HEIC decoding all ship — each
+                runs entirely in the tab.
               </p>
               <p className="small muted">
                 Want a specific tool? The fastest way to get it built is to ask for it — every

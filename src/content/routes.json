@@ -34,6 +34,11 @@
     "description": "Shrink heavy PDFs by rebuilding each page as a JPEG at 110, 150 or 200 DPI. See the real before-and-after size. Runs entirely in the browser, nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/pdf-compare": {
+    "title": "Compare two PDFs side by side, no upload",
+    "description": "Put two versions of a PDF next to each other, page through them together and highlight what changed pixel by pixel. Handles different page counts. Runs entirely in your browser — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/tools/pdf-merge": {
     "title": "Merge PDF files locally, no upload",
     "description": "Combine several PDFs into one document in the order you choose. Everything happens inside your browser, so contracts and scans never leave your device.",

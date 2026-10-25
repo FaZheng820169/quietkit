@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Seventeen tools, no filler</span>
+              <span className="eyebrow">Eighteen tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -147,6 +147,13 @@ export function Home() {
               title="Compress a PDF"
               description="Rebuild a 20 MB scan at a lower resolution and compare the real sizes before keeping the copy — locally, page by page."
               meta="110 · 150 · 200 DPI"
+            />
+            <ToolCard
+              to="/tools/pdf-compare"
+              icon={<FileIcon size={22} />}
+              title="Compare PDFs"
+              description="Two versions of a quote, contract or report, side by side — page through in lockstep and highlight what changed."
+              meta="Side by side · Diff"
             />
             <ToolCard
               to="/tools/pdf-merge"
