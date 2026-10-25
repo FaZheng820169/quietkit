@@ -99,6 +99,11 @@
     "description": "Turn PDF pages into JPEG images at 150, 200 or 300 DPI. Choose pages, keep a white background, download one file or a ZIP — rendered in your browser, nothing uploaded.",
     "priority": "0.9"
   },
+  "/tools/batch": {
+    "title": "Batch a whole folder: clean photos, merge PDFs, one ZIP",
+    "description": "Drop a folder of photos and PDFs. Photos are stripped of EXIF and GPS data, converted and compressed; PDFs are merged in name order, numbered and resized to A4. One ZIP back, nothing uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",

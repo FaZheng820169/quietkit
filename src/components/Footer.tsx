@@ -76,6 +76,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/jpg-to-pdf">JPG to PDF</Link>
               </li>
+              <li>
+                <Link to="/tools/batch">Batch a folder</Link>
+              </li>
             </ul>
           </div>
 

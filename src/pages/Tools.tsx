@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Eighteen tools. Zero uploads.</h1>
+          <h1>Nineteen tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -147,18 +147,24 @@ export function Tools() {
               description="Combine receipts, scans or photos into one PDF, in the order you choose, with GPS stripped."
               meta="Photos · Documents"
             />
+            <ToolCard
+              to="/tools/batch"
+              icon={<PinIcon size={22} />}
+              title="Batch a folder"
+              description="Drop a whole folder: photos are cleaned of metadata, converted and compressed; PDFs are merged, numbered and resized. One ZIP back."
+              meta="Photos + Documents · ZIP"
+            />
           </div>
 
           <div className="panel" style={{ marginTop: 26 }}>
             <span className="panel-title">On the workbench</span>
             <div className="split" style={{ gap: 24 }}>
               <p className="small muted">
-                Next up: more guides for the tools that already ship, then a batch workflow that
-                runs several tools over one folder in a single pass. Comparison, watermarking,
-                compression, PDF to JPG rendering, splitting, page-size rebuilding, metadata
-                inspection, page numbering, folder-wide resizing and metadata cleaning, text
-                extraction, page reorder, rotation, JPG to PDF and HEIC decoding all ship — each
-                runs entirely in the tab.
+                Shipped from the bench: a batch workflow that runs several tools over one folder
+                in a single pass. Comparison, watermarking, compression, PDF to JPG rendering,
+                splitting, page-size rebuilding, metadata inspection, page numbering, folder-wide
+                resizing and metadata cleaning, text extraction, page reorder, rotation, JPG to
+                PDF and HEIC decoding all ship — each runs entirely in the tab.
               </p>
               <p className="small muted">
                 Want a specific tool? The fastest way to get it built is to ask for it — every

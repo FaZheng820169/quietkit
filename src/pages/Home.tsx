@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Eighteen tools, no filler</span>
+              <span className="eyebrow">Nineteen tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -231,6 +231,13 @@ export function Home() {
               title="PDF to JPG"
               description="Turn pages into JPEGs at 150, 200 or 300 DPI — one per page, white background, ZIP for a whole document."
               meta="150–300 DPI · ZIP"
+            />
+            <ToolCard
+              to="/tools/batch"
+              icon={<BoltIcon size={22} />}
+              title="Batch a folder"
+              description="One folder in, one ZIP out: photos cleaned, converted and compressed; PDFs merged, numbered and resized — in a single pass."
+              meta="Folder · ZIP"
             />
           </div>
 
