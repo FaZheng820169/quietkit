@@ -177,6 +177,11 @@ export function Home() {
           <div className="card-grid">
             {[
               {
+                to: '/guides/heic-to-jpg',
+                title: 'Convert HEIC to JPG',
+                body: 'Why iPhones save HEIC, where it breaks, and how to convert it without uploading photos.',
+              },
+              {
                 to: '/guides/remove-location-from-photo',
                 title: 'Remove location data from a photo',
                 body: 'What GPS in a JPEG actually is, and the exact steps on iPhone, Android and Windows.',
