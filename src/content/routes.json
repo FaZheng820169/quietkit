@@ -209,6 +209,11 @@
     "description": "What changes between JPEG, PNG and WebP, why HEIC needs a decoder, what happens to transparency and metadata — and how to convert a whole folder locally.",
     "priority": "0.8"
   },
+  "/guides/remove-exif-metadata-without-upload": {
+    "title": "Remove EXIF metadata from photos without uploading them",
+    "description": "What the EXIF block contains, which fields actually expose you, why screenshots and platform stripping fall short, and how to clean one photo or a whole folder locally.",
+    "priority": "0.8"
+  },
   "/pricing": {
     "title": "Pricing — free tools, one planned pro tier",
     "description": "QuietKit tools are free with no limits and no account. A one-time pro tier for saved presets and batch folders across many tools is in development.",

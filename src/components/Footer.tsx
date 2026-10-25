@@ -145,6 +145,9 @@ export function Footer() {
               <li>
                 <Link to="/guides/convert-images-without-upload">Convert images locally</Link>
               </li>
+              <li>
+                <Link to="/guides/remove-exif-metadata-without-upload">Strip photo metadata</Link>
+              </li>
             </ul>
           </div>
 

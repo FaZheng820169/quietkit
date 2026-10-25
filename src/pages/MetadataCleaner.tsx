@@ -507,6 +507,11 @@ export function MetadataCleaner() {
                   <CheckIcon size={15} /> Merge PDFs locally
                 </Link>
               </li>
+              <li>
+                <Link to="/guides/remove-exif-metadata-without-upload" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Guide: strip metadata properly
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -358,6 +358,11 @@ export function Home() {
                 title: 'Convert images locally',
                 body: 'What JPEG, PNG and WebP each keep, why HEIC needs a decoder, and how to convert a folder.',
               },
+              {
+                to: '/guides/remove-exif-metadata-without-upload',
+                title: 'Strip photo metadata',
+                body: 'The fields that expose you, why screenshots fall short, and how to clean a whole folder.',
+              },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">
                 <h3 style={{ fontSize: 19 }}>{article.title}</h3>

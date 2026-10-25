@@ -150,6 +150,13 @@ const articles = [
       'HEIC, PNG, WebP, JPEG — what each format keeps, why files can grow, and how to convert a folder locally.',
     tag: 'Formats',
   },
+  {
+    to: '/guides/remove-exif-metadata-without-upload',
+    title: 'Strip photo metadata, locally',
+    description:
+      'The fields that expose you, why screenshots fall short, and how to clean a whole folder in one pass.',
+    tag: 'Metadata',
+  },
 ]
 
 export function Guides() {
