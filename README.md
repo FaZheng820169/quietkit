@@ -1,32 +1,32 @@
-# React + TypeScript + Vite
+# QuietKit
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Private file tools that run entirely in the browser. No uploads, no accounts, no server-side processing.
 
-Currently, two official plugins are available:
+Live site: https://fazheng820169.github.io/quietkit/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tools
 
-## React Compiler
+- **Image compressor** — resize and re-encode JPEG / PNG / WebP with the Canvas API.
+- **Metadata cleaner** — a hand-written JPEG/PNG segment parser that lists EXIF, GPS, XMP and IPTC data, then rewrites the file without it (preserving the display orientation tag).
+- **PDF merge** — copies pages between documents with pdf-lib, without rasterising them.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Development
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev          # http://localhost:5173
+npm run build        # type-check, build to dist/, emit 404.html + sitemap.xml
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Deployment
+
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds with
+`VITE_BASE_PATH=/<repo-name>/` and publishes `dist/` to GitHub Pages.
+
+Set `VITE_ADSENSE_CLIENT` and `VITE_ADSENSE_SLOT` at build time to activate the
+ad slots that are already positioned in the layouts.
+
+## Testing note
+
+`scripts/postbuild.mjs` copies `index.html` to `404.html` so client-side routes
+work on GitHub Pages, and generates `robots.txt` + `sitemap.xml` from `SITE_URL`.
