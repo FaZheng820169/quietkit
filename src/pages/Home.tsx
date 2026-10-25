@@ -348,6 +348,11 @@ export function Home() {
                 title: 'Reorder pages by typing',
                 body: 'Why a written order beats dragging thumbnails, and what survives a rebuilt document.',
               },
+              {
+                to: '/guides/extract-text-from-pdf-without-upload',
+                title: 'Copy text out of a PDF',
+                body: 'What the text layer is, why scans stay silent, and what plain text keeps.',
+              },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">
                 <h3 style={{ fontSize: 19 }}>{article.title}</h3>

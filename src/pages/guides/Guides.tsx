@@ -136,6 +136,13 @@ const articles = [
       'Why a written order beats dragging thumbnails, and what survives a rebuilt document.',
     tag: 'Documents',
   },
+  {
+    to: '/guides/extract-text-from-pdf-without-upload',
+    title: 'Extract text from a PDF',
+    description:
+      'What the text layer is, why scans stay silent, and what plain text keeps and drops.',
+    tag: 'Documents',
+  },
 ]
 
 export function Guides() {

@@ -139,6 +139,9 @@ export function Footer() {
               <li>
                 <Link to="/guides/reorder-pdf-pages-without-upload">Reorder PDF pages</Link>
               </li>
+              <li>
+                <Link to="/guides/extract-text-from-pdf-without-upload">Extract PDF text</Link>
+              </li>
             </ul>
           </div>
 

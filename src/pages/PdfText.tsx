@@ -317,6 +317,11 @@ export function PdfText() {
                   <CheckIcon size={15} /> Reorder PDF pages
                 </Link>
               </li>
+              <li>
+                <Link to="/guides/extract-text-from-pdf-without-upload" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Guide: the text layer, explained
+                </Link>
+              </li>
             </ul>
           </div>
         </aside>

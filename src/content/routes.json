@@ -199,6 +199,11 @@
     "description": "Why page order goes wrong, why a written order beats dragging thumbnails, what survives a rebuild, and how to rearrange a PDF locally.",
     "priority": "0.8"
   },
+  "/guides/extract-text-from-pdf-without-upload": {
+    "title": "Extract text from a PDF without uploading it",
+    "description": "What the PDF text layer is, why scans have no text to extract, what plain text keeps and drops, and how to copy text out of a PDF locally.",
+    "priority": "0.8"
+  },
   "/pricing": {
     "title": "Pricing — free tools, one planned pro tier",
     "description": "QuietKit tools are free with no limits and no account. A one-time pro tier for saved presets and batch folders across many tools is in development.",
