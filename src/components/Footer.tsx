@@ -136,6 +136,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/uuid-generator">UUID generator</Link>
               </li>
+              <li>
+                <Link to="/tools/unit-converter">Unit converter</Link>
+              </li>
             </ul>
           </div>
 
@@ -273,6 +276,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/uuid-generator-without-upload">UUIDs without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/unit-conversion-without-upload">Units without a server</Link>
               </li>
             </ul>
           </div>

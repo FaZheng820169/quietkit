@@ -311,6 +311,13 @@ const articles = [
       'What a version 4 UUID actually is, how likely a collision really is, and why an id you are about to use should not pass through an API.',
     tag: 'Developer',
   },
+  {
+    to: '/guides/unit-conversion-without-upload',
+    title: 'Convert units without uploading your numbers',
+    description:
+      'Why an inch is exactly 25.4 mm, what makes temperature conversion affine, the honest difference between MB and MiB — and why converting is a local job.',
+    tag: 'Everyday',
+  },
 ]
 
 export function Guides() {

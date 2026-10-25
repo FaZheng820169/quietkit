@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Thirty-eight tools, no filler</span>
+              <span className="eyebrow">Thirty-nine tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -372,6 +372,13 @@ export function Home() {
               description="Random v4 UUIDs in batches of up to 1,000 — standard, plain, braced or URN, with honest collision odds."
               meta="Developer · Random ids"
             />
+            <ToolCard
+              to="/tools/unit-converter"
+              icon={<FileIcon size={22} />}
+              title="Unit converter"
+              description="Inches, pounds, Fahrenheit, gigabytes — exact definitional factors, and MB versus MiB never conflated."
+              meta="Everyday · Exact ratios"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -612,6 +619,11 @@ export function Home() {
                 to: '/guides/uuid-generator-without-upload',
                 title: 'UUIDs without a server',
                 body: 'What the 122 random bits in a v4 UUID mean, how likely a collision really is, and why an id you are about to use should not pass through an API.',
+              },
+              {
+                to: '/guides/unit-conversion-without-upload',
+                title: 'Unit conversion without a server',
+                body: 'Why an inch is exactly 25.4 mm, what makes temperature affine, and the honest 7% gap between MB and MiB.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

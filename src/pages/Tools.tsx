@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Thirty-eight tools. Zero uploads.</h1>
+          <h1>Thirty-nine tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -286,6 +286,13 @@ export function Tools() {
               title="UUID generator"
               description="RFC 4122 v4 UUIDs from crypto.getRandomValues — batches of up to 1,000, in standard, plain, braced or URN form."
               meta="Developer · Random ids"
+            />
+            <ToolCard
+              to="/tools/unit-converter"
+              icon={<FileIcon size={22} />}
+              title="Unit converter"
+              description="Length, weight, temperature and data size with exact definitional factors — and MB versus MiB kept honestly distinct."
+              meta="Everyday · Exact ratios"
             />
           </div>
 

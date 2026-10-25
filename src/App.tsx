@@ -40,6 +40,7 @@ import { WordCounter } from './pages/WordCounter'
 import { CaseConverter } from './pages/CaseConverter'
 import { SlugGenerator } from './pages/SlugGenerator'
 import { UuidGenerator } from './pages/UuidGenerator'
+import { UnitConverter } from './pages/UnitConverter'
 import { Pricing } from './pages/Pricing'
 import { Privacy } from './pages/Privacy'
 import { About } from './pages/About'
@@ -89,6 +90,7 @@ import { WordCounterGuide } from './pages/guides/WordCounterGuide'
 import { CaseConverterGuide } from './pages/guides/CaseConverterGuide'
 import { SlugGeneratorGuide } from './pages/guides/SlugGeneratorGuide'
 import { UuidGeneratorGuide } from './pages/guides/UuidGeneratorGuide'
+import { UnitConverterGuide } from './pages/guides/UnitConverterGuide'
 
 export default function App() {
   return (
@@ -135,6 +137,7 @@ export default function App() {
           <Route path="/tools/case-converter" element={<CaseConverter />} />
           <Route path="/tools/slug-generator" element={<SlugGenerator />} />
           <Route path="/tools/uuid-generator" element={<UuidGenerator />} />
+          <Route path="/tools/unit-converter" element={<UnitConverter />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/remove-location-from-photo" element={<RemoveLocationPhoto />} />
           <Route path="/guides/compress-image-to-100kb" element={<CompressTo100kb />} />
@@ -180,6 +183,7 @@ export default function App() {
           <Route path="/guides/case-conversion-without-upload" element={<CaseConverterGuide />} />
           <Route path="/guides/slug-generator-without-upload" element={<SlugGeneratorGuide />} />
           <Route path="/guides/uuid-generator-without-upload" element={<UuidGeneratorGuide />} />
+          <Route path="/guides/unit-conversion-without-upload" element={<UnitConverterGuide />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />
