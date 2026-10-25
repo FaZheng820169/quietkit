@@ -287,6 +287,11 @@ export function Home() {
                 body: 'Which files shrink and which refuse to, what a rebuilt copy drops — with real before-and-after numbers.',
               },
               {
+                to: '/guides/remove-pdf-metadata',
+                title: 'Strip PDF metadata',
+                body: 'The author, company and dates a PDF carries invisibly — and how to take the luggage tag off.',
+              },
+              {
                 to: '/guides/exif-viewer',
                 title: 'What an EXIF viewer shows',
                 body: 'The metadata families, the risky fields, and what f-stop, ISO and focal length mean.',

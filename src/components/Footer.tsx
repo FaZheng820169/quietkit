@@ -101,6 +101,9 @@ export function Footer() {
                 <Link to="/guides/compress-pdf-without-upload">Compress a PDF</Link>
               </li>
               <li>
+                <Link to="/guides/remove-pdf-metadata">Strip PDF metadata</Link>
+              </li>
+              <li>
                 <Link to="/guides/exif-viewer">Read EXIF data</Link>
               </li>
               <li>

@@ -109,6 +109,11 @@
     "description": "What PDF compression really does, which files shrink and which refuse to, what a rebuilt copy keeps and drops — and how to do the whole thing locally.",
     "priority": "0.8"
   },
+  "/guides/remove-pdf-metadata": {
+    "title": "How to remove metadata from a PDF before sending it",
+    "description": "What a PDF's property block reveals — author, company, software, dates — when it matters, and how to strip it locally without changing a single page.",
+    "priority": "0.8"
+  },
   "/guides": {
     "title": "Guides — files, metadata and privacy",
     "description": "Practical guides on photo metadata, image compression and local PDF handling. Short, specific, and linked to a tool that does the work.",

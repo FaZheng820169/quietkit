@@ -324,6 +324,11 @@ export function PdfMetadata() {
             <span className="panel-title">Related</span>
             <ul className="stack-sm" style={{ listStyle: 'none', margin: 0, padding: 0, fontSize: 14 }}>
               <li>
+                <Link to="/guides/remove-pdf-metadata" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Read the full guide
+                </Link>
+              </li>
+              <li>
                 <Link to="/tools/pdf-remove-pages" className="row" style={{ gap: 8 }}>
                   <CheckIcon size={15} /> Drop a blank or sensitive page
                 </Link>

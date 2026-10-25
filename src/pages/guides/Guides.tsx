@@ -53,6 +53,13 @@ const articles = [
     tag: 'Documents',
   },
   {
+    to: '/guides/remove-pdf-metadata',
+    title: 'Remove metadata from a PDF',
+    description:
+      'Author, company, software and dates — what the property block reveals, and how to strip it without touching a page.',
+    tag: 'Documents',
+  },
+  {
     to: '/guides/exif-viewer',
     title: 'What an EXIF viewer shows you',
     description:
