@@ -115,6 +115,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/markdown-preview">Markdown preview</Link>
               </li>
+              <li>
+                <Link to="/tools/text-diff">Text diff</Link>
+              </li>
             </ul>
           </div>
 
@@ -231,6 +234,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/markdown-preview-without-upload">Preview Markdown without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/text-diff-without-upload">Compare texts without a server</Link>
               </li>
             </ul>
           </div>

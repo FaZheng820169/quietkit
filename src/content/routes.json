@@ -164,6 +164,11 @@
     "description": "Write Markdown and see it rendered live. Copy or download clean HTML, or keep the .md file. The renderer runs locally in your browser — drafts never leave your device.",
     "priority": "0.9"
   },
+  "/tools/text-diff": {
+    "title": "Text diff — compare two texts without uploading them",
+    "description": "Paste two versions of a contract, config or draft and see exactly what changed, line by line and word by word. Copy or download a unified diff. Runs locally — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -352,6 +357,11 @@
   "/guides/markdown-preview-without-upload": {
     "title": "Preview Markdown without pasting drafts into a server",
     "description": "Why an online Markdown renderer sees every draft you paste, what a safe local renderer must do about raw HTML, and how to export clean HTML from your browser.",
+    "priority": "0.8"
+  },
+  "/guides/text-diff-without-upload": {
+    "title": "Compare two texts without uploading either one",
+    "description": "Contracts, configs and drafts are exactly the texts you should not paste into a server. How line diffing works, what a unified diff is, and how to compare locally.",
     "priority": "0.8"
   },
   "/pricing": {

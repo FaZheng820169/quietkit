@@ -1476,3 +1476,89 @@ select {
   max-width: 100%;
   border-radius: 6px;
 }
+
+/* ---------- text diff ---------- */
+
+.diff-stat-added {
+  color: var(--forest);
+  font-weight: 600;
+}
+
+.diff-stat-removed {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.diff-wrap {
+  margin-top: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow-x: auto;
+  background: var(--paper);
+}
+
+.diff-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.diff-table td {
+  padding: 1px 10px;
+  vertical-align: top;
+}
+
+.diff-no {
+  width: 1%;
+  min-width: 34px;
+  text-align: right;
+  color: var(--ink-3);
+  user-select: none;
+  border-right: 1px solid var(--line);
+  background: var(--paper-2);
+}
+
+.diff-line {
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--ink-2);
+}
+
+.diff-sign {
+  display: inline-block;
+  width: 16px;
+  color: var(--ink-3);
+  user-select: none;
+}
+
+.diff-ins {
+  background: #e3f0e4;
+}
+
+.diff-ins .diff-sign {
+  color: var(--forest);
+}
+
+.diff-del {
+  background: #f7e4de;
+}
+
+.diff-del .diff-sign {
+  color: var(--danger);
+}
+
+.diff-ins .diff-changed {
+  background: #bfe0c6;
+  color: var(--ink);
+  border-radius: 3px;
+  padding: 0 1px;
+}
+
+.diff-del .diff-changed {
+  background: #efc8bd;
+  color: var(--ink);
+  border-radius: 3px;
+  padding: 0 1px;
+}

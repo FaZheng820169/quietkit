@@ -262,6 +262,13 @@ const articles = [
       'Drafts are the most sensitive text you write — render them locally, with raw HTML shown as text and clean HTML to copy.',
     tag: 'Writing',
   },
+  {
+    to: '/guides/text-diff-without-upload',
+    title: 'Compare two texts without uploading either one',
+    description:
+      'Contracts, configs and drafts are exactly what you should not paste into a server — how line diffing works, what a unified diff is, and how to compare locally.',
+    tag: 'Documents',
+  },
 ]
 
 export function Guides() {

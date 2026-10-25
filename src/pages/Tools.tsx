@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Thirty-one tools. Zero uploads.</h1>
+          <h1>Thirty-two tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -237,6 +237,13 @@ export function Tools() {
               title="Markdown preview"
               description="Write Markdown and see it rendered live. Copy or download clean HTML — drafts never leave your device."
               meta="Writer · Markdown"
+            />
+            <ToolCard
+              to="/tools/text-diff"
+              icon={<FileIcon size={22} />}
+              title="Text diff"
+              description="Paste two versions of a contract, config or draft and see exactly what changed — line by line, word by word, with a unified diff to export."
+              meta="Documents · Compare"
             />
           </div>
 
