@@ -55,6 +55,7 @@ export function ImageCompressor() {
   const [quality, setQuality] = useState(0.75)
   const [maxDimension, setMaxDimension] = useState<number | null>(null)
   const [format, setFormat] = useState<CompressFormat>('original')
+  const [targetBytes, setTargetBytes] = useState<number | null>(null)
   const [busy, setBusy] = useState(false)
 
   const itemsRef = useRef<Item[]>(items)
@@ -62,7 +63,7 @@ export function ImageCompressor() {
     itemsRef.current = items
   }, [items])
 
-  const settingsKey = `${quality}|${maxDimension}|${format}`
+  const settingsKey = `${quality}|${maxDimension}|${format}|${targetBytes ?? 'none'}`
 
   useEffect(() => {
     let cancelled = false
@@ -74,7 +75,7 @@ export function ImageCompressor() {
       for (const item of pending) {
         if (cancelled) break
         try {
-          const result = await compressImage(item.file, { maxDimension, quality, format })
+          const result = await compressImage(item.file, { maxDimension, quality, format, targetBytes })
           const url = URL.createObjectURL(result.blob)
           if (cancelled) {
             URL.revokeObjectURL(url)
@@ -108,7 +109,7 @@ export function ImageCompressor() {
     return () => {
       cancelled = true
     }
-  }, [items.length, settingsKey, format, maxDimension, quality])
+  }, [items.length, settingsKey, format, maxDimension, quality, targetBytes])
 
   const addFiles = (files: File[]) => {
     const images = files.filter((file) => file.type.startsWith('image/'))
@@ -216,10 +217,16 @@ export function ImageCompressor() {
                           ) : item.result ? (
                             <>
                               {formatBytes(item.file.size)} → {formatBytes(item.result.blob.size)} ·{' '}
-                              <span className="saved">
-                                −{percentSaved(item.file.size, item.result.blob.size)}%
+                              <span className={item.result.blob.size < item.file.size ? 'saved' : undefined}>
+                                {item.result.blob.size < item.file.size ? '−' : '+'}
+                                {Math.abs(percentSaved(item.file.size, item.result.blob.size))}%
                               </span>{' '}
                               · {item.result.width}×{item.result.height}
+                              {targetBytes
+                                ? item.result.metTarget
+                                  ? ` · ${Math.round(item.result.quality * 100)}% quality`
+                                  : ' · over target'
+                                : ''}
                             </>
                           ) : (
                             <>processing…</>
@@ -307,6 +314,31 @@ export function ImageCompressor() {
                     </button>
                   ))}
                 </div>
+              </div>
+
+              <div className="field">
+                <span className="field-label">Size target</span>
+                <div className="segmented">
+                  {[
+                    { label: 'Off', value: null },
+                    { label: '100 KB', value: 100 * 1024 },
+                    { label: '500 KB', value: 500 * 1024 },
+                    { label: '1 MB', value: 1024 * 1024 },
+                  ].map((option) => (
+                    <button
+                      key={option.label}
+                      aria-pressed={targetBytes === option.value}
+                      onClick={() => setTargetBytes(option.value)}
+                    >
+                      {option.label}
+                    </button>
+                  ))}
+                </div>
+                <p className="small muted" style={{ marginTop: 8 }}>
+                  {format === 'image/png'
+                    ? 'PNG is lossless, so a size target cannot be met by lowering quality. Choose JPEG or WebP.'
+                    : 'QuietKit lowers quality just enough to fit under the target, then stops.'}
+                </p>
               </div>
 
               <div className="field">
