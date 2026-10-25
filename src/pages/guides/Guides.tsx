@@ -143,6 +143,13 @@ const articles = [
       'What the text layer is, why scans stay silent, and what plain text keeps and drops.',
     tag: 'Documents',
   },
+  {
+    to: '/guides/convert-images-without-upload',
+    title: 'Convert images without uploading them',
+    description:
+      'HEIC, PNG, WebP, JPEG — what each format keeps, why files can grow, and how to convert a folder locally.',
+    tag: 'Formats',
+  },
 ]
 
 export function Guides() {

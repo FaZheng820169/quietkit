@@ -352,6 +352,11 @@ export function ImageConverter() {
                   <CheckIcon size={15} /> Guide: hit a 100 KB limit
                 </Link>
               </li>
+              <li>
+                <Link to="/guides/convert-images-without-upload" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Guide: convert without uploading
+                </Link>
+              </li>
             </ul>
           </div>
         </aside>

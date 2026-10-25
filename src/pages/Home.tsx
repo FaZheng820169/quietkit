@@ -353,6 +353,11 @@ export function Home() {
                 title: 'Copy text out of a PDF',
                 body: 'What the text layer is, why scans stay silent, and what plain text keeps.',
               },
+              {
+                to: '/guides/convert-images-without-upload',
+                title: 'Convert images locally',
+                body: 'What JPEG, PNG and WebP each keep, why HEIC needs a decoder, and how to convert a folder.',
+              },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">
                 <h3 style={{ fontSize: 19 }}>{article.title}</h3>

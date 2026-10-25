@@ -45,6 +45,7 @@ import { RemovePdfPagesGuide } from './pages/guides/RemovePdfPagesGuide'
 import { RotatePdfGuide } from './pages/guides/RotatePdfGuide'
 import { ReorderPdfGuide } from './pages/guides/ReorderPdfGuide'
 import { ExtractPdfTextGuide } from './pages/guides/ExtractPdfTextGuide'
+import { ConvertImagesGuide } from './pages/guides/ConvertImagesGuide'
 
 export default function App() {
   return (
@@ -92,6 +93,7 @@ export default function App() {
           <Route path="/guides/rotate-pdf-without-upload" element={<RotatePdfGuide />} />
           <Route path="/guides/reorder-pdf-pages-without-upload" element={<ReorderPdfGuide />} />
           <Route path="/guides/extract-text-from-pdf-without-upload" element={<ExtractPdfTextGuide />} />
+          <Route path="/guides/convert-images-without-upload" element={<ConvertImagesGuide />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />

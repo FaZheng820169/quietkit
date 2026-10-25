@@ -142,6 +142,9 @@ export function Footer() {
               <li>
                 <Link to="/guides/extract-text-from-pdf-without-upload">Extract PDF text</Link>
               </li>
+              <li>
+                <Link to="/guides/convert-images-without-upload">Convert images locally</Link>
+              </li>
             </ul>
           </div>
 
