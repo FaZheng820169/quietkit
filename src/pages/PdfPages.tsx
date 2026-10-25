@@ -233,6 +233,11 @@ export function PdfPages() {
                 </Link>
               </li>
               <li>
+                <Link to="/tools/pdf-rotate" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Rotate a sideways scan instead
+                </Link>
+              </li>
+              <li>
                 <Link to="/guides/merge-pdf-without-upload" className="row" style={{ gap: 8 }}>
                   <CheckIcon size={15} /> Guide: why local PDF tools matter
                 </Link>

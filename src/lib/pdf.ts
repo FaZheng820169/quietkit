@@ -1,4 +1,4 @@
-import { PDFDocument } from 'pdf-lib'
+import { PDFDocument, degrees } from 'pdf-lib'
 
 export type PdfPart = {
   file: File
@@ -70,6 +70,43 @@ export type PageEditResult = {
   blob: Blob
   pages: number
   changed: number
+}
+
+export type RotateResult = {
+  blob: Blob
+  pages: number
+  rotated: number
+}
+
+/**
+ * Rotates pages by adding to their existing /Rotate value, so a page that was
+ * already upside down ends up upright instead of being reset to zero.
+ * Pass an empty range to rotate every page.
+ */
+export async function rotatePdfPages(
+  file: File,
+  input: string,
+  angle: 90 | 180 | 270,
+): Promise<RotateResult> {
+  const bytes = await file.arrayBuffer()
+  const doc = await PDFDocument.load(bytes, { ignoreEncryption: true })
+  const total = doc.getPageCount()
+  const targets = input.trim()
+    ? parsePageRanges(input, total)
+    : doc.getPageIndices()
+
+  targets.forEach((index) => {
+    const page = doc.getPage(index)
+    const current = page.getRotation().angle
+    page.setRotation(degrees(((current + angle) % 360 + 360) % 360))
+  })
+
+  const saved = await doc.save()
+  return {
+    blob: new Blob([new Uint8Array(saved)], { type: 'application/pdf' }),
+    pages: total,
+    rotated: targets.length,
+  }
 }
 
 /** Removes or isolates a page selection, keeping the original pages untouched. */

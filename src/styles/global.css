@@ -179,6 +179,27 @@ svg {
   }
 }
 
+@media (max-width: 480px) {
+  .header-inner {
+    gap: 12px;
+  }
+  .wordmark {
+    font-size: 19px;
+  }
+  .nav {
+    gap: 12px;
+    font-size: 13.5px;
+  }
+  .nav .nav-hide-sm {
+    display: none;
+  }
+  .header-cta {
+    margin-left: 0;
+    padding: 6px 11px;
+    font-size: 12.5px;
+  }
+}
+
 /* ---------- buttons ---------- */
 
 .btn {

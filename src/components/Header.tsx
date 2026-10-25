@@ -4,7 +4,7 @@ import { LockIcon } from './Icons'
 const links = [
   { to: '/tools', label: 'Tools' },
   { to: '/guides', label: 'Guides' },
-  { to: '/pricing', label: 'Pricing' },
+  { to: '/pricing', label: 'Pricing', hideOnSmall: true },
   { to: '/privacy', label: 'Privacy', hideOnMobile: true },
 ]
 
@@ -21,7 +21,9 @@ export function Header() {
             <NavLink
               key={link.to}
               to={link.to}
-              className={link.hideOnMobile ? 'nav-hide' : undefined}
+              className={[link.hideOnMobile && 'nav-hide', link.hideOnSmall && 'nav-hide-sm']
+                .filter(Boolean)
+                .join(' ') || undefined}
             >
               {link.label}
             </NavLink>

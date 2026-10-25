@@ -6,7 +6,7 @@
   },
   "/tools": {
     "title": "All tools — private browser-local file utilities",
-    "description": "The full QuietKit toolbox: compress, convert or resize images, remove EXIF and GPS metadata, merge PDFs or delete pages from one. Every tool runs locally in your browser.",
+    "description": "The full QuietKit toolbox: compress, convert or resize images, remove EXIF and GPS metadata, merge PDFs, delete pages or rotate them. Every tool runs locally in your browser.",
     "priority": "0.8"
   },
   "/tools/image-compressor": {
@@ -37,6 +37,11 @@
   "/tools/pdf-remove-pages": {
     "title": "Remove or extract pages from a PDF, no upload",
     "description": "Delete blank or sensitive pages from a PDF, or pull selected pages into a new file. Enter ranges like 1-3, 7, 10- and download — nothing is uploaded.",
+    "priority": "0.9"
+  },
+  "/tools/pdf-rotate": {
+    "title": "Rotate PDF pages locally, without redrawing",
+    "description": "Turn all pages or only the sideways ones by 90°, 180° or 270°. Text and images are untouched, and the PDF never leaves your browser.",
     "priority": "0.9"
   },
   "/guides": {

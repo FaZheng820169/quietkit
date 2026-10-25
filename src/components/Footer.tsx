@@ -40,6 +40,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/pdf-remove-pages">Remove PDF pages</Link>
               </li>
+              <li>
+                <Link to="/tools/pdf-rotate">Rotate PDF pages</Link>
+              </li>
             </ul>
           </div>
 
