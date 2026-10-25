@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ToolCard } from '../components/ToolCard'
 import { AdSlot } from '../components/AdSlot'
-import { FileIcon, ImageIcon, ShieldIcon, PinIcon, BoltIcon, LockIcon, CheckIcon } from '../components/Icons'
+import { FileIcon, ImageIcon, ShieldIcon, PinIcon, BoltIcon, LockIcon, CheckIcon, QrIcon } from '../components/Icons'
 import { faqJsonLd, routeMeta, useSeo } from '../lib/seo'
 
 const faqs = [
@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Twenty-three tools, no filler</span>
+              <span className="eyebrow">Twenty-four tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -267,6 +267,13 @@ export function Home() {
               description="Draw or type a signature, click where it belongs, download the signed copy — document and signature never leave the tab."
               meta="Sign · Local"
             />
+            <ToolCard
+              to="/tools/qr-code"
+              icon={<QrIcon size={22} />}
+              title="QR code generator"
+              description="Type a link or text, watch the code draw itself, download PNG or SVG. Static codes — no redirect service, no expiry, no tracking."
+              meta="Everyday · PNG / SVG"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -432,6 +439,11 @@ export function Home() {
                 to: '/guides/sign-pdf-without-upload',
                 title: 'Sign a PDF, locally',
                 body: 'Electronic versus digital signatures, what makes one valid, and why the file and the signature stay on your device.',
+              },
+              {
+                to: '/guides/qr-code-without-upload',
+                title: 'QR codes without tracking',
+                body: 'Static versus dynamic codes, why free generators expire, and how to print a code that answers to nobody.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

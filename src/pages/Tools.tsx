@@ -1,5 +1,5 @@
 import { ToolCard } from '../components/ToolCard'
-import { FileIcon, ImageIcon, PinIcon } from '../components/Icons'
+import { FileIcon, ImageIcon, PinIcon, QrIcon } from '../components/Icons'
 import { routeMeta, useSeo } from '../lib/seo'
 
 export function Tools() {
@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Twenty-three tools. Zero uploads.</h1>
+          <h1>Twenty-four tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -182,6 +182,13 @@ export function Tools() {
               description="Draw or type your signature and click where it belongs — one page or every page, with a live preview. Document and signature stay on your device."
               meta="Sign · No upload"
             />
+            <ToolCard
+              to="/tools/qr-code"
+              icon={<QrIcon size={22} />}
+              title="QR code generator"
+              description="Turn a link, Wi-Fi password or any text into a static QR code with live preview — PNG or SVG, no redirect service in the middle."
+              meta="Everyday · PNG / SVG"
+            />
           </div>
 
           <div className="panel" style={{ marginTop: 26 }}>
@@ -191,8 +198,9 @@ export function Tools() {
                 Shipped from the bench: a batch workflow that runs several tools over one folder
                 in a single pass, an OCR reader that turns pictures of words into plain text,
                 a form filler that types into a PDF's fields and flattens the answers, an
-                AVIF converter that works in both directions, and a signing tool that stamps a
-                drawn or typed signature onto the pages you pick.
+                AVIF converter that works in both directions, a signing tool that stamps a
+                drawn or typed signature onto the pages you pick, and a QR generator whose
+                static codes answer to no redirect server.
                 Comparison, watermarking, compression, PDF to JPG rendering,
                 splitting, page-size rebuilding, metadata inspection, page numbering, folder-wide
                 resizing and metadata cleaning, text extraction, page reorder, rotation, JPG to

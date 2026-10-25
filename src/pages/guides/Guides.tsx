@@ -206,6 +206,13 @@ const articles = [
       'Electronic versus digital signatures, what makes one valid, and why the document and the signature stay on your device.',
     tag: 'Documents',
   },
+  {
+    to: '/guides/qr-code-without-upload',
+    title: "Make a QR code that doesn't track people — or expire",
+    description:
+      'Static versus dynamic codes, why free generators expire, and how to print a code that answers to nobody.',
+    tag: 'Everyday',
+  },
 ]
 
 export function Guides() {

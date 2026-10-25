@@ -91,6 +91,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/pdf-sign">Sign a PDF</Link>
               </li>
+              <li>
+                <Link to="/tools/qr-code">QR code generator</Link>
+              </li>
             </ul>
           </div>
 
@@ -183,6 +186,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/sign-pdf-without-upload">Sign a PDF locally</Link>
+              </li>
+              <li>
+                <Link to="/guides/qr-code-without-upload">QR codes without tracking</Link>
               </li>
             </ul>
           </div>

@@ -79,11 +79,12 @@ export function toolJsonLd(name: string, description: string, path: string) {
   const base = import.meta.env.BASE_URL.replace(/\/$/, '')
   return {
     '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
+    '@type': ['SoftwareApplication', 'WebApplication'],
     name,
     description,
     applicationCategory: 'UtilitiesApplication',
     operatingSystem: 'Any (browser)',
+    browserRequirements: 'Requires JavaScript. Runs entirely in the browser.',
     url: `${window.location.origin}${base}${path}`,
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     publisher: { '@type': 'Organization', name: SITE },

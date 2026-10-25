@@ -124,6 +124,11 @@
     "description": "Draw or type your signature, click where it belongs on the page, and download a signed copy. The document and your signature never leave your device.",
     "priority": "0.9"
   },
+  "/tools/qr-code": {
+    "title": "QR code generator — static codes, no upload, no tracking",
+    "description": "Turn a link, Wi-Fi password or any text into a static QR code with a live preview. Choose error correction, colours and size, download PNG or SVG — generated locally, nothing uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -272,6 +277,11 @@
   "/guides/sign-pdf-without-upload": {
     "title": "Sign a PDF without uploading it — or your signature",
     "description": "Electronic versus digital signatures, what makes one legally valid, how to place a signature so it looks written — and how to do it all on your own device.",
+    "priority": "0.8"
+  },
+  "/guides/qr-code-without-upload": {
+    "title": "Make a QR code that doesn't track people — or expire",
+    "description": "Static versus dynamic codes, why free generators expire, what error correction really buys, how big to print, and how to make a code locally that answers to nobody.",
     "priority": "0.8"
   },
   "/pricing": {

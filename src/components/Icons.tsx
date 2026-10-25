@@ -26,6 +26,17 @@ export function LockIcon(props: IconProps) {
   )
 }
 
+export function QrIcon(props: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <rect x="4" y="4" width="6" height="6" rx="1" />
+      <rect x="14" y="4" width="6" height="6" rx="1" />
+      <rect x="4" y="14" width="6" height="6" rx="1" />
+      <path d="M14 14h3v3h-3zM20 14v2M14 20h2M18 18h2v2h-2z" />
+    </svg>
+  )
+}
+
 export function ImageIcon(props: IconProps) {
   return (
     <svg {...base(props)}>
