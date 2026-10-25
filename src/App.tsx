@@ -24,6 +24,7 @@ import { Guides } from './pages/guides/Guides'
 import { RemoveLocationPhoto } from './pages/guides/RemoveLocationPhoto'
 import { CompressTo100kb } from './pages/guides/CompressTo100kb'
 import { MergePdfGuide } from './pages/guides/MergePdfGuide'
+import { SplitPdfGuide } from './pages/guides/SplitPdfGuide'
 import { ExifGuide } from './pages/guides/ExifGuide'
 import { ConvertPngToJpg } from './pages/guides/ConvertPngToJpg'
 import { WhatIsWebp } from './pages/guides/WhatIsWebp'
@@ -55,6 +56,7 @@ export default function App() {
           <Route path="/guides/remove-location-from-photo" element={<RemoveLocationPhoto />} />
           <Route path="/guides/compress-image-to-100kb" element={<CompressTo100kb />} />
           <Route path="/guides/merge-pdf-without-upload" element={<MergePdfGuide />} />
+          <Route path="/guides/split-pdf-without-upload" element={<SplitPdfGuide />} />
           <Route path="/guides/exif-viewer" element={<ExifGuide />} />
           <Route path="/guides/convert-png-to-jpg" element={<ConvertPngToJpg />} />
           <Route path="/guides/what-is-webp" element={<WhatIsWebp />} />

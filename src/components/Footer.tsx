@@ -80,6 +80,9 @@ export function Footer() {
                 <Link to="/guides/merge-pdf-without-upload">Merge PDFs locally</Link>
               </li>
               <li>
+                <Link to="/guides/split-pdf-without-upload">Split PDFs locally</Link>
+              </li>
+              <li>
                 <Link to="/guides/exif-viewer">Read EXIF data</Link>
               </li>
               <li>

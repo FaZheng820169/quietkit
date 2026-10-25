@@ -476,6 +476,11 @@ export function PdfSplit() {
                   <CheckIcon size={15} /> Number each part before sharing
                 </Link>
               </li>
+              <li>
+                <Link to="/guides/split-pdf-without-upload" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Guide: what a split keeps and drops
+                </Link>
+              </li>
             </ul>
           </div>
         </aside>

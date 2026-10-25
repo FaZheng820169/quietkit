@@ -246,6 +246,11 @@ export function Home() {
                 body: 'Why contracts and IDs should stay on your machine, and how to verify a tool is local.',
               },
               {
+                to: '/guides/split-pdf-without-upload',
+                title: 'Split a PDF, properly',
+                body: 'Three ways to cut a document, what each part keeps, and what a split silently drops.',
+              },
+              {
                 to: '/guides/exif-viewer',
                 title: 'What an EXIF viewer shows',
                 body: 'The metadata families, the risky fields, and what f-stop, ISO and focal length mean.',

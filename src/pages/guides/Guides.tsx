@@ -25,6 +25,13 @@ const articles = [
     tag: 'Documents',
   },
   {
+    to: '/guides/split-pdf-without-upload',
+    title: 'Split a PDF without uploading it',
+    description:
+      'Three ways to cut a document, what each part keeps, and how to verify a splitter is local.',
+    tag: 'Documents',
+  },
+  {
     to: '/guides/exif-viewer',
     title: 'What an EXIF viewer shows you',
     description:

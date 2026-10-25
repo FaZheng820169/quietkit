@@ -99,6 +99,11 @@
     "description": "Combining contracts, scans and invoices usually means uploading them to a stranger's server. Here is how to merge PDFs entirely inside your browser instead.",
     "priority": "0.8"
   },
+  "/guides/split-pdf-without-upload": {
+    "title": "Split a PDF without uploading it",
+    "description": "How to cut one PDF into a file per page, fixed chunks or your own ranges on your own machine — what survives a split, what is left behind, and how to check that a splitter is really local.",
+    "priority": "0.8"
+  },
   "/guides/exif-viewer": {
     "title": "EXIF viewer: what your photos really reveal",
     "description": "A plain-language guide to photo metadata: what EXIF, XMP and IPTC contain, how to view them without uploading, and which fields expose your location.",
