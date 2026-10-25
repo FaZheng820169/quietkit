@@ -13,15 +13,21 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Check the live site and every tool route
+      - name: Check every URL in the live sitemap
         run: |
           set -e
-          BASE="https://fazheng820169.github.io/quietkit"
-          for path in "/" "/tools" "/tools/image-compressor" "/tools/metadata-cleaner" "/tools/pdf-merge"; do
-            code=$(curl -sL -o /dev/null -w "%{http_code}" --max-time 20 "$BASE$path")
-            echo "$path -> $code"
+          SITEMAP="https://fazheng820169.github.io/quietkit/sitemap.xml"
+          mapfile -t urls < <(curl -sL --max-time 20 "$SITEMAP" | grep -o '<loc>[^<]*</loc>' | sed 's/<loc>//;s|</loc>||')
+          echo "sitemap lists ${#urls[@]} URLs"
+          if [ "${#urls[@]}" -lt 10 ]; then
+            echo "::error::sitemap returned ${#urls[@]} URLs, expected at least 10"
+            exit 1
+          fi
+          for url in "${urls[@]}"; do
+            code=$(curl -sL -o /dev/null -w "%{http_code}" --max-time 20 "$url")
+            echo "$url -> $code"
             if [ "$code" != "200" ]; then
-              echo "::error::$path returned $code"
+              echo "::error::$url returned $code"
               exit 1
             fi
           done
