@@ -6,7 +6,7 @@
   },
   "/tools": {
     "title": "All tools — private browser-local file utilities",
-    "description": "The full QuietKit toolbox: compress or convert images, remove EXIF and GPS metadata, merge PDFs or delete pages from one. Every tool runs locally in your browser.",
+    "description": "The full QuietKit toolbox: compress, convert or resize images, remove EXIF and GPS metadata, merge PDFs or delete pages from one. Every tool runs locally in your browser.",
     "priority": "0.8"
   },
   "/tools/image-compressor": {
@@ -17,6 +17,11 @@
   "/tools/image-converter": {
     "title": "Convert PNG to JPG, JPG to WebP — no upload",
     "description": "Convert images between JPEG, PNG and WebP in batches inside your browser. Transparent areas become white in JPEG, and nothing is uploaded.",
+    "priority": "0.9"
+  },
+  "/tools/image-resizer": {
+    "title": "Resize an image to exact pixels — no upload",
+    "description": "Resize photos to 1080×1080, 1584×396, 600×600 or any custom size. Crop to fill or fit the whole image, processed locally with nothing uploaded.",
     "priority": "0.9"
   },
   "/tools/metadata-cleaner": {
@@ -67,6 +72,11 @@
   "/guides/what-is-webp": {
     "title": "What is a WebP file, and when to use one?",
     "description": "WebP versus JPEG and PNG: where it saves 25–35%, how transparency and animation work, and the email, print and form uploads that still reject it.",
+    "priority": "0.8"
+  },
+  "/guides/social-media-image-sizes": {
+    "title": "Social media image sizes (2026) and why images get cropped",
+    "description": "The pixel sizes that matter for Instagram, X, LinkedIn, Facebook, YouTube, Pinterest and TikTok, plus the two settings that keep your subject in frame.",
     "priority": "0.8"
   },
   "/pricing": {

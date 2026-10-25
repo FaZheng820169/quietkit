@@ -953,6 +953,11 @@ select {
 
 /* comparison */
 
+.table-wrap {
+  overflow-x: auto;
+  margin: 18px 0;
+}
+
 .compare {
   width: 100%;
   border-collapse: collapse;

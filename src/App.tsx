@@ -4,6 +4,7 @@ import { Home } from './pages/Home'
 import { Tools } from './pages/Tools'
 import { ImageCompressor } from './pages/ImageCompressor'
 import { ImageConverter } from './pages/ImageConverter'
+import { ImageResizer } from './pages/ImageResizer'
 import { MetadataCleaner } from './pages/MetadataCleaner'
 import { PdfMerge } from './pages/PdfMerge'
 import { PdfPages } from './pages/PdfPages'
@@ -18,6 +19,7 @@ import { MergePdfGuide } from './pages/guides/MergePdfGuide'
 import { ExifGuide } from './pages/guides/ExifGuide'
 import { ConvertPngToJpg } from './pages/guides/ConvertPngToJpg'
 import { WhatIsWebp } from './pages/guides/WhatIsWebp'
+import { SocialMediaImageSizes } from './pages/guides/SocialMediaImageSizes'
 
 export default function App() {
   return (
@@ -28,6 +30,7 @@ export default function App() {
           <Route path="/tools" element={<Tools />} />
           <Route path="/tools/image-compressor" element={<ImageCompressor />} />
           <Route path="/tools/image-converter" element={<ImageConverter />} />
+          <Route path="/tools/image-resizer" element={<ImageResizer />} />
           <Route path="/tools/metadata-cleaner" element={<MetadataCleaner />} />
           <Route path="/tools/pdf-merge" element={<PdfMerge />} />
           <Route path="/tools/pdf-remove-pages" element={<PdfPages />} />
@@ -38,6 +41,7 @@ export default function App() {
           <Route path="/guides/exif-viewer" element={<ExifGuide />} />
           <Route path="/guides/convert-png-to-jpg" element={<ConvertPngToJpg />} />
           <Route path="/guides/what-is-webp" element={<WhatIsWebp />} />
+          <Route path="/guides/social-media-image-sizes" element={<SocialMediaImageSizes />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />

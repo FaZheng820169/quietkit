@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Five tools, no filler</span>
+              <span className="eyebrow">Six tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -119,6 +119,13 @@ export function Home() {
               title="Convert images"
               description="Turn PNG into JPEG, screenshots into WebP, or a whole folder into one format — in a single pass."
               meta="JPG · PNG · WebP"
+            />
+            <ToolCard
+              to="/tools/image-resizer"
+              icon={<ImageIcon size={22} />}
+              title="Resize images"
+              description="Exact pixels for a post, banner or passport photo — crop to fill or keep the whole frame."
+              meta="1080×1080 · custom"
             />
             <ToolCard
               to="/tools/metadata-cleaner"
@@ -191,6 +198,11 @@ export function Home() {
                 to: '/guides/what-is-webp',
                 title: 'What is a WebP file?',
                 body: 'Where WebP wins, and the email and print workflows where it still fails.',
+              },
+              {
+                to: '/guides/social-media-image-sizes',
+                title: 'Social media image sizes',
+                body: 'One table for every platform, and why your subject keeps getting cropped.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

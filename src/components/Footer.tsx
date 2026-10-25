@@ -29,6 +29,9 @@ export function Footer() {
                 <Link to="/tools/image-converter">Convert images</Link>
               </li>
               <li>
+                <Link to="/tools/image-resizer">Resize images</Link>
+              </li>
+              <li>
                 <Link to="/tools/metadata-cleaner">Remove photo metadata</Link>
               </li>
               <li>
@@ -60,6 +63,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/what-is-webp">What is WebP</Link>
+              </li>
+              <li>
+                <Link to="/guides/social-media-image-sizes">Image sizes</Link>
               </li>
             </ul>
           </div>

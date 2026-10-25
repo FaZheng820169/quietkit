@@ -108,3 +108,65 @@ export function outputExtension(type: string): string {
   if (type === 'image/webp') return 'webp'
   return 'jpg'
 }
+
+export type ResizeOptions = {
+  width: number
+  height: number
+  /** cover crops to fill the frame; contain pads to preserve the whole image. */
+  fit: 'cover' | 'contain'
+  format: 'image/jpeg' | 'image/png' | 'image/webp'
+  quality?: number
+}
+
+export type ResizeResult = {
+  blob: Blob
+  width: number
+  height: number
+  type: string
+}
+
+/** Resizes to exact pixel dimensions, cropping or padding to reach the aspect ratio. */
+export async function resizeImage(file: File, options: ResizeOptions): Promise<ResizeResult> {
+  let bitmap: ImageBitmap
+  try {
+    bitmap = await createImageBitmap(file, { imageOrientation: 'from-image' })
+  } catch {
+    bitmap = await createImageBitmap(file)
+  }
+
+  const { width, height, fit, format } = options
+  const canvas = document.createElement('canvas')
+  canvas.width = width
+  canvas.height = height
+  const ctx = canvas.getContext('2d')
+  if (!ctx) throw new Error('Canvas is not available in this browser.')
+
+  ctx.imageSmoothingQuality = 'high'
+  if (format !== 'image/png') {
+    ctx.fillStyle = '#ffffff'
+    ctx.fillRect(0, 0, width, height)
+  }
+
+  if (fit === 'cover') {
+    // Largest centred rectangle of the source that shares the target aspect ratio.
+    const scale = Math.max(width / bitmap.width, height / bitmap.height)
+    const sourceWidth = width / scale
+    const sourceHeight = height / scale
+    const sourceX = (bitmap.width - sourceWidth) / 2
+    const sourceY = (bitmap.height - sourceHeight) / 2
+    ctx.drawImage(bitmap, sourceX, sourceY, sourceWidth, sourceHeight, 0, 0, width, height)
+  } else {
+    const scale = Math.min(width / bitmap.width, height / bitmap.height)
+    const drawWidth = bitmap.width * scale
+    const drawHeight = bitmap.height * scale
+    ctx.drawImage(bitmap, (width - drawWidth) / 2, (height - drawHeight) / 2, drawWidth, drawHeight)
+  }
+  bitmap.close()
+
+  const blob = await new Promise<Blob | null>((resolve) => {
+    canvas.toBlob(resolve, format, format === 'image/png' ? undefined : (options.quality ?? 0.9))
+  })
+  if (!blob) throw new Error('This browser could not encode the image.')
+
+  return { blob, width, height, type: format }
+}

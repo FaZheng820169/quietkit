@@ -45,6 +45,13 @@ const articles = [
       'Where WebP beats JPEG and PNG, and the places — email, print, forms — where it still fails.',
     tag: 'Formats',
   },
+  {
+    to: '/guides/social-media-image-sizes',
+    title: 'Social media image sizes',
+    description:
+      'One table for Instagram, X, LinkedIn, YouTube and the rest — plus why your subject gets cropped.',
+    tag: 'Sizes',
+  },
 ]
 
 export function Guides() {
