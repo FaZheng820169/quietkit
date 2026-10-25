@@ -258,6 +258,11 @@ export function Home() {
                 body: 'Three ways to cut a document, what each part keeps, and what a split silently drops.',
               },
               {
+                to: '/guides/pdf-to-jpg-without-upload',
+                title: 'PDF pages as JPGs',
+                body: 'What a page loses when it becomes pixels, the DPI that fits each job, and why margins turn black.',
+              },
+              {
                 to: '/guides/exif-viewer',
                 title: 'What an EXIF viewer shows',
                 body: 'The metadata families, the risky fields, and what f-stop, ISO and focal length mean.',

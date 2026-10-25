@@ -86,6 +86,9 @@ export function Footer() {
                 <Link to="/guides/split-pdf-without-upload">Split PDFs locally</Link>
               </li>
               <li>
+                <Link to="/guides/pdf-to-jpg-without-upload">PDF to JPG locally</Link>
+              </li>
+              <li>
                 <Link to="/guides/exif-viewer">Read EXIF data</Link>
               </li>
               <li>

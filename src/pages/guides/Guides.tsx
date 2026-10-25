@@ -32,6 +32,13 @@ const articles = [
     tag: 'Documents',
   },
   {
+    to: '/guides/pdf-to-jpg-without-upload',
+    title: 'PDF to JPG without uploading it',
+    description:
+      'What you give up when a page becomes pixels, which DPI to pick, and why some pages turn black.',
+    tag: 'Documents',
+  },
+  {
     to: '/guides/exif-viewer',
     title: 'What an EXIF viewer shows you',
     description:

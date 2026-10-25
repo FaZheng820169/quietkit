@@ -84,6 +84,11 @@
     "description": "Turn PDF pages into JPEG images at 150, 200 or 300 DPI. Choose pages, keep a white background, download one file or a ZIP — rendered in your browser, nothing uploaded.",
     "priority": "0.9"
   },
+  "/guides/pdf-to-jpg-without-upload": {
+    "title": "PDF to JPG without uploading the document",
+    "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
+    "priority": "0.8"
+  },
   "/guides": {
     "title": "Guides — files, metadata and privacy",
     "description": "Practical guides on photo metadata, image compression and local PDF handling. Short, specific, and linked to a tool that does the work.",
