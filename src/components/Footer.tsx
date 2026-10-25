@@ -53,6 +53,9 @@ export function Footer() {
                 <Link to="/tools/pdf-page-numbers">Add PDF page numbers</Link>
               </li>
               <li>
+                <Link to="/tools/pdf-watermark">Watermark a PDF</Link>
+              </li>
+              <li>
                 <Link to="/tools/pdf-split">Split a PDF</Link>
               </li>
               <li>

@@ -13,6 +13,7 @@ import { PdfReorder } from './pages/PdfReorder'
 import { JpgToPdf } from './pages/JpgToPdf'
 import { PdfText } from './pages/PdfText'
 import { PdfPageNumbers } from './pages/PdfPageNumbers'
+import { PdfWatermark } from './pages/PdfWatermark'
 import { PdfMetadata } from './pages/PdfMetadata'
 import { PdfResize } from './pages/PdfResize'
 import { PdfSplit } from './pages/PdfSplit'
@@ -51,6 +52,7 @@ export default function App() {
           <Route path="/tools/jpg-to-pdf" element={<JpgToPdf />} />
           <Route path="/tools/pdf-text" element={<PdfText />} />
           <Route path="/tools/pdf-page-numbers" element={<PdfPageNumbers />} />
+          <Route path="/tools/pdf-watermark" element={<PdfWatermark />} />
           <Route path="/tools/pdf-metadata" element={<PdfMetadata />} />
           <Route path="/tools/pdf-resize" element={<PdfResize />} />
           <Route path="/tools/pdf-split" element={<PdfSplit />} />

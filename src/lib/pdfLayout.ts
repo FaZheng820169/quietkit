@@ -31,6 +31,40 @@ export type PageNumberResult = {
 /** Gap between the printed number and the paper edge, in points (≈8.5 mm). */
 export const PAGE_NUMBER_EDGE = 24
 
+export type WatermarkPosition = 'center' | 'tile'
+
+/** Slant of the mark, measured anticlockwise from horizontal. */
+export type WatermarkAngle = 0 | 45 | 90
+
+export type WatermarkOptions = {
+  text: string
+  fontSize: number
+  opacity: number
+  angle: WatermarkAngle
+  position: WatermarkPosition
+  /** Empty means every page; otherwise ranges like "1-3, 7". */
+  range: string
+}
+
+export type WatermarkResult = {
+  blob: Blob
+  pages: number
+  marked: number
+}
+
+/**
+ * Distance between repeated marks on a tiled page, in points. The advance is
+ * approximated from the character count rather than measured, so the live
+ * preview can lay out the same grid before pdf-lib is loaded.
+ */
+export function watermarkSpacing(text: string, fontSize: number): { x: number; y: number } {
+  const advance = Math.max(text.trim().length, 1) * fontSize * 0.6
+  return {
+    x: Math.max(advance * 1.9, fontSize * 6),
+    y: fontSize * 5.5,
+  }
+}
+
 export type PdfPaper = 'a4' | 'letter' | 'legal' | 'a5' | 'a3'
 
 /** Sheet sizes in points (1 pt = 1/72 inch), portrait orientation. */

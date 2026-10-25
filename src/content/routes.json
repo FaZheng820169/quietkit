@@ -64,6 +64,11 @@
     "description": "Stamp page numbers on a PDF in the corner you choose — “7”, “7 / 24” or “Page 7 of 24” — with a live preview, an optional cover skip and nothing uploaded.",
     "priority": "0.9"
   },
+  "/tools/pdf-watermark": {
+    "title": "Watermark a PDF in your browser, no upload",
+    "description": "Add a diagonal, horizontal or vertical text watermark to a PDF — centred or tiled, any opacity, all pages or a range — with a live preview. Nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/tools/pdf-metadata": {
     "title": "See and remove the metadata inside a PDF",
     "description": "Read the author, producer, creation date and XMP packet a PDF carries, then download a copy with the property block emptied. Pages are untouched and nothing is uploaded.",

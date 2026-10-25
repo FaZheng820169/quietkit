@@ -4,11 +4,14 @@ import {
   PAGE_NUMBER_EDGE,
   paperName,
   targetSize,
+  watermarkSpacing,
   type PageNumberOptions,
   type PageNumberResult,
   type PdfPageBox,
   type ResizeOptions,
   type ResizeResult,
+  type WatermarkOptions,
+  type WatermarkResult,
 } from './pdfLayout'
 import { EncryptedPdfError } from './pdfErrors'
 
@@ -193,6 +196,106 @@ export async function stampPageNumbers(
     blob: new Blob([new Uint8Array(saved)], { type: 'application/pdf' }),
     pages: total,
     numbered,
+  }
+}
+
+/**
+ * Draws text over existing pages without rebuilding them. The mark is a single
+ * text object placed in viewer orientation, so a rotated scan gets a watermark
+ * that reads the same way up as the page looks on screen.
+ */
+export async function stampWatermark(
+  file: File,
+  options: WatermarkOptions,
+): Promise<WatermarkResult> {
+  const bytes = await file.arrayBuffer()
+  const doc = await PDFDocument.load(bytes, { ignoreEncryption: true })
+  if (doc.isEncrypted) throw new EncryptedPdfError(file.name)
+
+  const text = options.text.trim()
+  if (!text) throw new Error('Type the text you want across the page.')
+
+  const font = await doc.embedFont(StandardFonts.HelveticaBold)
+  const total = doc.getPageCount()
+  const size = options.fontSize
+  const targets = options.range.trim()
+    ? parsePageRanges(options.range, total)
+    : doc.getPageIndices()
+  if (targets.length === 0) throw new Error('That page range selects nothing.')
+
+  const spacing = watermarkSpacing(text, size)
+  const textWidth = font.widthOfTextAtSize(text, size)
+  // Height of the cap area, used to centre the glyphs on the intended point
+  // rather than centring the baseline.
+  const halfHeight = (size * 0.72) / 2
+  const visual = (options.angle * Math.PI) / 180
+
+  for (const index of targets) {
+    const page = doc.getPage(index)
+    const box = page.getCropBox()
+    const rotation = ((page.getRotation().angle % 360) + 360) % 360
+    const sideways = rotation === 90 || rotation === 270
+    const visibleWidth = sideways ? box.height : box.width
+    const visibleHeight = sideways ? box.width : box.height
+    const centreX = box.x + box.width / 2
+    const centreY = box.y + box.height / 2
+
+    // A page's /Rotate turns the content clockwise on screen, so the drawn
+    // angle has to carry that turn if the mark is to look the same on screen.
+    const drawnAngle = options.angle + rotation
+    const drawn = (drawnAngle * Math.PI) / 180
+    const cos = Math.cos(drawn)
+    const sin = Math.sin(drawn)
+
+    let tiles: { u: number; v: number }[]
+    if (options.position === 'center') {
+      tiles = [{ u: 0, v: 0 }]
+    } else {
+      // Project the sheet onto the watermark's own axes; that is how far the
+      // repeated grid has to reach to cover the corners as well.
+      const reachX =
+        Math.abs(visibleWidth * Math.cos(visual)) + Math.abs(visibleHeight * Math.sin(visual))
+      const reachY =
+        Math.abs(visibleWidth * Math.sin(visual)) + Math.abs(visibleHeight * Math.cos(visual))
+      const columns = Math.max(1, Math.ceil(reachX / spacing.x) + 1)
+      const rows = Math.max(1, Math.ceil(reachY / spacing.y) + 1)
+      tiles = []
+      for (let column = 0; column < columns; column += 1) {
+        for (let row = 0; row < rows; row += 1) {
+          tiles.push({
+            u: (column - (columns - 1) / 2) * spacing.x,
+            v: (row - (rows - 1) / 2) * spacing.y,
+          })
+        }
+      }
+    }
+
+    for (const tile of tiles) {
+      const tileX = centreX + tile.u * cos - tile.v * sin
+      const tileY = centreY + tile.u * sin + tile.v * cos
+      // pdf-lib rotates the text about its own origin, so the origin is placed
+      // half a word back along the slanted baseline.
+      page.drawText(text, {
+        x: tileX - (textWidth / 2) * cos + halfHeight * sin,
+        y: tileY - (textWidth / 2) * sin - halfHeight * cos,
+        size,
+        font,
+        color: rgb(0.16, 0.16, 0.14),
+        opacity: options.opacity,
+        rotate: degrees(drawnAngle),
+      })
+    }
+  }
+
+  doc.setProducer('QuietKit')
+  doc.setCreator('QuietKit')
+  doc.setModificationDate(new Date())
+
+  const saved = await doc.save()
+  return {
+    blob: new Blob([new Uint8Array(saved)], { type: 'application/pdf' }),
+    pages: total,
+    marked: targets.length,
   }
 }
 

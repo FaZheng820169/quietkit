@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Fifteen tools. Zero uploads.</h1>
+          <h1>Sixteen tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -99,6 +99,13 @@ export function Tools() {
               meta="Documents"
             />
             <ToolCard
+              to="/tools/pdf-watermark"
+              icon={<FileIcon size={22} />}
+              title="Watermark a PDF"
+              description="Stamp a diagonal, horizontal or vertical text mark — centred or tiled, faint or bold, across every page or a range you choose."
+              meta="Documents"
+            />
+            <ToolCard
               to="/tools/pdf-resize"
               icon={<FileIcon size={22} />}
               title="Resize PDF pages"
@@ -133,10 +140,10 @@ export function Tools() {
             <div className="split" style={{ gap: 24 }}>
               <p className="small muted">
                 Next up: a comparison view for PDFs — put two versions side by side and see what
-                changed. PDF to JPG rendering, splitting, page-size rebuilding, metadata inspection,
-                page numbering, folder-wide resizing and metadata cleaning, text extraction, page
-                reorder, rotation, JPG to PDF and HEIC decoding all ship — each runs entirely in
-                the tab.
+                changed. Watermarking, PDF to JPG rendering, splitting, page-size rebuilding,
+                metadata inspection, page numbering, folder-wide resizing and metadata cleaning,
+                text extraction, page reorder, rotation, JPG to PDF and HEIC decoding all ship —
+                each runs entirely in the tab.
               </p>
               <p className="small muted">
                 Want a specific tool? The fastest way to get it built is to ask for it — every
