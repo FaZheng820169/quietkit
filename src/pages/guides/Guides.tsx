@@ -241,6 +241,13 @@ const articles = [
       'What HEX, RGB and HSL are each for, why contrast ratios matter more than taste, and how to build a palette locally.',
     tag: 'Design',
   },
+  {
+    to: '/guides/json-formatter-without-upload',
+    title: 'Format JSON without pasting it into a server',
+    description:
+      'Why a server-side formatter sees every byte you paste, how to read a parse error, and what a local formatter gives you instead.',
+    tag: 'Developer',
+  },
 ]
 
 export function Guides() {

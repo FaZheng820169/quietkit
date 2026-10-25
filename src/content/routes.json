@@ -149,6 +149,11 @@
     "description": "Convert between HEX, RGB and HSL. Check WCAG contrast ratios, see complementary and analogous colours, and copy CSS-ready values — all locally in your browser.",
     "priority": "0.9"
   },
+  "/tools/json-formatter": {
+    "title": "JSON formatter — validate, format and minify, no upload",
+    "description": "Format, validate and minify JSON with precise error locations. Sort keys, copy or download the result. The parser runs locally in your browser — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -322,6 +327,11 @@
   "/guides/color-converter-without-upload": {
     "title": "Convert colours without uploading your brand palette",
     "description": "What HEX, RGB and HSL are each for, why contrast ratios matter more than taste, and how to build a palette locally.",
+    "priority": "0.8"
+  },
+  "/guides/json-formatter-without-upload": {
+    "title": "Format JSON without pasting it into a server",
+    "description": "Why a server-side formatter sees every byte you paste, how to read a parse error, and what a local formatter gives you instead.",
     "priority": "0.8"
   },
   "/pricing": {

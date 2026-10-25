@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Twenty-eight tools, no filler</span>
+              <span className="eyebrow">Twenty-nine tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -302,6 +302,13 @@ export function Home() {
               description="Type a HEX code or pick a colour, see RGB and HSL instantly, check contrast against white and black, grab a palette."
               meta="Design · HEX / RGB / HSL"
             />
+            <ToolCard
+              to="/tools/json-formatter"
+              icon={<FileIcon size={22} />}
+              title="JSON formatter"
+              description="Paste JSON, see if it parses, format it with two spaces or tabs, minify it for production, sort keys for a clean diff."
+              meta="Developer · Validation / format"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -492,6 +499,11 @@ export function Home() {
                 to: '/guides/color-converter-without-upload',
                 title: 'Convert colours without the upload',
                 body: 'What HEX, RGB and HSL are each for, why contrast ratios matter, and how to build a palette locally.',
+              },
+              {
+                to: '/guides/json-formatter-without-upload',
+                title: 'Format JSON without the upload',
+                body: 'Why a server-side formatter sees every byte, how to read a parse error, and what a local formatter gives you.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

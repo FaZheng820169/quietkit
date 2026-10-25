@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Twenty-eight tools. Zero uploads.</h1>
+          <h1>Twenty-nine tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -216,6 +216,13 @@ export function Tools() {
               title="Color converter"
               description="Convert between HEX, RGB and HSL. Check WCAG contrast ratios, see complementary and analogous palettes, copy CSS-ready values."
               meta="Design · HEX / RGB / HSL"
+            />
+            <ToolCard
+              to="/tools/json-formatter"
+              icon={<FileIcon size={22} />}
+              title="JSON formatter"
+              description="Validate, format and minify JSON with precise error locations. Sort keys alphabetically, copy or download the result — all locally."
+              meta="Developer · Validation / format"
             />
           </div>
 
