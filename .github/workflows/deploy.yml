@@ -14,6 +14,10 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
+env:
+  SITE: https://fazheng820169.github.io/quietkit
+  INDEXNOW_KEY: 419f59828a04f0b9d67161ef2f449da3
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,7 +31,7 @@ jobs:
       - run: npm run build
         env:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
-          SITE_URL: https://${{ github.repository_owner }}.github.io
+          SITE_URL: https://fazheng820169.github.io
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
@@ -41,3 +45,36 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+      # Bing and Yandex accept URL submissions without an account through
+      # IndexNow, using the key file we ship in public/. Google has no such
+      # endpoint, so it still has to find us through the sitemap.
+      - name: Submit the sitemap to IndexNow
+        run: |
+          set -uo pipefail
+          for attempt in 1 2 3 4 5; do
+            code=$(curl -sL -o /dev/null -w "%{http_code}" --max-time 20 "$SITE/$INDEXNOW_KEY.txt")
+            echo "key file attempt $attempt -> $code"
+            [ "$code" = "200" ] && break
+            sleep 10
+          done
+
+          curl -sL --max-time 20 "$SITE/sitemap.xml" -o /tmp/sitemap.xml
+          urls=$(grep -o '<loc>[^<]*</loc>' /tmp/sitemap.xml \
+            | sed -e 's|<loc>||' -e 's|</loc>||' \
+            | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          echo "urls in sitemap: $(echo "$urls" | jq 'length')"
+
+          body=$(jq -n \
+            --arg host "fazheng820169.github.io" \
+            --arg key "$INDEXNOW_KEY" \
+            --arg keyLocation "$SITE/$INDEXNOW_KEY.txt" \
+            --argjson urlList "$urls" \
+            '{host: $host, key: $key, keyLocation: $keyLocation, urlList: $urlList}')
+
+          status=$(curl -sS -o /tmp/indexnow.out -w "%{http_code}" \
+            -X POST https://api.indexnow.org/indexnow \
+            -H "Content-Type: application/json; charset=utf-8" \
+            --data "$body")
+          echo "IndexNow responded $status (200/202 means accepted)"
+          head -c 400 /tmp/indexnow.out || true
