@@ -269,6 +269,11 @@ export function PdfMerge() {
                 </Link>
               </li>
               <li>
+                <Link to="/tools/jpg-to-pdf" className="row" style={{ gap: 8 }}>
+                  <CheckIcon size={15} /> Turn photos into a PDF first
+                </Link>
+              </li>
+              <li>
                 <Link to="/tools/metadata-cleaner" className="row" style={{ gap: 8 }}>
                   <CheckIcon size={15} /> Remove photo metadata
                 </Link>

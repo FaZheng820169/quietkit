@@ -44,6 +44,11 @@
     "description": "Turn all pages or only the sideways ones by 90°, 180° or 270°. Text and images are untouched, and the PDF never leaves your browser.",
     "priority": "0.9"
   },
+  "/tools/jpg-to-pdf": {
+    "title": "JPG to PDF — combine photos into one PDF, no upload",
+    "description": "Turn JPG, PNG and HEIC images into one PDF in the order you choose, on A4, Letter or fitted pages. Photos are processed locally and stripped of GPS metadata.",
+    "priority": "0.9"
+  },
   "/guides": {
     "title": "Guides — files, metadata and privacy",
     "description": "Practical guides on photo metadata, image compression and local PDF handling. Short, specific, and linked to a tool that does the work.",

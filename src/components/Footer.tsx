@@ -43,6 +43,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/pdf-rotate">Rotate PDF pages</Link>
               </li>
+              <li>
+                <Link to="/tools/jpg-to-pdf">JPG to PDF</Link>
+              </li>
             </ul>
           </div>
 

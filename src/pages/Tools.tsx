@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Seven tools. Zero uploads.</h1>
+          <h1>Eight tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -70,14 +70,21 @@ export function Tools() {
               description="Turn every page, or only the sideways scans, by 90° or 180°. Text and images stay vector."
               meta="Documents"
             />
+            <ToolCard
+              to="/tools/jpg-to-pdf"
+              icon={<ImageIcon size={22} />}
+              title="JPG to PDF"
+              description="Combine receipts, scans or photos into one PDF, in the order you choose, with GPS stripped."
+              meta="Photos · Documents"
+            />
           </div>
 
           <div className="panel" style={{ marginTop: 26 }}>
             <span className="panel-title">On the workbench</span>
             <div className="split" style={{ gap: 24 }}>
               <p className="small muted">
-                Next up: reordering PDF pages and batch metadata cleaning for whole folders. HEIC to
-                JPEG and page rotation shipped — both run entirely in the tab.
+                Next up: reordering PDF pages and batch metadata cleaning for whole folders. JPG to
+                PDF, page rotation and HEIC decoding all ship — each one runs entirely in the tab.
               </p>
               <p className="small muted">
                 Want a specific tool? The fastest way to get it built is to ask for it — every
