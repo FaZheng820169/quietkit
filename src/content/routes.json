@@ -6,7 +6,7 @@
   },
   "/tools": {
     "title": "All tools — private browser-local file utilities",
-    "description": "The full QuietKit toolbox: compress, convert or resize images, remove EXIF and GPS metadata, build a PDF from photos, merge PDFs, add page numbers, extract text, then delete, reorder or rotate pages. Every tool runs locally in your browser.",
+    "description": "The full QuietKit toolbox: compress, convert or resize images, remove EXIF and GPS metadata, inspect and strip the metadata inside a PDF, build a PDF from photos, merge PDFs, add page numbers, extract text, then delete, reorder or rotate pages. Every tool runs locally in your browser.",
     "priority": "0.8"
   },
   "/tools/image-compressor": {
@@ -62,6 +62,11 @@
   "/tools/pdf-page-numbers": {
     "title": "Add page numbers to a PDF, no upload",
     "description": "Stamp page numbers on a PDF in the corner you choose — “7”, “7 / 24” or “Page 7 of 24” — with a live preview, an optional cover skip and nothing uploaded.",
+    "priority": "0.9"
+  },
+  "/tools/pdf-metadata": {
+    "title": "See and remove the metadata inside a PDF",
+    "description": "Read the author, producer, creation date and XMP packet a PDF carries, then download a copy with the property block emptied. Pages are untouched and nothing is uploaded.",
     "priority": "0.9"
   },
   "/guides": {

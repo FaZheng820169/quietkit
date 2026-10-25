@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Eleven tools, no filler</span>
+              <span className="eyebrow">Twelve tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -133,6 +133,13 @@ export function Home() {
               title="Remove photo metadata"
               description="See the GPS coordinates, camera model and timestamps hidden in your photos, then strip one file or an entire folder."
               meta="EXIF · GPS · XMP"
+            />
+            <ToolCard
+              to="/tools/pdf-metadata"
+              icon={<PinIcon size={22} />}
+              title="Inspect PDF metadata"
+              description="See who a PDF says wrote it, which program produced it and when — then download a copy with the property block emptied."
+              meta="Author · XMP · Dates"
             />
             <ToolCard
               to="/tools/pdf-merge"

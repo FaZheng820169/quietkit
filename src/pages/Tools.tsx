@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Eleven tools. Zero uploads.</h1>
+          <h1>Twelve tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -48,6 +48,13 @@ export function Tools() {
               title="Remove photo metadata"
               description="Inspect EXIF, GPS and XMP fields in one photo or a whole folder, then rewrite every file without them."
               meta="Privacy"
+            />
+            <ToolCard
+              to="/tools/pdf-metadata"
+              icon={<PinIcon size={22} />}
+              title="Inspect PDF metadata"
+              description="Read the author, producer, dates and XMP packet a PDF carries, then download a copy with the property block emptied."
+              meta="Privacy · Documents"
             />
             <ToolCard
               to="/tools/pdf-merge"
@@ -104,10 +111,11 @@ export function Tools() {
             <span className="panel-title">On the workbench</span>
             <div className="split" style={{ gap: 24 }}>
               <p className="small muted">
-                Next up: a PDF metadata viewer that shows what a file says about itself before you
-                send it. Page numbering, folder-wide resizing and metadata cleaning, text
-                extraction, page reorder, rotation, JPG to PDF and HEIC decoding all ship — each
-                runs entirely in the tab.
+                Next up: a page-size fixer that rescales and crops a PDF to A4 or Letter, so a
+                print comes out at the size it was meant to be. PDF metadata inspection, page
+                numbering, folder-wide resizing and metadata cleaning, text extraction, page
+                reorder, rotation, JPG to PDF and HEIC decoding all ship — each runs entirely in
+                the tab.
               </p>
               <p className="small muted">
                 Want a specific tool? The fastest way to get it built is to ask for it — every
