@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Fifty-three tools, no filler</span>
+              <span className="eyebrow">Fifty-four tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -477,6 +477,13 @@ export function Home() {
               description="Centimetres to feet and inches, both directions, as you type. Runs locally — your height never leaves your browser."
               meta="Everyday · Converter"
             />
+            <ToolCard
+              to="/tools/gpa-calculator"
+              icon={<FileIcon size={22} />}
+              title="GPA calculator"
+              description="Cumulative GPA on a 4.0 scale from courses and credit hours. Runs locally — your grades never leave your browser."
+              meta="Education · Calculator"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -792,6 +799,11 @@ export function Home() {
                 to: '/guides/height-converter-without-upload',
                 title: 'Convert height without a server',
                 body: 'How the inch-to-centimetre ratio converts height between metric and imperial, and why your height should stay local.',
+              },
+              {
+                to: '/guides/gpa-calculator-without-upload',
+                title: 'Calculate your GPA without a server',
+                body: 'How the 4.0 scale and credit-hour weighting work, why plus and minus grades matter, and why your grades stay local.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

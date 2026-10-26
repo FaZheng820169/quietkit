@@ -416,6 +416,13 @@ const articles = [
       'How the inch-to-centimetre ratio lets you convert between metric and imperial height, why feet and inches are still used, and why your height should never leave your device.',
     tag: 'Everyday',
   },
+  {
+    to: '/guides/gpa-calculator-without-upload',
+    title: 'Calculate your GPA without sending grades to a server',
+    description:
+      'How the 4.0 grade point scale works, how credit hours weight your average, why plus and minus grades matter, and how to compute your GPA locally in the browser.',
+    tag: 'Education',
+  },
 ]
 
 export function Guides() {

@@ -274,6 +274,11 @@
     "description": "Convert your height between centimetres and feet and inches instantly. Enter a value in one unit and see the other update as you type. Runs locally — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/gpa-calculator": {
+    "title": "GPA calculator — cumulative GPA on a 4.0 scale",
+    "description": "Calculate your cumulative grade point average from your courses and credit hours. Enter each course's grade and credits and see your GPA update instantly. Runs locally — your grades never leave your browser.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -572,6 +577,11 @@
   "/guides/height-converter-without-upload": {
     "title": "Convert height without a server",
     "description": "How the inch-to-centimetre ratio lets you convert between metric and imperial height, why feet and inches are still used, and why your height should never leave your device.",
+    "priority": "0.8"
+  },
+  "/guides/gpa-calculator-without-upload": {
+    "title": "Calculate your GPA without sending grades to a server",
+    "description": "How the 4.0 grade point scale works, how credit hours weight your average, why plus and minus grades matter, and how to compute your GPA locally in the browser.",
     "priority": "0.8"
   },
   "/pricing": {

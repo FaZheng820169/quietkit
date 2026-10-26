@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Fifty-three tools. Zero uploads.</h1>
+          <h1>Fifty-four tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -391,6 +391,13 @@ export function Tools() {
               title="Height converter"
               description="Convert between centimetres and feet and inches, in both directions, as you type. Exact 2.54 cm per inch. Private — your height never leaves your browser."
               meta="Everyday · Converter"
+            />
+            <ToolCard
+              to="/tools/gpa-calculator"
+              icon={<FileIcon size={22} />}
+              title="GPA calculator"
+              description="Calculate your cumulative GPA on a 4.0 scale from courses and credit hours. Enter each grade and watch the average update instantly. Private — your grades never leave your browser."
+              meta="Education · Calculator"
             />
           </div>
 
