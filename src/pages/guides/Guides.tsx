@@ -339,6 +339,13 @@ const articles = [
       'What a ratio actually is, why 16:9 won the screen, the difference between fit and fill, and how to solve any width-height pair entirely in your browser.',
     tag: 'Design',
   },
+  {
+    to: '/guides/random-number-without-upload',
+    title: 'Generate random numbers without a server',
+    description:
+      'Where randomness comes from in a browser, why crypto.random beats Math.random, how to draw without repeats, and why a reproducible seed is sometimes what you want.',
+    tag: 'Developer',
+  },
 ]
 
 export function Guides() {

@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Forty-two tools, no filler</span>
+              <span className="eyebrow">Forty-three tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -400,6 +400,13 @@ export function Home() {
               description="Pixels to ratio, or ratio plus one dimension to the other — fit, fill, scale and diagonal, no distortion."
               meta="Design · Layout"
             />
+            <ToolCard
+              to="/tools/random-number"
+              icon={<FileIcon size={22} />}
+              title="Random number generator"
+              description="Integers or decimals, any range, no repeats optional — from crypto.getRandomValues with a seed mode for reproducible draws."
+              meta="Developer · Randomness"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -660,6 +667,11 @@ export function Home() {
                 to: '/guides/aspect-ratio-without-upload',
                 title: 'Aspect ratios without a server',
                 body: 'Why 16:9 won the screen, how fit and fill differ, and why resizing two dimensions independently always distorts.',
+              },
+              {
+                to: '/guides/random-number-without-upload',
+                title: 'Random numbers without a server',
+                body: 'Why crypto.random beats Math.random, what modulo bias is, how no-repeats draws really work, and when a seed is the right call.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

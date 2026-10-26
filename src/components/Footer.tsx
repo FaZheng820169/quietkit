@@ -148,6 +148,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/aspect-ratio">Aspect ratio calculator</Link>
               </li>
+              <li>
+                <Link to="/tools/random-number">Random number generator</Link>
+              </li>
             </ul>
           </div>
 
@@ -297,6 +300,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/aspect-ratio-without-upload">Aspect ratios without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/random-number-without-upload">Random numbers without a server</Link>
               </li>
             </ul>
           </div>

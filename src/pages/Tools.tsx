@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Forty-two tools. Zero uploads.</h1>
+          <h1>Forty-three tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -314,6 +314,13 @@ export function Tools() {
               title="Aspect ratio calculator"
               description="Pixels to ratio, or ratio plus one dimension to the other — fit, fill, scale and diagonal, no distortion."
               meta="Design · Layout"
+            />
+            <ToolCard
+              to="/tools/random-number"
+              icon={<FileIcon size={22} />}
+              title="Random number generator"
+              description="Integers or decimals in any range, with or without repeats — from crypto.getRandomValues, with an optional seed for reproducibility."
+              meta="Developer · Randomness"
             />
           </div>
 

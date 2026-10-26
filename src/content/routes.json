@@ -219,6 +219,11 @@
     "description": "Enter any width and height to get the reduced ratio, or pick a ratio and a dimension to solve the other. Fit (contain) and fill (cover) a box, scale uniformly, see the diagonal. Runs locally — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/random-number": {
+    "title": "Random number generator — integers, decimals, unique draws",
+    "description": "Generate cryptographically random integers or decimals in any range, singly or in batches, with an optional no-repeats mode and a seed for reproducible sequences. Runs locally — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -462,6 +467,11 @@
   "/guides/aspect-ratio-without-upload": {
     "title": "Calculate aspect ratios without a server",
     "description": "What a ratio actually is, why 16:9 won the screen, the difference between fit and fill, and how to solve any width-height pair entirely in your browser.",
+    "priority": "0.8"
+  },
+  "/guides/random-number-without-upload": {
+    "title": "Generate random numbers without a server",
+    "description": "Where randomness comes from in a browser, why crypto.random beats Math.random, how to draw without repeats, and why a reproducible seed is sometimes what you want.",
     "priority": "0.8"
   },
   "/pricing": {
