@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Forty-seven tools, no filler</span>
+              <span className="eyebrow">Forty-eight tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -435,6 +435,13 @@ export function Home() {
               description="Pixels to rems and back with a configurable root size — single values or a whole CSS snippet, converted in place."
               meta="Developer · CSS"
             />
+            <ToolCard
+              to="/tools/date-calculator"
+              icon={<FileIcon size={22} />}
+              title="Date calculator"
+              description="Days, weeks and weekdays between two dates, or add and subtract days, weeks, months and years — leap years and month lengths handled correctly."
+              meta="Everyday · Date"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -720,6 +727,11 @@ export function Home() {
                 to: '/guides/px-to-rem-without-upload',
                 title: 'px to rem without a server',
                 body: 'What a rem actually is, why the root font size is a contract, and how to convert a whole CSS snippet in one pass.',
+              },
+              {
+                to: '/guides/date-calculator-without-upload',
+                title: 'Calculate dates without a server',
+                body: 'How many days are really between two dates, why adding a month is not 30 days, and how leap years change the math.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

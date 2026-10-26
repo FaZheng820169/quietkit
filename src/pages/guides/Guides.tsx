@@ -374,6 +374,13 @@ const articles = [
       'What a rem actually is, why the root font size is a contract, when to use rem instead of px, and how to convert a whole CSS snippet in one pass.',
     tag: 'Developer',
   },
+  {
+    to: '/guides/date-calculator-without-upload',
+    title: 'Calculate dates without a server',
+    description:
+      'How many days are really between two dates, why adding a month is not 30 days, how leap years and month lengths change the math, and why a date calculation should never leave your device.',
+    tag: 'Everyday',
+  },
 ]
 
 export function Guides() {

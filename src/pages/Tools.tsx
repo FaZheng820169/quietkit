@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Forty-seven tools. Zero uploads.</h1>
+          <h1>Forty-eight tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -349,6 +349,13 @@ export function Tools() {
               title="px to rem converter"
               description="Convert pixels to rems and back with a configurable root font size. Single values or a whole CSS snippet — every px and rem token converted in place."
               meta="Developer · CSS"
+            />
+            <ToolCard
+              to="/tools/date-calculator"
+              icon={<FileIcon size={22} />}
+              title="Date calculator"
+              description="Days, weeks and weekdays between two dates, or add and subtract days, weeks, months and years — leap years and month lengths handled correctly."
+              meta="Everyday · Date"
             />
           </div>
 

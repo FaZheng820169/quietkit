@@ -244,6 +244,11 @@
     "description": "Convert pixels to rems and back with a configurable root font size. Convert a single value or paste a whole CSS snippet — every px and rem token is converted in place, everything else left untouched. Runs locally — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/date-calculator": {
+    "title": "Date calculator — days between dates and date math",
+    "description": "Find the number of days, weeks and weekdays between two dates, or add and subtract days, weeks, months and years from a date. Handles leap years and month-length edge cases correctly. Runs locally — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -512,6 +517,11 @@
   "/guides/px-to-rem-without-upload": {
     "title": "Convert px to rem without a server",
     "description": "What a rem actually is, why the root font size matters, when to use rem instead of px, how to convert a whole CSS snippet in one pass, and why a style value should never leave your device.",
+    "priority": "0.8"
+  },
+  "/guides/date-calculator-without-upload": {
+    "title": "Calculate dates without a server",
+    "description": "How many days are really between two dates, why adding a month is not 30 days, how leap years and month lengths change the math, and why a date calculation should never leave your device.",
     "priority": "0.8"
   },
   "/pricing": {

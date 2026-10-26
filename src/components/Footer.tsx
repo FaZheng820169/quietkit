@@ -163,6 +163,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/px-to-rem">px to rem converter</Link>
               </li>
+              <li>
+                <Link to="/tools/date-calculator">Date calculator</Link>
+              </li>
             </ul>
           </div>
 
@@ -327,6 +330,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/px-to-rem-without-upload">px to rem without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/date-calculator-without-upload">Calculate dates without a server</Link>
               </li>
             </ul>
           </div>
