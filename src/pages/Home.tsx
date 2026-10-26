@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Fifty-one tools, no filler</span>
+              <span className="eyebrow">Fifty-two tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -463,6 +463,13 @@ export function Home() {
               description="Monthly payment, total interest and amortization for any loan or mortgage. Runs locally — your loan details never leave your browser."
               meta="Finance · Calculator"
             />
+            <ToolCard
+              to="/tools/grade-calculator"
+              icon={<FileIcon size={22} />}
+              title="Grade calculator"
+              description="Score needed on your final exam, or a weighted average across assignments. Runs locally — your grades never leave your browser."
+              meta="Education · Calculator"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -768,6 +775,11 @@ export function Home() {
                 to: '/guides/loan-calculator-without-upload',
                 title: 'Calculate loan payments without a server',
                 body: 'How the amortization formula turns principal, rate and term into a monthly payment, where the interest goes each month, and why your details stay local.',
+              },
+              {
+                to: '/guides/grade-calculator-without-upload',
+                title: 'Calculate grades without a server',
+                body: 'How the final-grade formula finds the exam score you need, how weighted averages work, and why your grades stay local.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

@@ -402,6 +402,13 @@ const articles = [
       'How the amortization formula turns a principal, rate and term into a monthly payment, where the interest goes each month, and why your loan details should never leave your device.',
     tag: 'Finance',
   },
+  {
+    to: '/guides/grade-calculator-without-upload',
+    title: 'Calculate grades without a server',
+    description:
+      'How the final-grade formula finds the exam score you need, how weighted averages work, what letter grades mean, and why your grades should never leave your device.',
+    tag: 'Education',
+  },
 ]
 
 export function Guides() {

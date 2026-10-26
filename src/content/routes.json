@@ -264,6 +264,11 @@
     "description": "Calculate the monthly payment, total payment and total interest for a loan or mortgage from the principal, annual interest rate and term. See the first months of the amortization schedule. Private — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/grade-calculator": {
+    "title": "Grade calculator — final exam score needed and weighted average",
+    "description": "Find out what score you need on your final exam to reach a target grade, or calculate your current weighted average from multiple assignments. Runs locally — your grades never leave your browser.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -552,6 +557,11 @@
   "/guides/loan-calculator-without-upload": {
     "title": "Calculate loan payments without a server",
     "description": "How the amortization formula turns a principal, rate and term into a monthly payment, where the interest goes each month, and why your loan details should never leave your device.",
+    "priority": "0.8"
+  },
+  "/guides/grade-calculator-without-upload": {
+    "title": "Calculate grades without a server",
+    "description": "How the final-grade formula finds the exam score you need, how weighted averages work, what letter grades mean, and why your grades should never leave your device.",
     "priority": "0.8"
   },
   "/pricing": {

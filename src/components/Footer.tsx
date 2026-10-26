@@ -175,6 +175,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/loan-calculator">Loan calculator</Link>
               </li>
+              <li>
+                <Link to="/tools/grade-calculator">Grade calculator</Link>
+              </li>
             </ul>
           </div>
 
@@ -351,6 +354,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/loan-calculator-without-upload">Calculate loan payments without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/grade-calculator-without-upload">Calculate grades without a server</Link>
               </li>
             </ul>
           </div>
