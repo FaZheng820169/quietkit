@@ -409,6 +409,13 @@ const articles = [
       'How the final-grade formula finds the exam score you need, how weighted averages work, what letter grades mean, and why your grades should never leave your device.',
     tag: 'Education',
   },
+  {
+    to: '/guides/height-converter-without-upload',
+    title: 'Convert height without a server',
+    description:
+      'How the inch-to-centimetre ratio lets you convert between metric and imperial height, why feet and inches are still used, and why your height should never leave your device.',
+    tag: 'Everyday',
+  },
 ]
 
 export function Guides() {

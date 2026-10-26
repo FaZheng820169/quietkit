@@ -269,6 +269,11 @@
     "description": "Find out what score you need on your final exam to reach a target grade, or calculate your current weighted average from multiple assignments. Runs locally — your grades never leave your browser.",
     "priority": "0.9"
   },
+  "/tools/height-converter": {
+    "title": "Height converter — cm to feet and inches, and back",
+    "description": "Convert your height between centimetres and feet and inches instantly. Enter a value in one unit and see the other update as you type. Runs locally — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -562,6 +567,11 @@
   "/guides/grade-calculator-without-upload": {
     "title": "Calculate grades without a server",
     "description": "How the final-grade formula finds the exam score you need, how weighted averages work, what letter grades mean, and why your grades should never leave your device.",
+    "priority": "0.8"
+  },
+  "/guides/height-converter-without-upload": {
+    "title": "Convert height without a server",
+    "description": "How the inch-to-centimetre ratio lets you convert between metric and imperial height, why feet and inches are still used, and why your height should never leave your device.",
     "priority": "0.8"
   },
   "/pricing": {

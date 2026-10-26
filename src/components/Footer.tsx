@@ -178,6 +178,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/grade-calculator">Grade calculator</Link>
               </li>
+              <li>
+                <Link to="/tools/height-converter">Height converter</Link>
+              </li>
             </ul>
           </div>
 
@@ -357,6 +360,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/grade-calculator-without-upload">Calculate grades without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/height-converter-without-upload">Convert height without a server</Link>
               </li>
             </ul>
           </div>
