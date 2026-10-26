@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Forty-five tools. Zero uploads.</h1>
+          <h1>Forty-six tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -335,6 +335,13 @@ export function Tools() {
               title="Percentage calculator"
               description="Four modes — what is X% of Y, X is what % of Y, percentage change from X to Y, and X% of what is Y — with honest handling of divide-by-zero."
               meta="Everyday · Math"
+            />
+            <ToolCard
+              to="/tools/age-calculator"
+              icon={<FileIcon size={22} />}
+              title="Age calculator"
+              description="Years, months and days from a birth date, plus total days, weeks and months lived, and the countdown to the next birthday — leap days and the 31st handled correctly."
+              meta="Everyday · Date"
             />
           </div>
 

@@ -234,6 +234,11 @@
     "description": "Work out what a percentage of a number is, what percentage one number is of another, the percentage change between two values, or what number a percentage refers back to. Four modes, instant results, runs locally — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/age-calculator": {
+    "title": "Age calculator — years, months, days and next birthday",
+    "description": "Enter a birth date and get the exact age in years, months and days, plus total days, weeks and months lived, and the countdown to the next birthday. Handles leap-day births and month-length edge cases correctly. Runs locally — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -492,6 +497,11 @@
   "/guides/percentage-calculator-without-upload": {
     "title": "Calculate percentages without a server",
     "description": "The four percentage questions people actually ask — of, is, change and reverse — what each one means, the one formula behind all of them, and why the right answer is always a local calculation.",
+    "priority": "0.8"
+  },
+  "/guides/age-calculator-without-upload": {
+    "title": "Calculate age without a server",
+    "description": "Why years and months are not a simple subtraction, how leap-day birthdays are handled, why the 31st maps to month-end in shorter months, and why a birth date should never leave your device.",
     "priority": "0.8"
   },
   "/pricing": {

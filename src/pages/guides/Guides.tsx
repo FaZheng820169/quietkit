@@ -360,6 +360,13 @@ const articles = [
       'The four percentage questions people actually ask, the one formula behind all of them, how percentage change keeps its direction, and why the answer is always local.',
     tag: 'Everyday',
   },
+  {
+    to: '/guides/age-calculator-without-upload',
+    title: 'Calculate age without a server',
+    description:
+      'Why age is not a simple subtraction, how leap-day birthdays are handled, why the 31st maps to month-end, and why a birth date should never leave your device.',
+    tag: 'Everyday',
+  },
 ]
 
 export function Guides() {

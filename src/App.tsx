@@ -47,6 +47,7 @@ import { AspectRatio } from './pages/AspectRatio'
 import { RandomNumber } from './pages/RandomNumber'
 import { TipCalculator } from './pages/TipCalculator'
 import { PercentageCalculator } from './pages/PercentageCalculator'
+import { AgeCalculator } from './pages/AgeCalculator'
 import { Pricing } from './pages/Pricing'
 import { Privacy } from './pages/Privacy'
 import { About } from './pages/About'
@@ -103,6 +104,7 @@ import { AspectRatioGuide } from './pages/guides/AspectRatioGuide'
 import { RandomNumberGuide } from './pages/guides/RandomNumberGuide'
 import { TipCalculatorGuide } from './pages/guides/TipCalculatorGuide'
 import { PercentageCalculatorGuide } from './pages/guides/PercentageCalculatorGuide'
+import { AgeCalculatorGuide } from './pages/guides/AgeCalculatorGuide'
 
 export default function App() {
   return (
@@ -156,6 +158,7 @@ export default function App() {
           <Route path="/tools/random-number" element={<RandomNumber />} />
           <Route path="/tools/tip-calculator" element={<TipCalculator />} />
           <Route path="/tools/percentage-calculator" element={<PercentageCalculator />} />
+          <Route path="/tools/age-calculator" element={<AgeCalculator />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/remove-location-from-photo" element={<RemoveLocationPhoto />} />
           <Route path="/guides/compress-image-to-100kb" element={<CompressTo100kb />} />
@@ -208,6 +211,7 @@ export default function App() {
           <Route path="/guides/random-number-without-upload" element={<RandomNumberGuide />} />
           <Route path="/guides/tip-calculator-without-upload" element={<TipCalculatorGuide />} />
           <Route path="/guides/percentage-calculator-without-upload" element={<PercentageCalculatorGuide />} />
+          <Route path="/guides/age-calculator-without-upload" element={<AgeCalculatorGuide />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />

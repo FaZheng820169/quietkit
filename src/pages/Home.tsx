@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Forty-five tools, no filler</span>
+              <span className="eyebrow">Forty-six tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -421,6 +421,13 @@ export function Home() {
               description="Four modes — of, is, change and reverse — with honest divide-by-zero handling and instant results."
               meta="Everyday · Math"
             />
+            <ToolCard
+              to="/tools/age-calculator"
+              icon={<FileIcon size={22} />}
+              title="Age calculator"
+              description="Years, months and days from a birth date, plus total days and weeks lived and the next-birthday countdown — leap days handled correctly."
+              meta="Everyday · Date"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -696,6 +703,11 @@ export function Home() {
                 to: '/guides/percentage-calculator-without-upload',
                 title: 'Percentages without a server',
                 body: 'The four percentage questions people actually ask, the one formula behind all of them, and why divide-by-zero deserves an honest answer.',
+              },
+              {
+                to: '/guides/age-calculator-without-upload',
+                title: 'Age without a server',
+                body: 'Why age is not a simple subtraction, how leap days and the 31st are handled, and why a birth date should never leave your device.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

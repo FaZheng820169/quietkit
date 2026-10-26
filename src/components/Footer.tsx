@@ -157,6 +157,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/percentage-calculator">Percentage calculator</Link>
               </li>
+              <li>
+                <Link to="/tools/age-calculator">Age calculator</Link>
+              </li>
             </ul>
           </div>
 
@@ -315,6 +318,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/percentage-calculator-without-upload">Percentages without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/age-calculator-without-upload">Age without a server</Link>
               </li>
             </ul>
           </div>
