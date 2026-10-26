@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Forty tools. Zero uploads.</h1>
+          <h1>Forty-one tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -300,6 +300,13 @@ export function Tools() {
               title="Lorem ipsum generator"
               description="The classic Cicero word pool by exact word, sentence or paragraph count — optional traditional opening, optional HTML wrapping."
               meta="Design · Placeholder text"
+            />
+            <ToolCard
+              to="/tools/timestamp-converter"
+              icon={<FileIcon size={22} />}
+              title="Unix timestamp converter"
+              description="Epoch to human date, both directions — seconds or milliseconds, UTC and your local zone, ISO 8601 and RFC 2822."
+              meta="Developer · Time"
             />
           </div>
 

@@ -325,6 +325,13 @@ const articles = [
       'Where lorem ipsum comes from, when to use words versus sentences versus paragraphs, why placeholder text should not look like real sentences — and how to generate it locally.',
     tag: 'Design',
   },
+  {
+    to: '/guides/timestamp-converter-without-upload',
+    title: 'Convert Unix timestamps without sending them anywhere',
+    description:
+      'What a Unix timestamp actually counts, why seconds and milliseconds both appear, how the leap-second-free epoch works, and how to convert in both directions entirely in your browser.',
+    tag: 'Developer',
+  },
 ]
 
 export function Guides() {

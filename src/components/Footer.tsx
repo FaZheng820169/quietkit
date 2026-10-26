@@ -142,6 +142,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/lorem-ipsum">Lorem ipsum</Link>
               </li>
+              <li>
+                <Link to="/tools/timestamp-converter">Unix timestamp converter</Link>
+              </li>
             </ul>
           </div>
 
@@ -285,6 +288,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/lorem-ipsum-without-upload">Lorem ipsum without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/timestamp-converter-without-upload">Timestamps without a server</Link>
               </li>
             </ul>
           </div>

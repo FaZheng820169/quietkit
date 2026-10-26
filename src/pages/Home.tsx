@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Forty tools, no filler</span>
+              <span className="eyebrow">Forty-one tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -386,6 +386,13 @@ export function Home() {
               description="Classic placeholder text by the word, sentence or paragraph — with the traditional opening and optional <p> wrapping."
               meta="Design · Placeholder text"
             />
+            <ToolCard
+              to="/tools/timestamp-converter"
+              icon={<FileIcon size={22} />}
+              title="Unix timestamp converter"
+              description="Epoch to human date, both directions — seconds or milliseconds, UTC and local, ISO 8601 and RFC 2822."
+              meta="Developer · Time"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -636,6 +643,11 @@ export function Home() {
                 to: '/guides/lorem-ipsum-without-upload',
                 title: 'Lorem ipsum without a server',
                 body: 'Where the 69 classic words come from, when to generate words versus sentences versus paragraphs, and why filler text must stay meaningless.',
+              },
+              {
+                to: '/guides/timestamp-converter-without-upload',
+                title: 'Timestamps without a server',
+                body: 'What the epoch actually counts, why seconds and milliseconds both appear, and why the Unix clock deliberately ignores leap seconds.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

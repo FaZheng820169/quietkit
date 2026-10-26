@@ -209,6 +209,11 @@
     "description": "Generate placeholder text from the classic Cicero word pool: exact word counts, sentences or paragraphs, with an optional traditional opening and HTML wrapping. Runs locally — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/timestamp-converter": {
+    "title": "Unix timestamp converter — epoch to date, both ways",
+    "description": "Convert a Unix epoch timestamp (seconds or milliseconds) to a human date in UTC and your local zone, or type a date back into a timestamp. ISO 8601 and RFC 2822 included. Runs locally — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -442,6 +447,11 @@
   "/guides/lorem-ipsum-without-upload": {
     "title": "Generate lorem ipsum without a server watching",
     "description": "Where lorem ipsum comes from, when to use words versus sentences versus paragraphs, why placeholder text should not look like real sentences — and how to generate it locally.",
+    "priority": "0.8"
+  },
+  "/guides/timestamp-converter-without-upload": {
+    "title": "Convert Unix timestamps without sending them anywhere",
+    "description": "What a Unix timestamp actually counts, why seconds and milliseconds both appear, how the leap-second-free epoch works, and how to convert in both directions entirely in your browser.",
     "priority": "0.8"
   },
   "/pricing": {

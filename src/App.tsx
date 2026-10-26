@@ -42,6 +42,7 @@ import { SlugGenerator } from './pages/SlugGenerator'
 import { UuidGenerator } from './pages/UuidGenerator'
 import { UnitConverter } from './pages/UnitConverter'
 import { LoremIpsum } from './pages/LoremIpsum'
+import { TimestampConverter } from './pages/TimestampConverter'
 import { Pricing } from './pages/Pricing'
 import { Privacy } from './pages/Privacy'
 import { About } from './pages/About'
@@ -93,6 +94,7 @@ import { SlugGeneratorGuide } from './pages/guides/SlugGeneratorGuide'
 import { UuidGeneratorGuide } from './pages/guides/UuidGeneratorGuide'
 import { UnitConverterGuide } from './pages/guides/UnitConverterGuide'
 import { LoremIpsumGuide } from './pages/guides/LoremIpsumGuide'
+import { TimestampConverterGuide } from './pages/guides/TimestampConverterGuide'
 
 export default function App() {
   return (
@@ -141,6 +143,7 @@ export default function App() {
           <Route path="/tools/uuid-generator" element={<UuidGenerator />} />
           <Route path="/tools/unit-converter" element={<UnitConverter />} />
           <Route path="/tools/lorem-ipsum" element={<LoremIpsum />} />
+          <Route path="/tools/timestamp-converter" element={<TimestampConverter />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/remove-location-from-photo" element={<RemoveLocationPhoto />} />
           <Route path="/guides/compress-image-to-100kb" element={<CompressTo100kb />} />
@@ -188,6 +191,7 @@ export default function App() {
           <Route path="/guides/uuid-generator-without-upload" element={<UuidGeneratorGuide />} />
           <Route path="/guides/unit-conversion-without-upload" element={<UnitConverterGuide />} />
           <Route path="/guides/lorem-ipsum-without-upload" element={<LoremIpsumGuide />} />
+          <Route path="/guides/timestamp-converter-without-upload" element={<TimestampConverterGuide />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />
