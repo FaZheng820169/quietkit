@@ -214,6 +214,11 @@
     "description": "Convert a Unix epoch timestamp (seconds or milliseconds) to a human date in UTC and your local zone, or type a date back into a timestamp. ISO 8601 and RFC 2822 included. Runs locally — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/aspect-ratio": {
+    "title": "Aspect ratio calculator — width, height, fit and fill",
+    "description": "Enter any width and height to get the reduced ratio, or pick a ratio and a dimension to solve the other. Fit (contain) and fill (cover) a box, scale uniformly, see the diagonal. Runs locally — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -452,6 +457,11 @@
   "/guides/timestamp-converter-without-upload": {
     "title": "Convert Unix timestamps without sending them anywhere",
     "description": "What a Unix timestamp actually counts, why seconds and milliseconds both appear, how the leap-second-free epoch works, and how to convert in both directions entirely in your browser.",
+    "priority": "0.8"
+  },
+  "/guides/aspect-ratio-without-upload": {
+    "title": "Calculate aspect ratios without a server",
+    "description": "What a ratio actually is, why 16:9 won the screen, the difference between fit and fill, and how to solve any width-height pair entirely in your browser.",
     "priority": "0.8"
   },
   "/pricing": {

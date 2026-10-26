@@ -43,6 +43,7 @@ import { UuidGenerator } from './pages/UuidGenerator'
 import { UnitConverter } from './pages/UnitConverter'
 import { LoremIpsum } from './pages/LoremIpsum'
 import { TimestampConverter } from './pages/TimestampConverter'
+import { AspectRatio } from './pages/AspectRatio'
 import { Pricing } from './pages/Pricing'
 import { Privacy } from './pages/Privacy'
 import { About } from './pages/About'
@@ -95,6 +96,7 @@ import { UuidGeneratorGuide } from './pages/guides/UuidGeneratorGuide'
 import { UnitConverterGuide } from './pages/guides/UnitConverterGuide'
 import { LoremIpsumGuide } from './pages/guides/LoremIpsumGuide'
 import { TimestampConverterGuide } from './pages/guides/TimestampConverterGuide'
+import { AspectRatioGuide } from './pages/guides/AspectRatioGuide'
 
 export default function App() {
   return (
@@ -144,6 +146,7 @@ export default function App() {
           <Route path="/tools/unit-converter" element={<UnitConverter />} />
           <Route path="/tools/lorem-ipsum" element={<LoremIpsum />} />
           <Route path="/tools/timestamp-converter" element={<TimestampConverter />} />
+          <Route path="/tools/aspect-ratio" element={<AspectRatio />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/remove-location-from-photo" element={<RemoveLocationPhoto />} />
           <Route path="/guides/compress-image-to-100kb" element={<CompressTo100kb />} />
@@ -192,6 +195,7 @@ export default function App() {
           <Route path="/guides/unit-conversion-without-upload" element={<UnitConverterGuide />} />
           <Route path="/guides/lorem-ipsum-without-upload" element={<LoremIpsumGuide />} />
           <Route path="/guides/timestamp-converter-without-upload" element={<TimestampConverterGuide />} />
+          <Route path="/guides/aspect-ratio-without-upload" element={<AspectRatioGuide />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />

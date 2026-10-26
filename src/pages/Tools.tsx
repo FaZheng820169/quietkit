@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Forty-one tools. Zero uploads.</h1>
+          <h1>Forty-two tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -307,6 +307,13 @@ export function Tools() {
               title="Unix timestamp converter"
               description="Epoch to human date, both directions — seconds or milliseconds, UTC and your local zone, ISO 8601 and RFC 2822."
               meta="Developer · Time"
+            />
+            <ToolCard
+              to="/tools/aspect-ratio"
+              icon={<FileIcon size={22} />}
+              title="Aspect ratio calculator"
+              description="Pixels to ratio, or ratio plus one dimension to the other — fit, fill, scale and diagonal, no distortion."
+              meta="Design · Layout"
             />
           </div>
 

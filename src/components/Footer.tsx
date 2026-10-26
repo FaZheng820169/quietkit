@@ -145,6 +145,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/timestamp-converter">Unix timestamp converter</Link>
               </li>
+              <li>
+                <Link to="/tools/aspect-ratio">Aspect ratio calculator</Link>
+              </li>
             </ul>
           </div>
 
@@ -291,6 +294,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/timestamp-converter-without-upload">Timestamps without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/aspect-ratio-without-upload">Aspect ratios without a server</Link>
               </li>
             </ul>
           </div>

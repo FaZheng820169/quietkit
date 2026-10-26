@@ -332,6 +332,13 @@ const articles = [
       'What a Unix timestamp actually counts, why seconds and milliseconds both appear, how the leap-second-free epoch works, and how to convert in both directions entirely in your browser.',
     tag: 'Developer',
   },
+  {
+    to: '/guides/aspect-ratio-without-upload',
+    title: 'Calculate aspect ratios without a server',
+    description:
+      'What a ratio actually is, why 16:9 won the screen, the difference between fit and fill, and how to solve any width-height pair entirely in your browser.',
+    tag: 'Design',
+  },
 ]
 
 export function Guides() {

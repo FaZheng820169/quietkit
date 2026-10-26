@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Forty-one tools, no filler</span>
+              <span className="eyebrow">Forty-two tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -393,6 +393,13 @@ export function Home() {
               description="Epoch to human date, both directions — seconds or milliseconds, UTC and local, ISO 8601 and RFC 2822."
               meta="Developer · Time"
             />
+            <ToolCard
+              to="/tools/aspect-ratio"
+              icon={<FileIcon size={22} />}
+              title="Aspect ratio calculator"
+              description="Pixels to ratio, or ratio plus one dimension to the other — fit, fill, scale and diagonal, no distortion."
+              meta="Design · Layout"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -648,6 +655,11 @@ export function Home() {
                 to: '/guides/timestamp-converter-without-upload',
                 title: 'Timestamps without a server',
                 body: 'What the epoch actually counts, why seconds and milliseconds both appear, and why the Unix clock deliberately ignores leap seconds.',
+              },
+              {
+                to: '/guides/aspect-ratio-without-upload',
+                title: 'Aspect ratios without a server',
+                body: 'Why 16:9 won the screen, how fit and fill differ, and why resizing two dimensions independently always distorts.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">
