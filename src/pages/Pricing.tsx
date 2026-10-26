@@ -3,7 +3,7 @@ import { CheckIcon } from '../components/Icons'
 import { routeMeta, useSeo } from '../lib/seo'
 
 const freeFeatures = [
-  'All forty-four tools, unlimited files',
+  'All forty-five tools, unlimited files',
   'Batch a whole folder in one pass',
   'No watermark on any result',
   'No account, no email',

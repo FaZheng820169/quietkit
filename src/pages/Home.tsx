@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Forty-four tools, no filler</span>
+              <span className="eyebrow">Forty-five tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -414,6 +414,13 @@ export function Home() {
               description="Bill, tip percentage and people — preset rates, custom percentage, and honest rounding that does not leave a stray cent on the table."
               meta="Everyday · Split the bill"
             />
+            <ToolCard
+              to="/tools/percentage-calculator"
+              icon={<FileIcon size={22} />}
+              title="Percentage calculator"
+              description="Four modes — of, is, change and reverse — with honest divide-by-zero handling and instant results."
+              meta="Everyday · Math"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -684,6 +691,11 @@ export function Home() {
                 to: '/guides/tip-calculator-without-upload',
                 title: 'Tips and splitting the bill',
                 body: 'Why pre-tax tipping is the honest default, what each percentage means, and how to split a bill without a stray cent vanishing.',
+              },
+              {
+                to: '/guides/percentage-calculator-without-upload',
+                title: 'Percentages without a server',
+                body: 'The four percentage questions people actually ask, the one formula behind all of them, and why divide-by-zero deserves an honest answer.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

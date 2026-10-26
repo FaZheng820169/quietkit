@@ -353,6 +353,13 @@ const articles = [
       'What the tip percentage really means, why pre-tax tipping is the honest default, how rounding splits a bill cleanly, and why a local calculator is right for a receipt.',
     tag: 'Everyday',
   },
+  {
+    to: '/guides/percentage-calculator-without-upload',
+    title: 'Calculate percentages without a server',
+    description:
+      'The four percentage questions people actually ask, the one formula behind all of them, how percentage change keeps its direction, and why the answer is always local.',
+    tag: 'Everyday',
+  },
 ]
 
 export function Guides() {

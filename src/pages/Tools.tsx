@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Forty-four tools. Zero uploads.</h1>
+          <h1>Forty-five tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -328,6 +328,13 @@ export function Tools() {
               title="Tip calculator"
               description="Bill, tip percentage and number of people — preset rates, custom percentage, and honest rounding that does not leave a stray cent on the table."
               meta="Everyday · Split the bill"
+            />
+            <ToolCard
+              to="/tools/percentage-calculator"
+              icon={<FileIcon size={22} />}
+              title="Percentage calculator"
+              description="Four modes — what is X% of Y, X is what % of Y, percentage change from X to Y, and X% of what is Y — with honest handling of divide-by-zero."
+              meta="Everyday · Math"
             />
           </div>
 

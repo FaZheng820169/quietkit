@@ -154,6 +154,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/tip-calculator">Tip calculator</Link>
               </li>
+              <li>
+                <Link to="/tools/percentage-calculator">Percentage calculator</Link>
+              </li>
             </ul>
           </div>
 
@@ -309,6 +312,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/tip-calculator-without-upload">Tips without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/percentage-calculator-without-upload">Percentages without a server</Link>
               </li>
             </ul>
           </div>
