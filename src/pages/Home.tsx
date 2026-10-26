@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Fifty tools, no filler</span>
+              <span className="eyebrow">Fifty-one tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -456,6 +456,13 @@ export function Home() {
               description="BMR via Mifflin-St Jeor, TDEE across five activity levels, and targets for losing or gaining weight. Runs locally — your details never leave your browser."
               meta="Health · Calculator"
             />
+            <ToolCard
+              to="/tools/loan-calculator"
+              icon={<FileIcon size={22} />}
+              title="Loan calculator"
+              description="Monthly payment, total interest and amortization for any loan or mortgage. Runs locally — your loan details never leave your browser."
+              meta="Finance · Calculator"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -756,6 +763,11 @@ export function Home() {
                 to: '/guides/calorie-calculator-without-upload',
                 title: 'Calculate calories without a server',
                 body: 'How the Mifflin-St Jeor equation estimates BMR, what an activity factor does to TDEE, and which calorie targets match weight goals.',
+              },
+              {
+                to: '/guides/loan-calculator-without-upload',
+                title: 'Calculate loan payments without a server',
+                body: 'How the amortization formula turns principal, rate and term into a monthly payment, where the interest goes each month, and why your details stay local.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

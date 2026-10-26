@@ -172,6 +172,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/calorie-calculator">Calorie calculator</Link>
               </li>
+              <li>
+                <Link to="/tools/loan-calculator">Loan calculator</Link>
+              </li>
             </ul>
           </div>
 
@@ -345,6 +348,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/calorie-calculator-without-upload">Calculate calories without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/loan-calculator-without-upload">Calculate loan payments without a server</Link>
               </li>
             </ul>
           </div>

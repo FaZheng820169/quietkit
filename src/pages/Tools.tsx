@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Fifty tools. Zero uploads.</h1>
+          <h1>Fifty-one tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -370,6 +370,13 @@ export function Tools() {
               title="Calorie calculator"
               description="BMR via the Mifflin-St Jeor equation, TDEE across five activity levels, and calorie targets for maintaining, losing or gaining weight. Private — nothing leaves your browser."
               meta="Health · Calculator"
+            />
+            <ToolCard
+              to="/tools/loan-calculator"
+              icon={<FileIcon size={22} />}
+              title="Loan calculator"
+              description="Monthly payment, total payment and total interest for any loan or mortgage, plus the first 12 months of the amortization schedule. Private — your details never leave your browser."
+              meta="Finance · Calculator"
             />
           </div>
 

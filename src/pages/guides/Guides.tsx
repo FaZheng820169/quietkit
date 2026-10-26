@@ -395,6 +395,13 @@ const articles = [
       'How the Mifflin-St Jeor equation estimates BMR, what an activity factor does to your TDEE, which calorie targets match common weight goals, and why your details should never leave your device.',
     tag: 'Health',
   },
+  {
+    to: '/guides/loan-calculator-without-upload',
+    title: 'Calculate loan payments without a server',
+    description:
+      'How the amortization formula turns a principal, rate and term into a monthly payment, where the interest goes each month, and why your loan details should never leave your device.',
+    tag: 'Finance',
+  },
 ]
 
 export function Guides() {

@@ -259,6 +259,11 @@
     "description": "Estimate your daily calorie needs with the Mifflin-St Jeor BMR equation and an activity factor. See maintenance calories plus targets for losing or gaining weight. Runs locally — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/loan-calculator": {
+    "title": "Loan calculator — monthly payment, total and amortization",
+    "description": "Calculate the monthly payment, total payment and total interest for a loan or mortgage from the principal, annual interest rate and term. See the first months of the amortization schedule. Private — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -542,6 +547,11 @@
   "/guides/calorie-calculator-without-upload": {
     "title": "Calculate calories without a server",
     "description": "How the Mifflin-St Jeor equation estimates BMR, what an activity factor does to your TDEE, which calorie targets match common weight goals, and why your details should never leave your device.",
+    "priority": "0.8"
+  },
+  "/guides/loan-calculator-without-upload": {
+    "title": "Calculate loan payments without a server",
+    "description": "How the amortization formula turns a principal, rate and term into a monthly payment, where the interest goes each month, and why your loan details should never leave your device.",
     "priority": "0.8"
   },
   "/pricing": {
