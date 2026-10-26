@@ -249,6 +249,11 @@
     "description": "Find the number of days, weeks and weekdays between two dates, or add and subtract days, weeks, months and years from a date. Handles leap years and month-length edge cases correctly. Runs locally — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/bmi-calculator": {
+    "title": "BMI calculator — metric and imperial, with category",
+    "description": "Calculate your Body Mass Index in metric (kg/cm) or imperial (lb/ft+in) units and see which WHO category you fall into. Private — your height and weight never leave your browser.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -522,6 +527,11 @@
   "/guides/date-calculator-without-upload": {
     "title": "Calculate dates without a server",
     "description": "How many days are really between two dates, why adding a month is not 30 days, how leap years and month lengths change the math, and why a date calculation should never leave your device.",
+    "priority": "0.8"
+  },
+  "/guides/bmi-calculator-without-upload": {
+    "title": "Calculate BMI without a server",
+    "description": "What BMI actually measures, how the metric and imperial formulas differ, which category boundaries the WHO uses, and why your height and weight should never leave your device.",
     "priority": "0.8"
   },
   "/pricing": {

@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Forty-eight tools. Zero uploads.</h1>
+          <h1>Forty-nine tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -356,6 +356,13 @@ export function Tools() {
               title="Date calculator"
               description="Days, weeks and weekdays between two dates, or add and subtract days, weeks, months and years — leap years and month lengths handled correctly."
               meta="Everyday · Date"
+            />
+            <ToolCard
+              to="/tools/bmi-calculator"
+              icon={<FileIcon size={22} />}
+              title="BMI calculator"
+              description="Body Mass Index in metric (kg/cm) or imperial (lb/ft+in) units, with the WHO category and the range it covers. Private — your numbers stay in this tab."
+              meta="Health · Calculator"
             />
           </div>
 

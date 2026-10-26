@@ -166,6 +166,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/date-calculator">Date calculator</Link>
               </li>
+              <li>
+                <Link to="/tools/bmi-calculator">BMI calculator</Link>
+              </li>
             </ul>
           </div>
 
@@ -333,6 +336,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/date-calculator-without-upload">Calculate dates without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/bmi-calculator-without-upload">Calculate BMI without a server</Link>
               </li>
             </ul>
           </div>

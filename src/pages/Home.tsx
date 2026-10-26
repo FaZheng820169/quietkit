@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Forty-eight tools, no filler</span>
+              <span className="eyebrow">Forty-nine tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -442,6 +442,13 @@ export function Home() {
               description="Days, weeks and weekdays between two dates, or add and subtract days, weeks, months and years — leap years and month lengths handled correctly."
               meta="Everyday · Date"
             />
+            <ToolCard
+              to="/tools/bmi-calculator"
+              icon={<FileIcon size={22} />}
+              title="BMI calculator"
+              description="Body Mass Index in metric or imperial units, with the WHO category and range. Runs locally — your height and weight never leave your browser."
+              meta="Health · Calculator"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -732,6 +739,11 @@ export function Home() {
                 to: '/guides/date-calculator-without-upload',
                 title: 'Calculate dates without a server',
                 body: 'How many days are really between two dates, why adding a month is not 30 days, and how leap years change the math.',
+              },
+              {
+                to: '/guides/bmi-calculator-without-upload',
+                title: 'Calculate BMI without a server',
+                body: 'What BMI measures, how metric and imperial formulas differ, which WHO categories apply, and why your numbers should never leave your device.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

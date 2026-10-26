@@ -381,6 +381,13 @@ const articles = [
       'How many days are really between two dates, why adding a month is not 30 days, how leap years and month lengths change the math, and why a date calculation should never leave your device.',
     tag: 'Everyday',
   },
+  {
+    to: '/guides/bmi-calculator-without-upload',
+    title: 'Calculate BMI without a server',
+    description:
+      'What BMI actually measures, how the metric and imperial formulas differ, which category boundaries the WHO uses, and why your height and weight should never leave your device.',
+    tag: 'Health',
+  },
 ]
 
 export function Guides() {
