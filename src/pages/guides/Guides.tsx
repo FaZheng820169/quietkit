@@ -430,6 +430,13 @@ const articles = [
       'How Roman numerals work, why subtractive notation matters, what the valid range is, and how to convert between numbers and Roman numerals locally in the browser.',
     tag: 'Everyday',
   },
+  {
+    to: '/guides/base-converter-without-upload',
+    title: 'Convert between number bases without a server',
+    description:
+      'How binary, octal, decimal and hexadecimal relate, why programmers use each one, and how to convert between them locally in the browser.',
+    tag: 'Developer',
+  },
 ]
 
 export function Guides() {

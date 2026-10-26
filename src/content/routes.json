@@ -284,6 +284,11 @@
     "description": "Convert between integers and Roman numerals instantly. Type a number from 1 to 3999 or a Roman numeral and see the conversion as you type. Runs locally — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/base-converter": {
+    "title": "Base converter — binary, decimal, hex and octal",
+    "description": "Convert between binary, decimal, hexadecimal and octal instantly. Type a value in any base and see the others update as you type. Runs locally — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -592,6 +597,11 @@
   "/guides/roman-numeral-converter-without-upload": {
     "title": "Convert Roman numerals without a server",
     "description": "How Roman numerals work, why subtractive notation matters, what the valid range is, and how to convert between numbers and Roman numerals locally in the browser.",
+    "priority": "0.8"
+  },
+  "/guides/base-converter-without-upload": {
+    "title": "Convert between number bases without a server",
+    "description": "How binary, octal, decimal and hexadecimal relate, why programmers use each one, and how to convert between them locally in the browser.",
     "priority": "0.8"
   },
   "/pricing": {

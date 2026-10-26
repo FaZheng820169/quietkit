@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Fifty-five tools. Zero uploads.</h1>
+          <h1>Fifty-six tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -405,6 +405,13 @@ export function Tools() {
               title="Roman numeral converter"
               description="Convert between numbers and Roman numerals, in both directions, as you type. Standard subtractive notation, 1 to 3999. Private — nothing leaves your browser."
               meta="Everyday · Converter"
+            />
+            <ToolCard
+              to="/tools/base-converter"
+              icon={<FileIcon size={22} />}
+              title="Base converter"
+              description="Convert between binary, octal, decimal and hexadecimal, all updating as you type. Private — nothing leaves your browser."
+              meta="Developer · Converter"
             />
           </div>
 

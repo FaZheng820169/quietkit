@@ -187,6 +187,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/roman-numeral-converter">Roman numeral converter</Link>
               </li>
+              <li>
+                <Link to="/tools/base-converter">Base converter</Link>
+              </li>
             </ul>
           </div>
 
@@ -375,6 +378,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/roman-numeral-converter-without-upload">Convert Roman numerals without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/base-converter-without-upload">Convert between number bases without a server</Link>
               </li>
             </ul>
           </div>
