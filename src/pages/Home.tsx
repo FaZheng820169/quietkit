@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Thirty-nine tools, no filler</span>
+              <span className="eyebrow">Forty tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -379,6 +379,13 @@ export function Home() {
               description="Inches, pounds, Fahrenheit, gigabytes — exact definitional factors, and MB versus MiB never conflated."
               meta="Everyday · Exact ratios"
             />
+            <ToolCard
+              to="/tools/lorem-ipsum"
+              icon={<FileIcon size={22} />}
+              title="Lorem ipsum generator"
+              description="Classic placeholder text by the word, sentence or paragraph — with the traditional opening and optional <p> wrapping."
+              meta="Design · Placeholder text"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -624,6 +631,11 @@ export function Home() {
                 to: '/guides/unit-conversion-without-upload',
                 title: 'Unit conversion without a server',
                 body: 'Why an inch is exactly 25.4 mm, what makes temperature affine, and the honest 7% gap between MB and MiB.',
+              },
+              {
+                to: '/guides/lorem-ipsum-without-upload',
+                title: 'Lorem ipsum without a server',
+                body: 'Where the 69 classic words come from, when to generate words versus sentences versus paragraphs, and why filler text must stay meaningless.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

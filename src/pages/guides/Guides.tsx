@@ -318,6 +318,13 @@ const articles = [
       'Why an inch is exactly 25.4 mm, what makes temperature conversion affine, the honest difference between MB and MiB — and why converting is a local job.',
     tag: 'Everyday',
   },
+  {
+    to: '/guides/lorem-ipsum-without-upload',
+    title: 'Generate lorem ipsum without a server watching',
+    description:
+      'Where lorem ipsum comes from, when to use words versus sentences versus paragraphs, why placeholder text should not look like real sentences — and how to generate it locally.',
+    tag: 'Design',
+  },
 ]
 
 export function Guides() {

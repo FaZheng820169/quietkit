@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Thirty-nine tools. Zero uploads.</h1>
+          <h1>Forty tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -293,6 +293,13 @@ export function Tools() {
               title="Unit converter"
               description="Length, weight, temperature and data size with exact definitional factors — and MB versus MiB kept honestly distinct."
               meta="Everyday · Exact ratios"
+            />
+            <ToolCard
+              to="/tools/lorem-ipsum"
+              icon={<FileIcon size={22} />}
+              title="Lorem ipsum generator"
+              description="The classic Cicero word pool by exact word, sentence or paragraph count — optional traditional opening, optional HTML wrapping."
+              meta="Design · Placeholder text"
             />
           </div>
 

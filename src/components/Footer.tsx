@@ -139,6 +139,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/unit-converter">Unit converter</Link>
               </li>
+              <li>
+                <Link to="/tools/lorem-ipsum">Lorem ipsum</Link>
+              </li>
             </ul>
           </div>
 
@@ -279,6 +282,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/unit-conversion-without-upload">Units without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/lorem-ipsum-without-upload">Lorem ipsum without a server</Link>
               </li>
             </ul>
           </div>
