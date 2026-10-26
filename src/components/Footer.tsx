@@ -190,6 +190,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/base-converter">Base converter</Link>
               </li>
+              <li>
+                <Link to="/tools/time-zone-converter">Time zone converter</Link>
+              </li>
             </ul>
           </div>
 
@@ -381,6 +384,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/base-converter-without-upload">Convert between number bases without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/time-zone-converter-without-upload">Time zones, converted without a server</Link>
               </li>
             </ul>
           </div>

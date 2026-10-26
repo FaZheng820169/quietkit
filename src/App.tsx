@@ -58,6 +58,7 @@ import { HeightConverter } from './pages/HeightConverter'
 import { GpaCalculator } from './pages/GpaCalculator'
 import { RomanNumeralConverter } from './pages/RomanNumeralConverter'
 import { BaseConverter } from './pages/BaseConverter'
+import { TimeZoneConverter } from './pages/TimeZoneConverter'
 import { Pricing } from './pages/Pricing'
 import { Privacy } from './pages/Privacy'
 import { About } from './pages/About'
@@ -125,6 +126,7 @@ import { HeightConverterGuide } from './pages/guides/HeightConverterGuide'
 import { GpaCalculatorGuide } from './pages/guides/GpaCalculatorGuide'
 import { RomanNumeralConverterGuide } from './pages/guides/RomanNumeralConverterGuide'
 import { BaseConverterGuide } from './pages/guides/BaseConverterGuide'
+import { TimeZoneConverterGuide } from './pages/guides/TimeZoneConverterGuide'
 
 export default function App() {
   return (
@@ -189,6 +191,7 @@ export default function App() {
           <Route path="/tools/gpa-calculator" element={<GpaCalculator />} />
           <Route path="/tools/roman-numeral-converter" element={<RomanNumeralConverter />} />
           <Route path="/tools/base-converter" element={<BaseConverter />} />
+          <Route path="/tools/time-zone-converter" element={<TimeZoneConverter />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/remove-location-from-photo" element={<RemoveLocationPhoto />} />
           <Route path="/guides/compress-image-to-100kb" element={<CompressTo100kb />} />
@@ -252,6 +255,7 @@ export default function App() {
           <Route path="/guides/gpa-calculator-without-upload" element={<GpaCalculatorGuide />} />
           <Route path="/guides/roman-numeral-converter-without-upload" element={<RomanNumeralConverterGuide />} />
           <Route path="/guides/base-converter-without-upload" element={<BaseConverterGuide />} />
+          <Route path="/guides/time-zone-converter-without-upload" element={<TimeZoneConverterGuide />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />

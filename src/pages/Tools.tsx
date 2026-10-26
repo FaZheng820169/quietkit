@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Fifty-six tools. Zero uploads.</h1>
+          <h1>Fifty-seven tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -412,6 +412,13 @@ export function Tools() {
               title="Base converter"
               description="Convert between binary, octal, decimal and hexadecimal, all updating as you type. Private — nothing leaves your browser."
               meta="Developer · Converter"
+            />
+            <ToolCard
+              to="/tools/time-zone-converter"
+              icon={<FileIcon size={22} />}
+              title="Time zone converter"
+              description="Convert a date and time between any two zones, with daylight saving read for that exact date. Nine cities at once, all updating as you type."
+              meta="Everyday · Converter"
             />
           </div>
 

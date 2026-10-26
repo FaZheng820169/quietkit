@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Fifty-six tools, no filler</span>
+              <span className="eyebrow">Fifty-seven tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -498,6 +498,13 @@ export function Home() {
               description="Binary, octal, decimal and hexadecimal, all updating as you type. Runs locally — nothing leaves your browser."
               meta="Developer · Converter"
             />
+            <ToolCard
+              to="/tools/time-zone-converter"
+              icon={<FileIcon size={22} />}
+              title="Time zone converter"
+              description="Any time in any two zones, with daylight saving read for that exact date. Runs locally — nothing leaves your browser."
+              meta="Everyday · Converter"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -828,6 +835,11 @@ export function Home() {
                 to: '/guides/base-converter-without-upload',
                 title: 'Convert between number bases without a server',
                 body: 'How binary, octal, decimal and hex relate, why programmers use each base, and why conversions should stay local.',
+              },
+              {
+                to: '/guides/time-zone-converter-without-upload',
+                title: 'Time zones, converted without a server',
+                body: 'Why a clock time needs a zone, how UTC makes conversion possible, and how daylight saving moves the gap between cities.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

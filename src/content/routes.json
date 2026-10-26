@@ -289,6 +289,11 @@
     "description": "Convert between binary, decimal, hexadecimal and octal instantly. Type a value in any base and see the others update as you type. Runs locally — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/time-zone-converter": {
+    "title": "Time zone converter — any two zones, daylight saving handled",
+    "description": "Convert a date and time between any two time zones, with daylight saving read for that exact date. See the same instant in nine cities at once. Runs locally — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -602,6 +607,11 @@
   "/guides/base-converter-without-upload": {
     "title": "Convert between number bases without a server",
     "description": "How binary, octal, decimal and hexadecimal relate, why programmers use each one, and how to convert between them locally in the browser.",
+    "priority": "0.8"
+  },
+  "/guides/time-zone-converter-without-upload": {
+    "title": "Time zones, converted without a server",
+    "description": "Why a clock time means nothing without a zone, how UTC makes conversion possible, and how daylight saving quietly changes the gap between two cities.",
     "priority": "0.8"
   },
   "/pricing": {

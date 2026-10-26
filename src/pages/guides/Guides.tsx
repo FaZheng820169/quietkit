@@ -437,6 +437,13 @@ const articles = [
       'How binary, octal, decimal and hexadecimal relate, why programmers use each one, and how to convert between them locally in the browser.',
     tag: 'Developer',
   },
+  {
+    to: '/guides/time-zone-converter-without-upload',
+    title: 'Time zones, converted without a server',
+    description:
+      'Why a clock time means nothing without a zone, how UTC makes conversion possible, and how daylight saving quietly changes the gap between two cities.',
+    tag: 'Everyday',
+  },
 ]
 
 export function Guides() {
