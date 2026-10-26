@@ -184,6 +184,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/gpa-calculator">GPA calculator</Link>
               </li>
+              <li>
+                <Link to="/tools/roman-numeral-converter">Roman numeral converter</Link>
+              </li>
             </ul>
           </div>
 
@@ -369,6 +372,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/gpa-calculator-without-upload">Calculate your GPA without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/roman-numeral-converter-without-upload">Convert Roman numerals without a server</Link>
               </li>
             </ul>
           </div>

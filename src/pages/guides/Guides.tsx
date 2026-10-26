@@ -423,6 +423,13 @@ const articles = [
       'How the 4.0 grade point scale works, how credit hours weight your average, why plus and minus grades matter, and how to compute your GPA locally in the browser.',
     tag: 'Education',
   },
+  {
+    to: '/guides/roman-numeral-converter-without-upload',
+    title: 'Convert Roman numerals without a server',
+    description:
+      'How Roman numerals work, why subtractive notation matters, what the valid range is, and how to convert between numbers and Roman numerals locally in the browser.',
+    tag: 'Everyday',
+  },
 ]
 
 export function Guides() {

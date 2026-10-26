@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Fifty-four tools. Zero uploads.</h1>
+          <h1>Fifty-five tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -398,6 +398,13 @@ export function Tools() {
               title="GPA calculator"
               description="Calculate your cumulative GPA on a 4.0 scale from courses and credit hours. Enter each grade and watch the average update instantly. Private — your grades never leave your browser."
               meta="Education · Calculator"
+            />
+            <ToolCard
+              to="/tools/roman-numeral-converter"
+              icon={<FileIcon size={22} />}
+              title="Roman numeral converter"
+              description="Convert between numbers and Roman numerals, in both directions, as you type. Standard subtractive notation, 1 to 3999. Private — nothing leaves your browser."
+              meta="Everyday · Converter"
             />
           </div>
 

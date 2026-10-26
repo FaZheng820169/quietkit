@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Fifty-four tools, no filler</span>
+              <span className="eyebrow">Fifty-five tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -484,6 +484,13 @@ export function Home() {
               description="Cumulative GPA on a 4.0 scale from courses and credit hours. Runs locally — your grades never leave your browser."
               meta="Education · Calculator"
             />
+            <ToolCard
+              to="/tools/roman-numeral-converter"
+              icon={<FileIcon size={22} />}
+              title="Roman numeral converter"
+              description="Numbers to Roman numerals and back, both directions, as you type. Runs locally — nothing leaves your browser."
+              meta="Everyday · Converter"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -804,6 +811,11 @@ export function Home() {
                 to: '/guides/gpa-calculator-without-upload',
                 title: 'Calculate your GPA without a server',
                 body: 'How the 4.0 scale and credit-hour weighting work, why plus and minus grades matter, and why your grades stay local.',
+              },
+              {
+                to: '/guides/roman-numeral-converter-without-upload',
+                title: 'Convert Roman numerals without a server',
+                body: 'How the seven symbols and subtractive notation work, why the range stops at 3999, and why conversions should stay local.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">
