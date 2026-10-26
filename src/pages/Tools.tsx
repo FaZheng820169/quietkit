@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Forty-nine tools. Zero uploads.</h1>
+          <h1>Fifty tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -362,6 +362,13 @@ export function Tools() {
               icon={<FileIcon size={22} />}
               title="BMI calculator"
               description="Body Mass Index in metric (kg/cm) or imperial (lb/ft+in) units, with the WHO category and the range it covers. Private — your numbers stay in this tab."
+              meta="Health · Calculator"
+            />
+            <ToolCard
+              to="/tools/calorie-calculator"
+              icon={<FileIcon size={22} />}
+              title="Calorie calculator"
+              description="BMR via the Mifflin-St Jeor equation, TDEE across five activity levels, and calorie targets for maintaining, losing or gaining weight. Private — nothing leaves your browser."
               meta="Health · Calculator"
             />
           </div>

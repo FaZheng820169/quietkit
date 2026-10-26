@@ -51,6 +51,7 @@ import { AgeCalculator } from './pages/AgeCalculator'
 import { PxToRem } from './pages/PxToRem'
 import { DateCalculator } from './pages/DateCalculator'
 import { BmiCalculator } from './pages/BmiCalculator'
+import { CalorieCalculator } from './pages/CalorieCalculator'
 import { Pricing } from './pages/Pricing'
 import { Privacy } from './pages/Privacy'
 import { About } from './pages/About'
@@ -111,6 +112,7 @@ import { AgeCalculatorGuide } from './pages/guides/AgeCalculatorGuide'
 import { PxToRemGuide } from './pages/guides/PxToRemGuide'
 import { DateCalculatorGuide } from './pages/guides/DateCalculatorGuide'
 import { BmiCalculatorGuide } from './pages/guides/BmiCalculatorGuide'
+import { CalorieCalculatorGuide } from './pages/guides/CalorieCalculatorGuide'
 
 export default function App() {
   return (
@@ -168,6 +170,7 @@ export default function App() {
           <Route path="/tools/px-to-rem" element={<PxToRem />} />
           <Route path="/tools/date-calculator" element={<DateCalculator />} />
           <Route path="/tools/bmi-calculator" element={<BmiCalculator />} />
+          <Route path="/tools/calorie-calculator" element={<CalorieCalculator />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/guides/remove-location-from-photo" element={<RemoveLocationPhoto />} />
           <Route path="/guides/compress-image-to-100kb" element={<CompressTo100kb />} />
@@ -224,6 +227,7 @@ export default function App() {
           <Route path="/guides/px-to-rem-without-upload" element={<PxToRemGuide />} />
           <Route path="/guides/date-calculator-without-upload" element={<DateCalculatorGuide />} />
           <Route path="/guides/bmi-calculator-without-upload" element={<BmiCalculatorGuide />} />
+          <Route path="/guides/calorie-calculator-without-upload" element={<CalorieCalculatorGuide />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />

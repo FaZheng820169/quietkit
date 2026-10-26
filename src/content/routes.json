@@ -254,6 +254,11 @@
     "description": "Calculate your Body Mass Index in metric (kg/cm) or imperial (lb/ft+in) units and see which WHO category you fall into. Private — your height and weight never leave your browser.",
     "priority": "0.9"
   },
+  "/tools/calorie-calculator": {
+    "title": "Calorie calculator — TDEE, BMR and weight goals",
+    "description": "Estimate your daily calorie needs with the Mifflin-St Jeor BMR equation and an activity factor. See maintenance calories plus targets for losing or gaining weight. Runs locally — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -532,6 +537,11 @@
   "/guides/bmi-calculator-without-upload": {
     "title": "Calculate BMI without a server",
     "description": "What BMI actually measures, how the metric and imperial formulas differ, which category boundaries the WHO uses, and why your height and weight should never leave your device.",
+    "priority": "0.8"
+  },
+  "/guides/calorie-calculator-without-upload": {
+    "title": "Calculate calories without a server",
+    "description": "How the Mifflin-St Jeor equation estimates BMR, what an activity factor does to your TDEE, which calorie targets match common weight goals, and why your details should never leave your device.",
     "priority": "0.8"
   },
   "/pricing": {

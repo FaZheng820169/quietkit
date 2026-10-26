@@ -388,6 +388,13 @@ const articles = [
       'What BMI actually measures, how the metric and imperial formulas differ, which category boundaries the WHO uses, and why your height and weight should never leave your device.',
     tag: 'Health',
   },
+  {
+    to: '/guides/calorie-calculator-without-upload',
+    title: 'Calculate calories without a server',
+    description:
+      'How the Mifflin-St Jeor equation estimates BMR, what an activity factor does to your TDEE, which calorie targets match common weight goals, and why your details should never leave your device.',
+    tag: 'Health',
+  },
 ]
 
 export function Guides() {

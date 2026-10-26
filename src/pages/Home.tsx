@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Forty-nine tools, no filler</span>
+              <span className="eyebrow">Fifty tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -449,6 +449,13 @@ export function Home() {
               description="Body Mass Index in metric or imperial units, with the WHO category and range. Runs locally — your height and weight never leave your browser."
               meta="Health · Calculator"
             />
+            <ToolCard
+              to="/tools/calorie-calculator"
+              icon={<FileIcon size={22} />}
+              title="Calorie calculator"
+              description="BMR via Mifflin-St Jeor, TDEE across five activity levels, and targets for losing or gaining weight. Runs locally — your details never leave your browser."
+              meta="Health · Calculator"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -744,6 +751,11 @@ export function Home() {
                 to: '/guides/bmi-calculator-without-upload',
                 title: 'Calculate BMI without a server',
                 body: 'What BMI measures, how metric and imperial formulas differ, which WHO categories apply, and why your numbers should never leave your device.',
+              },
+              {
+                to: '/guides/calorie-calculator-without-upload',
+                title: 'Calculate calories without a server',
+                body: 'How the Mifflin-St Jeor equation estimates BMR, what an activity factor does to TDEE, and which calorie targets match weight goals.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">
