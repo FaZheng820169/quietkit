@@ -239,6 +239,11 @@
     "description": "Enter a birth date and get the exact age in years, months and days, plus total days, weeks and months lived, and the countdown to the next birthday. Handles leap-day births and month-length edge cases correctly. Runs locally — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/px-to-rem": {
+    "title": "px to rem converter — single values and CSS snippets",
+    "description": "Convert pixels to rems and back with a configurable root font size. Convert a single value or paste a whole CSS snippet — every px and rem token is converted in place, everything else left untouched. Runs locally — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -502,6 +507,11 @@
   "/guides/age-calculator-without-upload": {
     "title": "Calculate age without a server",
     "description": "Why years and months are not a simple subtraction, how leap-day birthdays are handled, why the 31st maps to month-end in shorter months, and why a birth date should never leave your device.",
+    "priority": "0.8"
+  },
+  "/guides/px-to-rem-without-upload": {
+    "title": "Convert px to rem without a server",
+    "description": "What a rem actually is, why the root font size matters, when to use rem instead of px, how to convert a whole CSS snippet in one pass, and why a style value should never leave your device.",
     "priority": "0.8"
   },
   "/pricing": {

@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Forty-six tools, no filler</span>
+              <span className="eyebrow">Forty-seven tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -428,6 +428,13 @@ export function Home() {
               description="Years, months and days from a birth date, plus total days and weeks lived and the next-birthday countdown — leap days handled correctly."
               meta="Everyday · Date"
             />
+            <ToolCard
+              to="/tools/px-to-rem"
+              icon={<FileIcon size={22} />}
+              title="px to rem converter"
+              description="Pixels to rems and back with a configurable root size — single values or a whole CSS snippet, converted in place."
+              meta="Developer · CSS"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -708,6 +715,11 @@ export function Home() {
                 to: '/guides/age-calculator-without-upload',
                 title: 'Age without a server',
                 body: 'Why age is not a simple subtraction, how leap days and the 31st are handled, and why a birth date should never leave your device.',
+              },
+              {
+                to: '/guides/px-to-rem-without-upload',
+                title: 'px to rem without a server',
+                body: 'What a rem actually is, why the root font size is a contract, and how to convert a whole CSS snippet in one pass.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">
