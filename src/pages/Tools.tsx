@@ -10,7 +10,7 @@ export function Tools() {
       <section className="tool-hero">
         <div className="container">
           <span className="eyebrow">The toolbox</span>
-          <h1>Forty-three tools. Zero uploads.</h1>
+          <h1>Forty-four tools. Zero uploads.</h1>
           <p>
             QuietKit grows slowly and deliberately. A tool ships only when it can run entirely in
             your browser without a server behind it.
@@ -321,6 +321,13 @@ export function Tools() {
               title="Random number generator"
               description="Integers or decimals in any range, with or without repeats — from crypto.getRandomValues, with an optional seed for reproducibility."
               meta="Developer · Randomness"
+            />
+            <ToolCard
+              to="/tools/tip-calculator"
+              icon={<FileIcon size={22} />}
+              title="Tip calculator"
+              description="Bill, tip percentage and number of people — preset rates, custom percentage, and honest rounding that does not leave a stray cent on the table."
+              meta="Everyday · Split the bill"
             />
           </div>
 

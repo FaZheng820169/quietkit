@@ -346,6 +346,13 @@ const articles = [
       'Where randomness comes from in a browser, why crypto.random beats Math.random, how to draw without repeats, and why a reproducible seed is sometimes what you want.',
     tag: 'Developer',
   },
+  {
+    to: '/guides/tip-calculator-without-upload',
+    title: 'Calculate tips and split the bill without a server',
+    description:
+      'What the tip percentage really means, why pre-tax tipping is the honest default, how rounding splits a bill cleanly, and why a local calculator is right for a receipt.',
+    tag: 'Everyday',
+  },
 ]
 
 export function Guides() {

@@ -224,6 +224,11 @@
     "description": "Generate cryptographically random integers or decimals in any range, singly or in batches, with an optional no-repeats mode and a seed for reproducible sequences. Runs locally — nothing is uploaded.",
     "priority": "0.9"
   },
+  "/tools/tip-calculator": {
+    "title": "Tip calculator — split the bill, round up or down",
+    "description": "Work out the tip and each person's share from the bill, a tip percentage and the number of people. Preset rates, custom percentage, and honest rounding that does not silently pocket the cents. Runs locally — nothing is uploaded.",
+    "priority": "0.9"
+  },
   "/guides/pdf-to-jpg-without-upload": {
     "title": "PDF to JPG without uploading the document",
     "description": "What changes when a PDF page becomes a JPEG, which DPI to choose for screen or print, why transparent pages turn black, and how to verify the converter is local.",
@@ -472,6 +477,11 @@
   "/guides/random-number-without-upload": {
     "title": "Generate random numbers without a server",
     "description": "Where randomness comes from in a browser, why crypto.random beats Math.random, how to draw without repeats, and why a reproducible seed is sometimes what you want.",
+    "priority": "0.8"
+  },
+  "/guides/tip-calculator-without-upload": {
+    "title": "Calculate tips and split the bill without a server",
+    "description": "What the tip percentage actually means, why pre-tax tipping is the honest default, how rounding splits a bill cleanly, and why a local calculator is the right tool for a receipt.",
     "priority": "0.8"
   },
   "/pricing": {

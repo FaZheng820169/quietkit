@@ -96,7 +96,7 @@ export function Home() {
         <div className="container">
           <div className="split" style={{ alignItems: 'end', marginBottom: 34 }}>
             <div>
-              <span className="eyebrow">Forty-three tools, no filler</span>
+              <span className="eyebrow">Forty-four tools, no filler</span>
               <h2 style={{ fontSize: 34, marginTop: 14 }}>Fix a file in under a minute.</h2>
             </div>
             <p className="muted" style={{ maxWidth: '46ch' }}>
@@ -407,6 +407,13 @@ export function Home() {
               description="Integers or decimals, any range, no repeats optional — from crypto.getRandomValues with a seed mode for reproducible draws."
               meta="Developer · Randomness"
             />
+            <ToolCard
+              to="/tools/tip-calculator"
+              icon={<FileIcon size={22} />}
+              title="Tip calculator"
+              description="Bill, tip percentage and people — preset rates, custom percentage, and honest rounding that does not leave a stray cent on the table."
+              meta="Everyday · Split the bill"
+            />
           </div>
 
           <div style={{ marginTop: 26 }}>
@@ -672,6 +679,11 @@ export function Home() {
                 to: '/guides/random-number-without-upload',
                 title: 'Random numbers without a server',
                 body: 'Why crypto.random beats Math.random, what modulo bias is, how no-repeats draws really work, and when a seed is the right call.',
+              },
+              {
+                to: '/guides/tip-calculator-without-upload',
+                title: 'Tips and splitting the bill',
+                body: 'Why pre-tax tipping is the honest default, what each percentage means, and how to split a bill without a stray cent vanishing.',
               },
             ].map((article) => (
               <Link key={article.to} to={article.to} className="tool-card">

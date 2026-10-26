@@ -151,6 +151,9 @@ export function Footer() {
               <li>
                 <Link to="/tools/random-number">Random number generator</Link>
               </li>
+              <li>
+                <Link to="/tools/tip-calculator">Tip calculator</Link>
+              </li>
             </ul>
           </div>
 
@@ -303,6 +306,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/guides/random-number-without-upload">Random numbers without a server</Link>
+              </li>
+              <li>
+                <Link to="/guides/tip-calculator-without-upload">Tips without a server</Link>
               </li>
             </ul>
           </div>
